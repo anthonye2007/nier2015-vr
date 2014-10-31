@@ -24,15 +24,10 @@ Virtual reality can provide huge benefits to software engineering.
 \end{abstract}
 
 \section{Introduction}
-The primary cause of difficulty in code reviews is lack of software understanding. Understanding is needed in order to both find more non-trivial defects and to provide more alternate solutions.
+Quality virtual reality (VR) is finally inexpensive enough for consumers, including software engineers, to invest in. No longer will we have to go to a physical room to be fully immersed in a virtual reality, within the next few years we will be able to simply reach over and put on our fully immersive VR sunglasses and headphones. Virtual reality is often applied only to the entertainment industry but we argue that it will greatly change software engineering as well. 
 
-Research questions:
-1) If given a virtual environment, will users find a substantial number of non-trivial defects?
-2) If given a virtual environment, will users provide a substantial number of alternative solutions?
+Programmers have been tied to their monitors for too long. We stare at our three dimensional images on our two dimensional displays, unable to conceive of something greater. With VR we can truly be right next to the 3D graphics that we are creating. We can see the output of our system all around us, not just displayed on our second monitor.
 
-We found that the virtual environment enables users to understand the software better in a code review setting. Users of the environment both found a substantial number of non-trivial defects and provided a substantial number of alternative solutions.
-
-Virtual reality allows for true 3D.
 Software has been limited by physical world. For instance, more and larger monitors can increase programmer productivity but budget and desk size constrain this issue.
 Code review can be done in a physical room, but the room cannot be easily changed to show dynamic information. White-board walls can help this physical issue, but are still not as flexible as a completely virtual environment.
 
@@ -42,53 +37,31 @@ To immerse the user in a virtual environment we used a head-mounted display (Ocu
 
 Virtual reality has been around since Ivan Sutherland's Sword of Damocles in 1968 but the hardware is finally of high enough quality with a consumer price point. This will enable widespread adoption within the decade.
 
-We developed a prototype virtual environment for code review called Immersion. We ran a pilot talk aloud study to show that a virtual environment can help developers understand software better. 
-
-[talk more about prototype details]
-
-[screen-shot of prototype]
-
 \section{Related Work}
-Bacchelli and Bird found that although the primary motivations for performing code reviews include finding defects and providing alternate solutions, modern code reviews don't actual result in many defects found or alternate solutions provided.  They found the main reason for this discrepancy to be lack of understanding of the code.  Developers said that they could find more defects and provide more alternate solutions if they could understand the code better.
- 
+Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces.  Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
+
 Andrew Bragdon has implemented a system called Code Bubbles that enables the user to pull out methods from a file. The user is then able to move and group the methods as desired.  Code Bubbles also can display the call graph for the selected method and allows the user to open called methods.
 
 Code Canvas added semantic zoom to the Code Bubbles tool, allowing the user to gain a better understanding of how the current section of the system fits into the system as a whole.
 
 Chris Parnin developed a tool called NosePrints which allows users to quickly see if a code smell is relevant.
 
-Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces.  Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
-
 RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.
 
-\section{Methodology}
-We conducted a pilot study with three developers to see if using a prototype virtual environment could increase program comprehension in code review.
+\section{Applications}
+\subsection{Code Review}
+Immersion
+\subsection{Programming}
+RiftSketch
+\subsection{Debugging}
+\subsection{Visualization}
+\subsection{3D Modeling}
+\subsection{Metaphorical Programming}
+Factory
 
-The equipment was configured for each participant to enhance their viewing experiences. 
-
-[picture of participant wearing the Rift and using the Leap Motion]
-
-After configuration, the participant was given a short tutorial for our environment. The participant was then asked to perform a code review on a given code base. The participant was specifically prompted to look for non-trivial defects and alternative solutions.
-
-We asked the participants to think out loud and were prompted for their thoughts throughout.
-
-\section{Results and Discussion}
-We found that participants did find substantial numbers of non-trivial defects and alternate solutions.
-
-[visualize results somehow]
-
-\section{Limitations}
-Only used a prototype tool. Fully developed tool would greatly help.
-
-Comparing the results of my participants to the findings of other studies is not ideal.  Would be best to run another study on the same code base and where some people get the tool and others just use vanilla Eclipse.
-\section{Future Work}
-Improve tool. Integrate with audio cues?
-
-Metaphorical programming. Like Andy Ko's factory paper.
-Visualizations within immersive virtual environment.
+\section{Open Research Questions}
 \section{Conclusions}
-We showed that participants found a substantial amount of non-trivial defects.
-We showed that participants provided a substantial amount of alternative solutions.
+
 \bibliographystyle{abbrv}
 \bibliography{sigproc}
 \end{document}
