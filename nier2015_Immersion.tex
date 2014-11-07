@@ -72,25 +72,31 @@ RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper a libero eu vulputate. Sed et mi ullamcorper felis sodales egestas vel et tortor. Vestibulum quis metus arcu. Pellentesque mattis magna nec turpis dignissim egestas. 
 
 \subsection{Code Review}
-Immersion
-
 % Why does code review need another tool?
 One of the primary motivations behind code reviews is to find defects in the code~\cite{bacchelli:ModernCodeReviewChallenges}. However, finding defects requires the reviewer to understand the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. It is especially hard if the reviewer has not touched this code in a long time and must reacquaint themselves with it.
 % How manage the MSR citations above?
 
 % What are the main benefits from using this tool?
-  % affordances - immersive and more natural
+  % affordances - immersive and more natural -- might be able to take out this paragraph if able to paint a good enough picture in their minds below
 We propose a tool that takes advantage of the affordances of VR to help reviewers better understand the code being modified. This tool would be able to use the immersive environment to display more information to the user without them feeling overwhelmed. Additionally, the use of a device that can recognize hand gestures (such as the Leap Motion Controller) could allow reviewers to use interaction gestures that are more natural than a keyboard and mouse. 
 
-  % display more info without overwhelming
+  % display more info without being overwhelming
     % piles
       % able to get sense of size of pile
+      % methods called by active fragment
     % git diff overview
     % complexity overview
+    
+ Imagine being able to see all of the code relevant to the current method but all on the same monitor. That sounds very cramped and overwhelming. What about being able to display each group of relevant code as a pile of fragments lying on the floor? The user could easily see that this active fragment is important because there are a lot of piles on the ground. Moreover, the user could get an idea of how much test code there is for the active fragment by simply gauging the size of the test code pile. [Describe different ideas for piles here]
+ 
+ After assessing the piles of relevant information on the floor, the user can look to the left part of the sky and see an overview of the changes made in this review. [talk more about git diff here]
+ The user could also easily take in other useful visualizations such as an overview of the complexity of the different parts of the system and where the current fragment fits into the big picture.
     
   % still able to see details
     % active fragment
     % detailed view (stack/circle) of fragments
+    
+ If the user wants to look at the implementation of the methods called by the active fragment, they could simply reach out in the direction of the pile, grab it with their hand and pull their hand up. The fragments in the pile would follow the hand up and form a circle to the right of the active fragment. The user would then be able to read the details of the called methods at the forefront of the circle. The user could make a three-fingered swipe to the left to rotate the circle and bring the next three fragments to the forefront.  The user finds an especially large method, grabs it using a pinch motion on the top and bottom and moves it on top of the active fragment. The piles change to include code relevant to the new fragment.  The user realizes that this new fragment is only used once since that 'pile' only had one  fragment in it. She moves her arm as if she were clearing off her desk and returns to the fragment she initially had active.
     
   % interaction
     % grab pile
@@ -98,20 +104,12 @@ We propose a tool that takes advantage of the affordances of VR to help reviewer
     % push hand down to push detailed view back into pile on floor
     % swipe with fingers to cycle through detailed view
       % three finger swipe could cycle three fragments
+    % change active fragment somehow
     
 
 % What makes a VR code review tool better than a 3D tool displayed on a monitor?
+  % immersive (try to make this obvious from the above section)
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper a libero eu vulputate. Sed et mi ullamcorper felis sodales egestas vel et tortor. Vestibulum quis metus arcu. Pellentesque mattis magna nec turpis dignissim egestas. Praesent ut dignissim lorem. Mauris lacinia sem eget erat hendrerit, ac vestibulum dui tempus. Mauris quis tellus a leo porta vehicula et eu est. Maecenas ut quam eros. Praesent a molestie felis. Suspendisse imperdiet ligula ac ante cursus, vitae dignissim elit rhoncus. Suspendisse sapien massa, rutrum non luctus in, accumsan eget velit. Nam mollis, ligula eget porta gravida, nibh mi euismod turpis, eget fermentum elit velit quis eros.
-
-Duis aliquam tempor odio, ac cursus justo condimentum ac. Nulla ligula dui, lobortis sed magna ut, feugiat dictum eros. Maecenas cursus tincidunt dui vitae mattis. Cras dictum id libero non scelerisque. Nunc fermentum est turpis. Quisque porttitor congue arcu. Nam auctor iaculis aliquam. Etiam tempor pellentesque dui, at ullamcorper leo bibendum et. Praesent dictum erat nec dignissim posuere. Nam eu aliquet purus, viverra feugiat lectus. Maecenas posuere diam et lacus feugiat, quis consectetur ante venenatis. Praesent lobortis lacus non vestibulum rhoncus.
-
-Pellentesque rutrum libero vitae massa consequat molestie. Nullam rutrum convallis ligula sed feugiat. Sed non imperdiet nisl. Ut at vulputate diam. Etiam ullamcorper efficitur libero, eu fringilla dui semper quis. Donec sapien elit, rhoncus vitae ullamcorper vitae, malesuada et diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec semper, dolor non tempus cursus, diam tortor iaculis nulla, at semper nulla elit sed sapien. Proin egestas, sem laoreet posuere vulputate, neque nisi euismod mi, id efficitur leo diam eget turpis. Donec accumsan mollis ex, at maximus justo posuere non. Sed venenatis, neque vitae vehicula porttitor, urna eros consectetur tortor, non rutrum felis nisl sit amet nisl. Proin vitae tempor arcu, ac pharetra mauris. Nam eros ipsum, consequat id ex et, gravida maximus massa.
-
-In vehicula accumsan felis vitae dapibus. Morbi ut eleifend turpis. Quisque id dictum mi. Duis hendrerit nunc nunc, ac tempus justo interdum nec. Etiam eu mi finibus mi laoreet posuere. Vivamus ex justo, sollicitudin et dapibus nec, blandit mollis lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-Fusce justo urna, vehicula in volutpat at, finibus vel ipsum. Maecenas quis nisi non magna imperdiet pellentesque at ac dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean nibh enim, sagittis ut est sed, pretium posuere orci. Vivamus sit amet massa rutrum, aliquet leo et, pharetra lacus. Mauris ac quam fermentum risus cursus mollis. Vestibulum commodo rhoncus sapien, et tristique ligula pretium quis. Aenean lectus neque, tempus molestie dignissim vitae, rutrum vel leo. Morbi sollicitudin lacinia augue, vel cursus tellus pretium vitae. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tristique lorem consequat rutrum commodo. Proin molestie lectus nec sodales gravida.
 \subsection{Livecoding}
 RiftSketch
 
