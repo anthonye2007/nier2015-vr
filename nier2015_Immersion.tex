@@ -71,7 +71,13 @@ Chris Parnin developed a tool called NosePrints which allows users to quickly se
 RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.
 
 \section{Applications}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper a libero eu vulputate. Sed et mi ullamcorper felis sodales egestas vel et tortor. Vestibulum quis metus arcu. Pellentesque mattis magna nec turpis dignissim egestas. 
+% ties all application together
+% take advantage of the affordances of VR
+  % immersive env => lots of info at once
+  % stereoscopic => true 3D; depth
+Virtual environments can use the immersive property to display more information than on a computer monitor. We are still limited by the field of view of the human eye, so putting more information on the display is not novel, but what is novel is being able to distribute that information around the user in a meaningful way. This immersion is possible because the Rift uses stereoscopic rendering (creates a slightly different image for each eye) to enable depth sensing.
+
+In this section we describe how VR could aid in code review, live coding, remote collaboration, and simulation. Our main contribution is not these specific ideas, but to show the possibilities of software engineering with VR.
 
 \subsection{Code Review}
 % Why does code review need another tool?
@@ -138,6 +144,16 @@ VR worlds are also well-suited to applications with physical analogs that can be
 [3] - "NCrunch automated concurrent testing tool" NCrunch. NCrunch, 18 Sept. 2014. Web. 11 Nov. 2014. <http://www.ncrunch.net/>.
 
 \subsection{Remote Collaboration}
+% Imagining room inside HiFi with multiple avatars
+% each developer could have an avatar
+% able to get facial expressions
+% able to get body language (although somewhat expensive right now, these prices will come down)
+
+% code review
+% pair programming
+  % pair 'live coding'
+  % pair designing
+% exploring data visualization together
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper a libero eu vulputate. Sed et mi ullamcorper felis sodales egestas vel et tortor. Vestibulum quis metus arcu. Pellentesque mattis magna nec turpis dignissim egestas. Praesent ut dignissim lorem. Mauris lacinia sem eget erat hendrerit, ac vestibulum dui tempus. Mauris quis tellus a leo porta vehicula et eu est. Maecenas ut quam eros. Praesent a molestie felis. Suspendisse imperdiet ligula ac ante cursus, vitae dignissim elit rhoncus. Suspendisse sapien massa, rutrum non luctus in, accumsan eget velit. Nam mollis, ligula eget porta gravida, nibh mi euismod turpis, eget fermentum elit velit quis eros.
 
@@ -154,6 +170,24 @@ Duis aliquam tempor odio, ac cursus justo condimentum ac. Nulla ligula dui, lobo
 Pellentesque rutrum libero vitae massa consequat molestie. Nullam rutrum convallis ligula sed feugiat. Sed non imperdiet nisl. Ut at vulputate diam. Etiam ullamcorper efficitur libero, eu fringilla dui semper quis. Donec sapien elit, rhoncus vitae ullamcorper vitae, malesuada et diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
 
 \section{Open Research Questions}
+% VR vs AR in the future, which is better?
+  % code snippets while wearing Google Glass could appear on peripherals
+We have presented virtual environments that completely immerse the user. Other devices such as Google Glass, aim to help the user complete tasks in the physical world by adding information overlays (augmented reality). Augmented reality seeks to help the user in the physical world while virtual reality seeks to completely replace physical reality. 
+Is it more useful to immerse the user in a completely virtual, dynamic environment, or to enhance the physical world of developers?
+  
+% Manipulating environment
+% Utilize the 'experience'?
+  % Gamification of code review
+% Where is the limit for too much info displayed at once?
+% One main focal point (e.g. active fragment) or better to switch position to see other important things?
+  % With Immersion, the user is focused on the active fragment and I will use the peripherals for some extra info that isn't quite so important. This requires the user to rotate their head.
+  % But if I had a room then it would be much easier to have the user completely change their position (the Rift makes this uncomfortable with the wires)
+  % So if I had better equipment, would it be better to make one 'wall' primary and all others secondary or to allow all of them to become primary?
+% Does using a VR code review tool actually increase comprehension? Does it allow users to find bugs and provide alternative solutions?
+% What gestures are most natural in VR?
+% What use the z-axis for?
+% Use VR for specific activities?
+% Will a developer buy a Rift just for the tools?
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper a libero eu vulputate. Sed et mi ullamcorper felis sodales egestas vel et tortor. Vestibulum quis metus arcu. Pellentesque mattis magna nec turpis dignissim egestas. Praesent ut dignissim lorem. Mauris lacinia sem eget erat hendrerit, ac vestibulum dui tempus. Mauris quis tellus a leo porta vehicula et eu est. Maecenas ut quam eros. Praesent a molestie felis. Suspendisse imperdiet ligula ac ante cursus, vitae dignissim elit rhoncus. Suspendisse sapien massa, rutrum non luctus in, accumsan eget velit. Nam mollis, ligula eget porta gravida, nibh mi euismod turpis, eget fermentum elit velit quis eros.
 
