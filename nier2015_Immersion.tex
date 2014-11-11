@@ -32,6 +32,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper a lib
 \section{Introduction}
 Quality virtual reality (VR) is finally inexpensive enough for consumers, including software engineers, to invest in. No longer will we have to go to a physical room to be fully immersed in a virtual reality, within the next few years we will be able to simply reach over and put on our fully immersive VR sunglasses and headphones. Virtual reality is often applied only to the entertainment industry but we argue that it will greatly change software engineering as well. 
 
+[Affordances of VR - lots of info, stereoscopic (true 3D), immersive]
+
 Programmers have been tied to their monitors for too long. We stare at our three dimensional images on our two dimensional displays, unable to conceive of something greater. With VR we can truly be right next to the 3D graphics that we are creating. We can see the output of our system all around us, not just displayed on our second monitor.
 
 Software has been limited by physical world. For instance, more and larger monitors can increase programmer productivity but budget and desk size constrain this issue.
@@ -45,11 +47,11 @@ Virtual reality has been around since Ivan Sutherland's Sword of Damocles in 196
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{EvenOdd}
+\includegraphics[width=70mm]{EvenOdd}
 \caption{Possible setup with Rift \label{overflow}}
 \end{figure}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper a libero eu vulputate. Sed et mi ullamcorper felis sodales egestas vel et tortor. Vestibulum quis metus arcu. Pellentesque mattis magna nec turpis dignissim egestas. Praesent ut dignissim lorem. Mauris lacinia sem eget erat hendrerit, ac vestibulum dui tempus. Mauris quis tellus a leo porta vehicula et eu est. Maecenas ut quam eros. Praesent a molestie felis.
+[Describe each possible application in one sentence]
 
 \begin{figure*}[ht]
 \centering
@@ -110,28 +112,30 @@ We propose a tool that takes advantage of the affordances of VR to help reviewer
 % What makes a VR code review tool better than a 3D tool displayed on a monitor?
   % immersive (try to make this obvious from the above section)
 
+[Conclude and repeat how this tool could help developers rather than just looking cool]
+
 \subsection{Livecoding}
 RiftSketch
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{figures/riftsketch/closer}
+\includegraphics[width=80mm]{figures/riftsketch/closer}
 \caption{RiftSketch screenshot \label{riftsketch}}
 \end{figure}
 
 RiftSketch is a live coding environment built for VR. It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. RiftSketch presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. As the user types code into the editor, the world around them updates instantly to display the 3D scene dictated by their code. RiftSketch also allows the user to animate their scene via a callback function which is executed on every frame. The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
 
-Furthermore, RiftSketch provides the user with shortcuts and input methods to quickly edit numbers in the code that they write. Keyboard shortcuts allow the user to increment or decrement numbers in the code by increments of 0.1, 10 or 100. Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input; The user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. Numbers in the code could represent anything, from the X,Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
+Furthermore, RiftSketch provides the user with shortcuts and input methods to quickly edit numbers in the code that they write. Keyboard shortcuts allow the user to increment or decrement numbers in the code by increments of 0.1, 10 or 100. Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input: the user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. Numbers in the code could represent anything, from the X,Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
 
 Although the current implementation of RiftSketch is little more than a creative toy, the experience of using it shows the potential of practical applications. Largely inspired by Bret Victor's seminal lecture, "Inventing on Principle" [1][2], RiftSketch demonstrates the potency of giving a creator, or programmer, a direct and immediate connection to their creation. This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. RiftSketch is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a roadblock.  These benefits are especially evident in RiftSketch when the code describes a VR scene. Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
 
-In practical applications, one could extend the concept of live coding and tight feedback loops in order to create customized programming environment. VR programming environments could allow the user to take advantage of the malleability and expanse of virtual worlds. For example, a user could live code a widget that indicates some statistic of the code they are currently editing, such as the cyclomatic complexity, test coverage or test result. The widget would update itself as the user typed, not unlike existing code feedback tools[3], and they could position the widget in their virtual periphery.
+In practical applications, one could extend the concept of live coding and tight feedback loops in order to create customized programming environments. VR programming environments could allow the user to take advantage of the malleability and expanse of virtual worlds. For example, a user could live code a widget that indicates some statistic of the code they are currently editing, such as the cyclomatic complexity, test coverage or test result. The widget would update itself as the user typed, not unlike existing code feedback tools such as NCrunch[3], and they could position the widget in their virtual periphery.
 
 VR worlds are also well-suited to applications with physical analogs that can be simulated in 3D. For example, if a programmer was working on avionics software in a live coding environment, the VR world could include a simulation of a plane with moving control surfaces, propellers or a visualization of the aircraft's fuel injection system. The live coding environment would then give the programmer immediate visual feedback about the control flow and logic that they were programming. The programmer could scale the virtual plane to a manageable size to give her an overview of its behaviour, scale it to normal size and walk around the plane to inspect a particular control surface or scale it to larger than life-size, transport herself into the guts of the plane to watch a particular fuel valve respond to the state of the program.
 
 [1] - "Inventing on Principle" Vimeo. Bret Victor, 19 Jan. 2012. Web. 11 Nov. 2014. <http://vimeo.com/36579366>.
 [2] - "Transcript of Bret Victor's 'Inventing on Principle' talk" GitHub. Edward Z. Yang, 22 Aug. 2013. Web. 11 Nov. 2014. <https://github.com/ezyang/cusec2012-victor/blob/master/transcript.md>.
-[3] - "Ncrunch automated concurrent testing tool" Ncrunch. Ncrunch, 18 Sept. 2014. Web. 11 Nov. 2014. <http://www.ncrunch.net/>.
+[3] - "NCrunch automated concurrent testing tool" NCrunch. NCrunch, 18 Sept. 2014. Web. 11 Nov. 2014. <http://www.ncrunch.net/>.
 
 \subsection{Remote Collaboration}
 
