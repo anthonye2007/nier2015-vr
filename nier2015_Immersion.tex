@@ -42,26 +42,14 @@ VR devices render a slightly different image for each eye (stereoscopic renderin
 
 We believe that these affordances provide a platform for new kinds of software engineering tools. We imagine a future in which many software engineers find it most productive to design and build software within a VR environment. 
 
-There have been substantial amounts of VR research done in the past, but very little of it shown how VR can aid in software engineering. In this paper we present a vision of four software engineering activities that could benefit from VR.
-
-We envision a code review tool that enables developers to interact with the software primarily via head movement and hand gestures. The tool distributes information around the user according to relevance.
-
-We describe RiftSketch, a VR live coding environment that instantly updates user's surroundings as they code a 3D scene.
-
-We describe a remote collaboration tool that lets remote developers be right next to each other.
-
-We describe how VR could be used when creating applications with physical analogs to provide a simulation of those analogs.
-
 To immerse the user in a virtual environment we used a head-mounted display (Oculus Rift - Development Kit 2) and a Leap Motion Controller for gesture recognition. These devices are inexpensive (total is less than \$500) and future iterations of them could feasibly be used by a number of developers within five years.
-
-Virtual reality has been around since Ivan Sutherland's Sword of Damocles in 1968 but the hardware is finally of high enough quality with a consumer price point. This will enable widespread adoption within the decade.
 
 \begin{figure}[ht!]
 \centering
 \begin{subfigure}{.5\columnwidth}
 	\centering
 	\includegraphics[width=.4\linewidth]{figures/dk2}
-	\caption{Oculus Rift Development Kit 2 \label{fig:rift}}
+	\caption{Oculus Rift\label{fig:rift}}
 \end{subfigure}%
 \begin{subfigure}{.5\columnwidth}
   \centering
@@ -69,6 +57,10 @@ Virtual reality has been around since Ivan Sutherland's Sword of Damocles in 196
   \caption{Leap Motion Controller \label{fig:leap}}
 \end{subfigure}
 \end{figure}
+
+There have been substantial amounts of VR research done in the past, but very little of it has shown how VR can aid in software engineering. In this paper we present a vision of four software engineering activities that could benefit from VR.
+
+We illustrate how immersive 3D environments could make software engineering tools easier to learn and use, and to display more information without overwhelming users. We show that such environments enable much tighter feedback loops in development which helps software engineers develop faster and with fewer mistakes. We describe shared virtual environments that could increase communication among remote teams. We also illustrate how virtual reality can simulate fields that have physical analogs.
 
 \begin{figure*}[ht]
 \centering
@@ -124,8 +116,6 @@ Although the current implementation of RiftSketch is little more than a creative
 
 In practical applications, one could extend the concept of live coding and tight feedback loops in order to create customized programming environments. VR programming environments could allow the user to take advantage of the malleability and expanse of virtual worlds. For example, a user could live code a widget that indicates some statistic of the code they are currently editing, such as the cyclomatic complexity, test coverage or test result. The widget would update itself as the user typed, not unlike existing code feedback tools such as NCrunch \footnote{NCrunch automated concurrent testing tool: http://www.ncrunch.net/}, and they could position the widget in their virtual periphery.
 
-VR worlds are also well-suited to applications with physical analogs that can be simulated in 3D. For example, if a programmer was working on avionics software in a live coding environment, the VR world could include a simulation of a plane with moving control surfaces, propellers or a visualization of the aircraft's fuel injection system. The live coding environment would then give the programmer immediate visual feedback about the control flow and logic that they were programming. The programmer could scale the virtual plane to a manageable size to give her an overview of its behaviour, scale it to normal size and walk around the plane to inspect a particular control surface or scale it to larger than life-size, transport herself into the guts of the plane to watch a particular fuel valve respond to the state of the program.
-
 \subsection{Remote Collaboration}
 % Imagining room inside HiFi with multiple avatars
 % each developer could have an avatar
@@ -153,16 +143,9 @@ Remote workers could experience immersive visualizations together. A control flo
 Remote workers often miss out on many benefits that in-person communication can bring. Shared VR spaces tailored to developers' activities can fill some of the gaps caused by distance and help the team to function better together. 
 
 \subsection{Simulation}
+VR worlds are also well-suited to applications with physical analogs that can be simulated in 3D. For example, if a programmer was working on avionics software in a live coding environment, the VR world could include a simulation of a plane with moving control surfaces, propellers or a visualization of the aircraft's fuel injection system. The live coding environment would then give the programmer immediate visual feedback about the control flow and logic that they were programming. The programmer could scale the virtual plane to a manageable size to give her an overview of its behaviour, scale it to normal size and walk around the plane to inspect a particular control surface or scale it to larger than life-size, transport herself into the guts of the plane to watch a particular fuel valve respond to the state of the program.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper a libero eu vulputate. Sed et mi ullamcorper felis sodales egestas vel et tortor. Vestibulum quis metus arcu. Pellentesque mattis magna nec turpis dignissim egestas. Praesent ut dignissim lorem. Mauris lacinia sem eget erat hendrerit, ac vestibulum dui tempus. Mauris quis tellus a leo porta vehicula et eu est. Maecenas ut quam eros. Praesent a molestie felis. Suspendisse imperdiet ligula ac ante cursus, vitae dignissim elit rhoncus. Suspendisse sapien massa, rutrum non luctus in, accumsan eget velit. Nam mollis, ligula eget porta gravida, nibh mi euismod turpis, eget fermentum elit velit quis eros.
-
-Duis aliquam tempor odio, ac cursus justo condimentum ac. Nulla ligula dui, lobortis sed magna ut, feugiat dictum eros. Maecenas cursus tincidunt dui vitae mattis. Cras dictum id libero non scelerisque. Nunc fermentum est turpis. Quisque porttitor congue arcu. Nam auctor iaculis aliquam. Etiam tempor pellentesque dui, at ullamcorper leo bibendum et. Praesent dictum erat nec dignissim posuere. Nam eu aliquet purus, viverra feugiat lectus. Maecenas posuere diam et lacus feugiat, quis consectetur ante venenatis. Praesent lobortis lacus non vestibulum rhoncus.
-
-Pellentesque rutrum libero vitae massa consequat molestie. Nullam rutrum convallis ligula sed feugiat. Sed non imperdiet nisl. Ut at vulputate diam. Etiam ullamcorper efficitur libero, eu fringilla dui semper quis. Donec sapien elit, rhoncus vitae ullamcorper vitae, malesuada et diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-
-%\subsection{Visualization}
-%User can be immersed in the visualization
-
+[include rest of Brian's draft here]
 
 \section{Open Research Questions}
 % VR vs AR in the future, which is better?
@@ -199,9 +182,7 @@ What is needed for many developers to have a Rift? How many years before a devel
 \section{Conclusions}
 We have shown that virtual reality enables a new interaction paradigm that can improve developers' lives. The immersive environment allows users to process more information at once and stereoscopic rendering enables depth-sensing. Together, these affordances provide a novel platform for new software engineering tools.
 
-[recap each application]
-
-[paragraph on metaphorical programming]
+We have illustrated how immersive 3D environments could make software engineering tools easier to learn and use, and to display more information without overwhelming users. We have shown that such environments enable much tighter feedback loops in development which helps software engineers develop faster and with fewer mistakes. We have shown that shared virtual environments could increase communication among remote teams. We have also illustrated how virtual reality can simulate fields that have physical analogs.
 
 \bibliographystyle{abbrv}
 \bibliography{nier2015_Immersion}
