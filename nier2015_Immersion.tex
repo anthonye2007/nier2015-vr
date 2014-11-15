@@ -42,11 +42,12 @@ These two affordances from VR head-mounted displays enable the user to feel imme
 We envision a future where software engineers work in immersive environments which take advantage of more affordances of the human body than current workstations.
 
 %[Applications of VR in software engineering]
+% This section could be said in better words or bullet points, or VR, or *something*
 We describe our vision of what software engineering would look like with VR by illustrating various principles across four different immersive VR environments.
-First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information.
+First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information which leads to increased understanding of the software.
 Secondly, we show how an immersive live coding environment could enable much faster development times when creating 3D scenes.
 Next we show how a social immersive environment could improve communication among remote development teams.
-Finally, we show how an immersive environment could be used to provide faster feedback when affecting 3D objects.
+Finally, we show how an immersive environment could be used to experience physical analogs of abstract software.
 
 %[Discussion]
 We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
@@ -55,6 +56,7 @@ We provide a brief discussion of some open research questions and discuss some o
 % this is what VR can give that has not been captured by other domains
 % go into a bit of detail for each item
 % give concrete example of VR: we used the Rift and Leap Motion
+% the affordances allow an immersive environment: big whoop. Why should I care about an immersive environment?
 
 The text in this section is practically worthless. Will be updated later.
 
@@ -109,32 +111,36 @@ In this section we describe how VR could aid in code review, live coding, remote
 Our main contribution is not these specific ideas, but to show the possibilities of software engineering with VR.
 
 \subsection{Code Review}
-The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
-Immersion is a prototype of a VR tool that seeks to use the immersive 3D environment to enable reviewers to gain a better understanding of the code being modified. 
-The user views the environment through an Oculus Rift and interacts through hand gestures recognized by a Leap Motion Controller.
+%First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information which leads to increased understanding of the software.
 
+The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
+We created a prototype VR tool called Immersion that uses the overview and detail paradigm [cite] in three ways to allow reviewers to more easily find, analyze and navigate information relevant to the code being modified in this review.
+The user views the environment through an Oculus Rift and interacts with hand gestures recognized by a Leap Motion Controller.
+
+% piles vs circle
+\subsubsection{Piles as an Overview}
 Immersion shows code fragments similar to Code Bubbles~\cite{Bragdon:CodeBubbles}, but each fragment consists of exactly one method.  
 The reviewer initially sees the active fragment in the center of the screen with other relevant information distributed around the floor in piles with more relevant piles closer to the reviewer. 
 The reviewer is able to scan the label of the pile and number of fragments in each pile to quickly verify if this pile is indeed relevant. 
 The reviewer then makes a grabbing motion towards the most interesting pile and pulls their hand up to show all of the fragments in a circular expanded view to the right of the active fragment.
 
+% circle: foremost vs other fragments
+\subsubsection{Expanded Circle}
 The reviewer is now able to read the foremost fragment in the circle and can make horizontal finger swipes to rotate the circle and read other fragments. 
 Immersion uses semantic zoom to make method names readable even when at the back of the circle and the fragment retains its height so that the reviewer can quickly see how many lines of code it has. 
 The reviewer can select an especially large method using a pinch motion on the top and bottom and move it to become the active fragment. 
 The piles then change to include code relevant to the new fragment. 
 The reviewer can move their hand as if clearing off a desk to return to the previous active fragment.
 
-Natural interaction paradigms are not new, but are even more powerful in a immersive 3D environment where the user truly feels like they are \textit{inside} the environment. 
-This feeling of presence could make immersive VR tools easier to use when compared to a 3D tool displayed on computer screen. 
-
+% git diff + complexity vs active fragment
+\subsubsection{Big Picture}
 Immersion also displays overview diagrams of this changeset to allow the reviewer to see where this active fragment fits into the changeset as a whole. 
 Similarly an overview of the cyclomatic complexity also helps the reviewer to see which areas of the code would be most relevant to see. 
 These diagrams illustrate how VR is able to show multiple overview and detail diagrams without overwhelming the user.
 
-Immersion is merely a vehicle to demonstrate the advantages that VR can bring to software engineering. 
-Most software engineering tools don't display information in 3D because its not needed and merely looks cute. 
-An immersive 3D environment enables more information to be displayed which should increase developer productivity.
-Additionally, such a VR environment allows users to interact more naturally with the tool which would make VR tools easier to learn and use.
+Immersive VR environments have a lot more space for information display than current computer workstations.
+We used Immersion to illustrate that VR software engineering tools can use this increased space and the affordances of VR to more easily analyze and navigate the displayed information.
+% What does VR provide that makes this different from using a Leap with 5 monitors?
 
 \subsection{Live Coding}
 RiftSketch is a live coding environment built for VR. 
@@ -153,12 +159,12 @@ The user can manipulate the state of the 3D scene in this looped block of code i
 Furthermore, RiftSketch provides the user with shortcuts and input methods to quickly edit numbers in the code that they write. 
 Keyboard shortcuts allow the user to increment or decrement numbers in the code by increments of 0.1, 10 or 100. 
 Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input: the user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. 
-Numbers in the code could represent anything, from the X,Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
+Numbers in the code could represent anything, from the X, Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
 
 Although the current implementation of RiftSketch is little more than a creative toy, the experience of using it shows the potential of practical applications. 
 Largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}, RiftSketch demonstrates the potency of giving a creator, or programmer, a direct and immediate connection to their creation. 
 This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
-RiftSketch is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a roadblock.  
+RiftSketch is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hinderance.  
 These benefits are especially evident in RiftSketch when the code describes a VR scene. 
 Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
 
@@ -210,12 +216,11 @@ Remote workers often miss out on many benefits that in-person communication can 
 Shared VR spaces tailored to developers' activities can fill some of the gaps caused by distance and help the team to function better together. 
 
 \subsection{Simulation}
-VR worlds are also well-suited to applications with physical analogs that can be simulated in 3D. 
-For example, if a programmer was working on avionics software in a live coding environment, the VR world could include a simulation of a plane with moving control surfaces, propellers or a visualization of the aircraft's fuel injection system. 
-The live coding environment would then give the programmer immediate visual feedback about the control flow and logic that they were programming. 
-The programmer could scale the virtual plane to a manageable size to give her an overview of its behaviour, scale it to normal size and walk around the plane to inspect a particular control surface or scale it to larger than life-size, transport herself into the guts of the plane to watch a particular fuel valve respond to the state of the program.
+Virtual Reality is well-suited to applications with physical analogs that can be simulated in 3D. 
+Although simulation software is not uncommon, VR allows users to view, explore and manipulate simulated worlds in ways that would otherwise be awkward with typical 2D display hardware. 
 
-[include rest of Brian's draft here]
+For example, if a programmer was working on avionics software, the VR world could include a simulation of a plane with moving control surfaces, engines and a visualization of the aircraft's fuel system. 
+The programmer could scale the virtual plane to a manageable size to give her an overview of its behaviour, scale it to normal size and walk around the plane to inspect a particular control surface or scale it to larger than life-size and transport herself into the guts of the plane to watch a particular fuel valve respond to the state of the program.
 
 \section{Discussion}
 % VR vs AR in the future, which is better?
