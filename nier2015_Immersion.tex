@@ -43,15 +43,25 @@ We envision a future where software engineers work in immersive environments whi
 
 %[Applications of VR in software engineering]
 We describe our vision of what software engineering would look like with VR by illustrating various principles across four different immersive VR environments.
-First we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information.
-Secondly we show how an immersive live coding environment could enable much faster development times when creating 3D scenes.
+First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information.
+Secondly, we show how an immersive live coding environment could enable much faster development times when creating 3D scenes.
 Next we show how a social immersive environment could improve communication among remote development teams.
-Finally we show how an immersive environment could be used to provide faster feedback when affecting 3D objects.
+Finally, we show how an immersive environment could be used to provide faster feedback when affecting 3D objects.
 
 %[Discussion]
 We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
 
 \section{Affordances of Virtual Reality}
+% this is what VR can give that has not been captured by other domains
+% go into a bit of detail for each item
+% give concrete example of VR: we used the Rift and Leap Motion
+
+The text in this section is practically worthless. Will be updated later.
+
+Head-mounted VR displays allow the user to update their view by moving or rotating their neck, even a full 360 degrees.
+Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
+These two affordances from VR head-mounted displays enable the user to feel immersed in a virtual environment.
+
 VR devices render a slightly different image for each eye (stereoscopic rendering) which allows humans to sense depth in the images just like in the physical world. 
 VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
 This realistic imitation of the human body enables easier and more natural navigation as well as the ability to display more information at once in a meaningful way. 
@@ -85,24 +95,6 @@ In this paper we present a vision of four software engineering activities that c
 \includegraphics[width=\textwidth,height=5cm]{figures/unwarpped_stack}
 \caption{The active fragment is in the middle of the user's view. The user is currently looking at the implementations of the methods (shown to the right) called by the active fragment. The user is able to easily read 3 of these fragments at once.  \label{immersion}}
 \end{figure*}
-
-\section{Related Work}
-Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces~\cite{Cruz-Neira:CAVE}.  
-Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
-
-Andrew Bragdon has implemented a system called Code Bubbles that enables the user to pull out methods from a file. 
-The user is then able to move and group the methods as desired.  
-Code Bubbles also can display the call graph for the selected method and allows the user to open called methods~\cite{Bragdon:CodeBubbles}.
-
-Code Canvas added semantic zoom to the Code Bubbles tool, allowing the user to gain a better understanding of how the current section of the system fits into the system as a whole~\cite{DeLine:CodeCanvas}.
-
-Chris Parnin developed a tool called NosePrints which allows users to quickly see if a code smell is relevant~\cite{parnin:Noseprints}.
-
-Agarwala used piles to add structure to a 3D desktop.~\cite{Agarawala:BumpTop}
-
-Yongpisanpop created Bugarium that integrated a Leap Motion Controller to aid both interaction and visualization in a large-scale bug repository~\cite{Bugarium}.
-
-RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.~\cite{Jones:RoomAlive}
 
 \section{Applications}
 % ties all application together
@@ -262,6 +254,24 @@ What barriers of adoption will be present for software engineers and what steps 
 
 \subsection{Challenges}
 Here is a chance to include some honest things that need to be overcome, for example, resolution, nausea, configuration, pupil distance, etc.
+
+\section{Related Work}
+Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces~\cite{Cruz-Neira:CAVE}.  
+Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
+
+Andrew Bragdon has implemented a system called Code Bubbles that enables the user to pull out methods from a file. 
+The user is then able to move and group the methods as desired.  
+Code Bubbles also can display the call graph for the selected method and allows the user to open called methods~\cite{Bragdon:CodeBubbles}.
+
+Code Canvas added semantic zoom to the Code Bubbles tool, allowing the user to gain a better understanding of how the current section of the system fits into the system as a whole~\cite{DeLine:CodeCanvas}.
+
+Chris Parnin developed a tool called NosePrints which allows users to quickly see if a code smell is relevant~\cite{parnin:Noseprints}.
+
+Agarwala used piles to add structure to a 3D desktop.~\cite{Agarawala:BumpTop}
+
+Yongpisanpop created Bugarium that integrated a Leap Motion Controller to aid both interaction and visualization in a large-scale bug repository~\cite{Bugarium}.
+
+RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.~\cite{Jones:RoomAlive}
 
 \section{Conclusions}
 We have shown that virtual reality enables a new interaction paradigm that can improve developers' lives. 
