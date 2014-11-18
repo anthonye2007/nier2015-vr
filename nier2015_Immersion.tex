@@ -1,8 +1,13 @@
 
 \documentclass[conference]{IEEEtran}
+
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{subcaption}
+%\usepackage{caption}
+%\usepackage{subcaption}
+
+%\usepackage[turnoff]{notes}
+\usepackage[turnon]{notes}
 
 \begin{document}
 
@@ -34,7 +39,9 @@ This paper describes the benefits of virtual reality environments in software en
 
 \section{Introduction}
 %[Affordances of VR]
-Virtual reality (VR) could increase the productivity of software engineers by several orders of magnitude because it offers affordances not yet used in software engineering.
+
+Tools shapes 
+%Virtual reality (VR) could increase the productivity of software engineers by several orders of magnitude because it offers affordances not yet used in software engineering.
 Head-mounted VR displays allow the user to update their view by moving or rotating their neck, even a full 360 degrees.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
 These two affordances from VR head-mounted displays enable the user to feel immersed in a virtual environment.
@@ -57,7 +64,7 @@ We provide a brief discussion of some open research questions and discuss some o
 % give concrete example of VR: we used the Rift and Leap Motion
 % the affordances allow an immersive environment: big whoop. Why should I care about an immersive environment?
 
-The text in this section is practically worthless. Will be updated later.
+The text in this section is practically worthless. Will be updated later.\todo[Anthony]{Make not worthless.}
 
 Head-mounted VR displays allow the user to update their view by moving or rotating their neck, even a full 360 degrees.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
@@ -74,19 +81,19 @@ We imagine a future in which many software engineers find it most productive to 
 To immerse the user in a virtual environment we used a head-mounted display (Oculus Rift - Development Kit 2) and a Leap Motion Controller for gesture recognition. 
 These devices are inexpensive (total is less than \$500) and future iterations of them could feasibly be used by a number of developers within five years.
 
-\begin{figure}[ht!]
-\centering
-\begin{subfigure}{.5\columnwidth}
-	\centering
-	\includegraphics[width=.4\linewidth]{figures/dk2}
-	\caption{Oculus Rift\label{fig:rift}}
-\end{subfigure}%
-\begin{subfigure}{.5\columnwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{figures/LeapAndKeyboard}
-  \caption{Leap Motion Controller \label{fig:leap}}
-\end{subfigure}
-\end{figure}
+%\begin{figure}[ht!]
+%\centering
+%\begin{subfigure}{.5\columnwidth}
+%	\centering
+%	\includegraphics[width=.4\linewidth]{figures/dk2}
+%	\caption{Oculus Rift\label{fig:rift}}
+%\end{subfigure}%
+%\begin{subfigure}{.5\columnwidth}
+%  \centering
+%  \includegraphics[width=.4\linewidth]{figures/LeapAndKeyboard}
+%  \caption{Leap Motion Controller \label{fig:leap}}
+%\end{subfigure}
+%\end{figure}
 
 There have been substantial amounts of VR research done in the past, but very little of it has shown how VR can aid in software engineering. 
 In this paper we present a vision of four software engineering activities that could benefit from VR.
