@@ -21,7 +21,7 @@ anthony\_elliott@ncsu.edu}
 \and
 \IEEEauthorblockN{Brian Peiris}
 \IEEEauthorblockA{Toronto, Ontario, Canada\\
-brianpeiris@gmail.com}
+brian@peiris.io}
 \and
 \IEEEauthorblockN{Chris Parnin}
 \IEEEauthorblockA{Department of Computer Science\\
@@ -223,10 +223,13 @@ Shared VR spaces tailored to developers' activities can fill some of the gaps ca
 
 \subsection{Simulation}
 Virtual Reality is well-suited to applications with physical analogs that can be simulated in 3D. 
-Although simulation software is not uncommon, VR allows users to view, explore and manipulate simulated worlds in ways that would otherwise be awkward with typical 2D display hardware. 
+Although simulation software is not uncommon, 3D worlds are often difficult to to navigate and interact with when displayed on 2D devices. Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. Interacting with a simulation might require positioning a virtual cursor. 
 
-For example, if a programmer was working on avionics software, the VR world could include a simulation of a plane with moving control surfaces, engines and a visualization of the aircraft's fuel system. 
-The programmer could scale the virtual plane to a manageable size to give her an overview of its behaviour, scale it to normal size and walk around the plane to inspect a particular control surface or scale it to larger than life-size and transport herself into the guts of the plane to watch a particular fuel valve respond to the state of the program.
+VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly by physically turning their head to look around a simulated car plant or by using their hands, via a Leap Motion controller, to interact with a simulated robot. These direct interactions provide a subtle but important advantage over 2D-projected simulations. This sense of immersion gives the users unimpeded access to the simulation which would allow for quicker turn-around when testing or debugging the simulated software, especially if combined with a live-coding solution.
+
+For example, imagine you're a member of a space mission that has just landed a probe on the surface of a comet. After 10 years in flight, the probe has arrived at its destination against all odds but has landed at an odd angle and without deploying its anchoring harpoons. You are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die. 
+
+Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. You update your simulation with the data and step into VR to survey the situation. After assessing the lander's options, you live-code and iterate on a number of solutions. With each one you observe the lander's behaviour inside the simulation. You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. Finally, after having run the simulation dozens of times and being confident in your solution, you upload the program with time to spare. The lander repositions itself as expected and the historic mission can continue successfully.
 
 \section{Discussion}
 % VR vs AR in the future, which is better?
@@ -254,7 +257,7 @@ What is the best way for the user to provide input to a VR system?
 The games industry has found a console controller to work well for navigation and limited action support but those controllers are poorly suited for text entry. 
 However, while the keyboard is well suited for text entry, many people find it hard to type while wearing a head-mounted display. 
 Gesture recognition devices like the Leap Motion Controller and Kinect sensor enable the user to perform more natural gestures, but often put too much strain on the user's arms. 
-Voice added to gesture recognition could help to reduce that arm strain, but speaking to one's computer may feel disruptive and awkward in a shared office space.
+Voice recognition added to gesture recognition could help to reduce that arm strain, but speaking to one's computer may feel disruptive and awkward in a shared office space.
 
 How can software engineers take advantage of the affordances of VR to improve upon existing 3D visualizations?
 
