@@ -11,7 +11,7 @@
 
 \begin{document}
 
-\title{Consumer Virtual Reality in Software Engineering: Affordances, Applications, and Challenges}
+\title{Virtual Reality in Software Engineering: Affordances, Applications, and Challenges}
 
 \author{\IEEEauthorblockN{Anthony Elliott}
 \IEEEauthorblockA{Department of Computer Science\\
@@ -33,19 +33,81 @@ chris.parnin@ncsu.edu}}
 \begin{abstract}
 Software engineers primarily interact with software using a keyboard and mouse and typically view software on three or fewer monitors.
 This interaction paradigm does not take advantage of many affordances of natural human movement.
-Virtual reality environments designed for software engineering could greatly increase productivity by taking advantage of natural human affordances.
-This paper describes the benefits of virtual reality environments in software engineering, discusses open research questions, and examines challenges that need to be overcome.
+Virtual reality (VR) environments designed for software engineering could greatly increase productivity by taking advantage of natural human affordances.
+This paper describes several prototype applications for software engineering tools in VR, including a live coding environment and code review system, and discusses possible benefits, open research questions, and challenges and future research directions.
 \end{abstract}
 
 \section{Introduction}
-%[Affordances of VR]
 
-Tools shapes 
-%Virtual reality (VR) could increase the productivity of software engineers by several orders of magnitude because it offers affordances not yet used in software engineering.
-Head-mounted VR displays allow the user to update their view by moving or rotating their neck, even a full 360 degrees.
+Understanding, navigating, and changing software systems is daily challenge for software developers.
+Still, the fundamental design behind a programming environment has not significantly changed in decades.
+
+
+For example, consider the programming environment reduced to its fundamental form: a main window for viewing content with a set of navigational links (tabs, tree views, and search results) to allow transitions between content.  More advanced forms allow multiple fragments or windows software to be displayed at once.
+
+The choices developers have available so far is to choose between better links to software while coding in a main document (e.g. recommendation systems)
+or showing all the software (never escaping some form of view management due to the limited space to display content).
+
+Human capacity for attention and memory ground our designs; but limited design choices and increasing 
+scale of development efforts grate against these capacities.  
+Spatial memory.  Kuhn.
+
+The motivation for these approaches (spatial memory).
+
+Developers spend a large amount of time navigating source code.
+In a laboratory study of 10 experienced Java developers, Ko~\cite{KoMaintenance06} observed that developers lost track of relevant code because they had to temporally navigate to another location in code and forgot how to find the relevant code location again. Developers spent, on average, 35 percent of their time performing the mechanics of navigation within and between source files. Previously, I studied data~\cite{Parnin:2006b} from twelve programmers collected over several months of development activity in the professional workplace and found that developers work with 57--83 methods in a day (25\% and 75\% percentile respectively) and frequently switched between those methods as they worked. 60\% of transitions were to different classes.
+
+Observations of developers suggest they frequently rely on associations with \emph{environmental cues}\textemdash interface elements of the programming environment\textemdash 
+for navigating and understanding new code.  For example, Ko et al.~\cite{KoMaintenance06} observed that programmers use cues, such as open-document tabs and scrollbars, 
+for maintaining context during their programming tasks.  However, these cues are often insufficient: The act of navigation often disturbs the state of environmental cues, 
+and the paucity of interface elements, such as tabbed panes, which often only contain a file name, starves associability.
+In studies of developer navigation histories, a common finding is that developers frequently spend time flipping through open tabs because they fail to associate the tabs with desired code locations~\cite{Singer05}.
+
+
+%Interactive displays of various sizes and form can greatly expand the mental workspace of developers.  
+%Pulling aside a particular item of interest can be far easier and less costly than managing everything as a fragment or hoping for an 
+%intelligent heuristic to provide access to the correct artifacts.
+
+Objects: E-books vs textbooks.
+Motions, memory (kitten training).
+Importance of affordances.
+
+Our motivation and argument is simple: 
+Interaction and manipulation of virtual space is a compelling but relatively unexplored alternative to windowed programming environments.
+Head-mounted VR displays allow the user to update their view by moving their bodies or rotating their neck, even a full 360 degrees.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
 These two affordances from VR head-mounted displays enable the user to feel immersed in a virtual environment.
+
+When coupled with input devices, such as the Leap motion, ...
+
+Live feedback (update with hands).  Simulation sickness.
+
 We envision a future where software engineers work in immersive environments which take advantage of more affordances of the human body than current workstations.
+
+
+
+%Virtual reality (VR) could increase the productivity of software engineers by several orders of magnitude because it offers affordances not yet used in software engineering.
+Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
+After 10 years in flight, the probe lands against all odds but at an odd angle and without deploying its anchoring harpoons. 
+Programmers are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface.
+
+Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. 
+
+You update your simulation with the data and step into VR to survey the situation. 
+After assessing the lander's options, you live-code and iterate on a number of solutions. 
+With each one you observe the lander's behaviour inside the simulation. 
+You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
+
+One coder sends.
+
+Finally, after having run the simulation dozens of times and being confident in your solution, you upload the program with time to spare. 
+
+
+The lander repositions itself as expected and the historic mission can continue successfully.
+
+
+Reality to shine through.
+
 
 %[Applications of VR in software engineering]
 % This section could be said in better words or bullet points, or VR, or *something*
@@ -73,27 +135,29 @@ These two affordances from VR head-mounted displays enable the user to feel imme
 VR devices render a slightly different image for each eye (stereoscopic rendering) which allows humans to sense depth in the images just like in the physical world. 
 VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
 This realistic imitation of the human body enables easier and more natural navigation as well as the ability to display more information at once in a meaningful way. 
-We get the naturalness of the physical world and the malleabillity of the virtual world.
+We get the naturalness of the physical world and the malleability of the virtual world.
 
 We argue that these affordances provide a platform for new kinds of software engineering tools. 
 We imagine a future in which many software engineers find it most productive to design and build software within a VR environment. 
 
 To immerse the user in a virtual environment we used a head-mounted display (Oculus Rift - Development Kit 2) and a Leap Motion Controller for gesture recognition. 
-These devices are inexpensive (total is less than \$500) and future iterations of them could feasibly be used by a number of developers within five years.
 
-%\begin{figure}[ht!]
-%\centering
+\begin{figure}[ht!]
+\centering
 %\begin{subfigure}{.5\columnwidth}
 %	\centering
-%	\includegraphics[width=.4\linewidth]{figures/dk2}
-%	\caption{Oculus Rift\label{fig:rift}}
+\begin{tabular}{cc}
+	\includegraphics[width=.45\linewidth]{figures/setup/equipment}\label{fig:rift}
+ 	\includegraphics[width=.45\linewidth]{figures/setup/webcam_passthrough}\label{fig:leap}
+\end{tabular}
+\caption{Leap Motion with webcam attached to Rift (left), keyboard inside VR (right)}
+%	\caption{Leap Motion with webcam attached to Rift \label{fig:rift}}
 %\end{subfigure}%
 %\begin{subfigure}{.5\columnwidth}
 %  \centering
-%  \includegraphics[width=.4\linewidth]{figures/LeapAndKeyboard}
-%  \caption{Leap Motion Controller \label{fig:leap}}
+%  \caption{Leap Motion and keyboard inside VR \label{fig:leap}}
 %\end{subfigure}
-%\end{figure}
+\end{figure}
 
 There have been substantial amounts of VR research done in the past, but very little of it has shown how VR can aid in software engineering. 
 In this paper we present a vision of four software engineering activities that could benefit from VR.
@@ -223,13 +287,13 @@ Shared VR spaces tailored to developers' activities can fill some of the gaps ca
 
 \subsection{Simulation}
 Virtual Reality is well-suited to applications with physical analogs that can be simulated in 3D. 
-Although simulation software is not uncommon, 3D worlds are often difficult to to navigate and interact with when displayed on 2D devices. Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. Interacting with a simulation might require positioning a virtual cursor. 
+Although simulation software is not uncommon, 3D worlds are often difficult to to navigate and interact with when displayed on 2D devices. 
+Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. 
+Interacting with a simulation might require positioning a virtual cursor. 
 
-VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly by physically turning their head to look around a simulated car plant or by using their hands, via a Leap Motion controller, to interact with a simulated robot. These direct interactions provide a subtle but important advantage over 2D-projected simulations. This sense of immersion gives the users unimpeded access to the simulation which would allow for quicker turn-around when testing or debugging the simulated software, especially if combined with a live-coding solution.
-
-For example, imagine you're a member of a space mission that has just landed a probe on the surface of a comet. After 10 years in flight, the probe has arrived at its destination against all odds but has landed at an odd angle and without deploying its anchoring harpoons. You are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die. 
-
-Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. You update your simulation with the data and step into VR to survey the situation. After assessing the lander's options, you live-code and iterate on a number of solutions. With each one you observe the lander's behaviour inside the simulation. You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. Finally, after having run the simulation dozens of times and being confident in your solution, you upload the program with time to spare. The lander repositions itself as expected and the historic mission can continue successfully.
+VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly by physically turning their head to look around a simulated car plant or by using their hands, via a Leap Motion controller, to interact with a simulated robot. 
+These direct interactions provide a subtle but important advantage over 2D-projected simulations. 
+This sense of immersion gives the users unimpeded access to the simulation which would allow for quicker turn-around when testing or debugging the simulated software, especially if combined with a live-coding solution.
 
 \section{Discussion}
 % VR vs AR in the future, which is better?
@@ -298,6 +362,10 @@ Alternatively, users can remove their eyeglasses and use stronger lenses instead
 However, these alternative lenses still reduce the field of view slightly, are not as powerful as required for some users, and removing one's eyeglasses becomes annoying if done frequently.
 
 Increased resolution and easier configuration will help reduce nausea in users, and these improvements are necessary for widespread adoption by software engineers.
+
+\todo[Anthony]{Interacting with peers not in VR, mental cost of "jacking in", how webcam projection can alleviate some of this.}
+\todo[Anthony]{Mapping problems that aren't necessarily 3d to have a 3d representation in VR.}
+
 
 \section{Related Work}
 Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces~\cite{Cruz-Neira:CAVE}.  
