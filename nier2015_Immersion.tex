@@ -34,7 +34,7 @@ chris.parnin@ncsu.edu}}
 Software engineers primarily interact with software using a keyboard and mouse and typically view software on three or fewer monitors.
 This interaction paradigm does not take advantage of many affordances of natural human movement and perception.
 Virtual reality (VR) environments designed for software engineering could greatly increase productivity by taking advantage of innate affordances.
-This paper describes several prototype applications for software engineering tools in VR, including a live coding environment and code review system, and discusses possible benefits, open research questions, and challenges and future research directions.
+This paper describes several prototype applications for software engineering tools in VR, including a live coding environment and code review system, and discusses possible benefits, open research questions, challenges, and future research directions.
 \end{abstract}
 
 \section{Introduction}
@@ -51,26 +51,7 @@ due to insufficient ability to navigate and understand the code under review~\ci
 Researchers have explored the underlying cognitive issues to several problems developers experience~\cite{Parnin:MemoryFailures}.
 For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{KoMaintenance06} observed that developers lost track of relevant code because they had to temporally navigate to another location in code and forgot how to find the relevant code location again because the cues they relied on: position of scroll bars and document tabs where unstable and were disrupted as a result of their navigation.  Kuhn~\cite{CodeMaps} describes how developers maintain an internal spatial representation of code, and often refer to code as being "above" or "below" one another.
 
-% Data Mountain: http://www.microsoft.com/usability/UEPostings/p153-robertson.pdf
-\emph{Affordances}, are devices that often leverage innate cognitive mechanisms when performing actions in an environment, and can result in increased task performance. 
-Researchers have attempted to improve interfaces and programming environments that incorporate the human capacity for attention, cognition, and memory.
-For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Data Mountain}. 
-After 6 months\todo{Check 6 months or 1 year}, participants could still recall the bookmarks based on position alone. Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
-
-%(stable locations), code bubbles (quick associations), patchworks (reduce view management issues in code bubbles).
-
-
-%Andrew Bragdon has implemented a system called Code Bubbles that enables the user to pull out methods from a file. 
-%The user is then able to move and group the methods as desired.  
-%Code Bubbles also can display the call graph for the selected method and allows the user to open called methods.
-
-%Code Canvas added semantic zoom to the Code Bubbles tool, allowing the user to gain a better understanding of how the current section of the system fits into the system as a whole~\cite{DeLine:CodeCanvas}.
-
-
-
-% lacked a set of rich and stable environmental cues.
-
-\begin{figure}[ht!]
+\begin{figure}[ht]
 \centering
 %\begin{subfigure}{.5\columnwidth}
 %	\centering
@@ -87,42 +68,26 @@ After 6 months\todo{Check 6 months or 1 year}, participants could still recall t
 %\end{subfigure}
 \end{figure}
 
-\todo{EkstEta VR|: Weave in virtual space earlier, talk about navigation in VR triggering place cells too.}
+% Data Mountain: http://www.microsoft.com/usability/UEPostings/p153-robertson.pdf
+\emph{Affordances}, are devices that often leverage innate cognitive mechanisms when performing actions in an environment, and can result in increased task performance. 
+Researchers have attempted to improve interfaces and programming environments that incorporate the human capacity for attention, cognition, and memory.
+For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Data Mountain}. 
+After 6 months\todo{Check 6 months or 1 year}, participants could still recall the bookmarks based on position alone.  Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could observed as a person navigated a virtual town and when later recalling the paths through the town~\cite{EkstEta}.
 
-Our motivation and argument is simple: 
-Introducing affordances that leverage human capabilities can lead to improvements in programming environments.
-Interaction and manipulation of virtual space is a compelling but relatively unexplored alternative to windowed programming environments, with a new capacities to support affordances not currently available in existing programming environments.
+Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
 
 Head-mounted VR displays allow the user to update their view by moving their bodies or rotating their neck, even a full 360 degrees.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
-These two affordances from VR head-mounted displays enable the user to feel immersed in a virtual environment.
+When coupled with input devices, such as the Leap motion, that allow direct manipulation with the hand, and live feedback in the environment, these affordances enable the user to feel immersed in a virtual environment.
 
-When coupled with input devices, such as the Leap motion, ...
+%Live feedback (update with hands).  Simulation sickness.
 
-Live feedback (update with hands).  Simulation sickness.
+Our motivation and argument is simple: 
+Introducing affordances that leverage human capabilities can lead to improvements in programming environments.
+Interaction and manipulation of virtual space is a compelling but relatively unexplored alternative to windowed programming environments, with a set of new capacities to support affordances not currently available in existing programming environments.   Understanding the challenges and benefits offered by programming environments supported by VR is a space worth exploring.
 
-We envision a future where software engineers work in immersive environments which take advantage of more affordances of the human body than current workstations.
-We argue that these affordances provide a platform for new kinds of software engineering tools. 
-We imagine a future in which many software engineers find it most productive to design and build software within a VR environment. 
-
-
-
-%Place cells, navigation, Kuhn (natural). Disorientation here.  Research has gradually introduced solutions that incrementally introduce elements that improve spatial memory support in programming environments (Desert, code canvas, code bubbles, patchworks, etc).  But where is the design ultimately heading?
-
-%Understanding, navigating, and changing software systems is daily challenge for software developers.
-
-%a main window for viewing content with a set of navigational links (tabs, tree views, and search results) to allow transitions between content.  
-%Research advances: More advanced forms allow multiple fragments or windows software to be displayed at once.
-
-%but limited design choices and increasing 
-%scale of development efforts grate against these capacities.  
-%Spatial memory.  Kuhn.
-
-% http://www.scientificamerican.com/article/reading-paper-screens/
-% http://healthland.time.com/2012/03/14/do-e-books-impair-memory/
-
-%The choices developers have available so far is to choose between better links to software while coding in a main document (e.g. recommendation systems)
-%or showing all the software (never escaping some form of view management due to the limited space to display content).
+In this paper, we describe a set of affordances that VR provides and describe how they can be beneficial to integrate into programming environments.  
+We then describe a scenario which describes a future programming environment which fully integrates VR.  We then describe several systems we have prototyped to begin realizing this scenario and how the systems can be used in several applications related to software engineering.  Finally, Ww provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
 
 \begin{figure*}[ht]
 \centering
@@ -131,67 +96,30 @@ We imagine a future in which many software engineers find it most productive to 
 \end{figure*}
 
 
-%The motivation for these approaches (spatial memory).
-
-%Developers spend a large amount of time navigating source code.
-%In a laboratory study of 10 experienced Java developers, Ko. Developers spent, on average, 35 percent of their time performing the mechanics of navigation within and between source files. Previously, I studied data~\cite{Parnin:2006b} from twelve programmers collected over several months of development activity in the professional workplace and found that developers work with 57--83 methods in a day (25\% and 75\% percentile respectively) and frequently switched between those methods as they worked. 60\% of transitions were to different classes.
-
-%Observations of developers suggest they frequently rely on associations with \emph{environmental cues}\textemdash interface elements of the programming environment\textemdash 
-%for navigating and understanding new code.  For example, Ko et al.~\cite{KoMaintenance06} observed that programmers use cues, such as open-document tabs and scrollbars, 
-%for maintaining context during their programming tasks.  However, these cues are often insufficient: The act of navigation often disturbs the state of environmental cues, 
-%and the paucity of interface elements, such as tabbed panes, which often only contain a file name, starves associability.
-%In studies of developer navigation histories, a common finding is that developers frequently spend time flipping through open tabs because they fail to associate the tabs with desired code locations~\cite{Singer05}.
-
-%Interactive displays of various sizes and form can greatly expand the mental workspace of developers.  
-%Pulling aside a particular item of interest can be far easier and less costly than managing everything as a fragment or hoping for an 
-%intelligent heuristic to provide access to the correct artifacts.
-
-%[Applications of VR in software engineering]
-% This section could be said in better words or bullet points, or VR, or *something*
-We describe our vision of what software engineering would look like with VR by illustrating various principles across four different immersive VR environments.
-First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information which leads to increased understanding of the software.
-Secondly, we show how an immersive live coding environment could enable much faster development times when creating 3D scenes.
-Next we show how a social immersive environment could improve communication among remote development teams.
-Finally, we show how an immersive environment could be used to experience physical analogs of abstract software.
-
-%[Discussion]
-We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
-
-
-
-\section{Background}
-
+\section{Affordances in Virtual Reality}
+\todo[Chris]{Make not worthless.}
 % this is what VR can give that has not been captured by other domains
 % go into a bit of detail for each item
 % give concrete example of VR: we used the Rift and Leap Motion
 % the affordances allow an immersive environment: big whoop. Why should I care about an immersive environment?
 
-Design principles.
+\subsubsection{Spatial Cognition and Memory}
 
-The text in this section is practically worthless. Will be updated later.\todo[Anthony]{Make not worthless.}
+In addition to affordances of depth and ... six degrees.
+%VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
 
-Head-mounted VR displays allow the user to update their view by moving or rotating their neck, even a full 360 degrees.
-Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
-These two affordances from VR head-mounted displays enable the user to feel immersed in a virtual environment.
+\begin{quote}
+In nature, information comes with a physical address (and often a temporal one), and one can navigate to and from the address. Those raspberry patches we found last year are over the hill and through the woods\textemdash and they are still over the hill and through the woods.
+\end{quote}
 
-VR devices render a slightly different image for each eye (stereoscopic rendering) which allows humans to sense depth in the images just like in the physical world. 
-VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
-This realistic imitation of the human body enables easier and more natural navigation as well as the ability to display more information at once in a meaningful way. 
-We get the naturalness of the physical world and the malleability of the virtual world.
-
-
-\subsection{Affordances in Virtual Reality}
+%VR devices render a slightly different image for each eye (stereoscopic rendering) which allows humans to sense depth in the images just like in the physical world. 
+%VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
+%This realistic imitation of the human body enables easier and more natural navigation as well as the ability to display more information at once in a meaningful way. 
+%We get the naturalness of the physical world and the malleability of the virtual world.
 
 Objects: E-books vs textbooks.
 Motions, memory (kitten training).
 Liveness
-
-Importance of affordances.
-
-
-\subsubsection{Spatial Cognition and Memory}
-
-%In nature, information comes with a physical address (and often a temporal one), and one can navigate to and from the address. Those raspberry patches we found last year are over the hill and through the woods Ñ and they are still over the hill and through the woods.
 
 Virtual environments can use the immersive property to display more information than on a computer monitor. 
 We are still limited by the field of view of the human eye, so putting more information on the display is not novel, but what is novel is being able to distribute that information around the user in a meaningful way. 
@@ -199,7 +127,6 @@ This immersion is possible because the Rift uses stereoscopic rendering (creates
 
 Affodanrance =>
 Data mountain. More pathways => more activation. LTP persistence. notes: predict longer term retention.
-
 
 \subsubsection{Motion}
 
@@ -214,8 +141,6 @@ walking paper, creativity..
 
 \subsubsection{Liveness}
 
-
-
 There have been substantial amounts of VR research done in the past, but very little of it has shown how VR can aid in software engineering. 
 In this paper we present a vision of four software engineering activities that could benefit from VR.
 
@@ -229,7 +154,7 @@ Thankfully the companion orbiter has gathered detailed information about the sur
 
 You update your simulation with the data and step into VR to survey the situation. 
 After assessing the lander's options, you live-code and iterate on a number of solutions. 
-With each one you observe the lander's behaviour inside the simulation. 
+With each one you observe the lander's behavior inside the simulation. 
 You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
 
 One coder sends. (code review, sees replay of simulation), notices potential for clipping side?  Code related bug... new path booster reversion code not able to handle when at angle.
@@ -396,6 +321,13 @@ The widget would update itself as the user typed, not unlike existing code feedb
 \subsection{Open Questions}
 
 \todo[Anthony]{Either expand or cut out stand-alone questions without discussion}
+
+\subsubsection{Degrees of Immersion}
+
+Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces~\cite{Cruz-Neira:CAVE}.  
+Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
+RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.~\cite{Jones:RoomAlive}
+
 Other devices such as Google Glass, aim to help the user complete tasks in the physical world by adding information overlays (augmented reality). 
 Augmented reality seeks to help the user in the physical world while virtual reality seeks to completely replace physical reality. 
 Is it more useful to immerse the user in a completely virtual, dynamic environment, or to enhance the physical world of developers?
@@ -403,9 +335,9 @@ Is it more useful to immerse the user in a completely virtual, dynamic environme
 % Manipulating environment
 % Utilize the 'experience'?
   % Gamification of code review
-\todo{If the paper is done right, this question should not need to be asked.  Open question is a missing argument. Not good}
-Virtual reality is able to make users feel `presence', that is, to trick their mind into thinking they are physically in the environment. 
-This is critical to entertainment experiences but would creating such a compelling experience have tangible benefits like improved defect detection rate in a code review environment? 
+%\todo{If the paper is done right, this question should not need to be asked.  Open question is a missing argument. Not good}
+%Virtual reality is able to make users feel `presence', that is, to trick their mind into thinking they are physically in the environment. 
+%This is critical to entertainment experiences but would creating such a compelling experience have tangible benefits like improved defect detection rate in a code review environment? 
 
 % Where is the limit for too much info displayed at once?
 The main advantage of VR is being able to display more information at once to the user.  
@@ -475,21 +407,80 @@ Increased resolution and easier configuration will help reduce nausea in users, 
 
 \todo{Potential to kill this section because, we can instead cite through out paper}
 
-Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces~\cite{Cruz-Neira:CAVE}.  
-Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
-
-Chris Parnin developed a tool called NosePrints which allows users to quickly see if a code smell is relevant~\cite{parnin:Noseprints}.
+%Chris Parnin developed a tool called NosePrints which allows users to quickly see if a code smell is relevant~\cite{parnin:Noseprints}.
 
 Agarwala used piles to add structure to a 3D desktop.~\cite{Agarawala:BumpTop}
 
 Yongpisanpop created Bugarium that integrated a Leap Motion Controller to aid both interaction and visualization in a large-scale bug repository~\cite{Bugarium}.
 
-RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.~\cite{Jones:RoomAlive}
+
 
 \section{Conclusions}
-We have shown that virtual reality enables a new interaction paradigm that can improve developers' lives. 
-The immersive environment allows users to process more information at once and stereoscopic rendering enables depth-sensing. 
-Together, these affordances provide a novel platform for new software engineering tools.
+%We have shown that virtual reality enables a new interaction paradigm that can improve developers' lives. 
+%The immersive environment allows users to process more information at once and stereoscopic rendering enables depth-sensing. 
+%Together, these affordances provide a novel platform for new software engineering tools.
+
+We envision a future where software engineers work in immersive environments which take advantage of more affordances of the human body than current workstations.
+We argue that these affordances provide a platform for new kinds of software engineering tools. 
+%We imagine a future in which many software engineers find it most productive to design and build software within a VR environment. 
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%% NOTES
+%%%%%%%%%%%%%%%%%%%%%
+
+%We describe our vision of what software engineering would look like with VR by illustrating various principles across four different immersive VR environments.
+%First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information which leads to increased understanding of the software. Secondly, we show how an immersive live coding environment could enable much faster development times when creating 3D scenes.
+%Next we show how a social immersive environment could improve communication among remote development teams.
+%Finally, we show how an immersive environment could be used to experience physical analogs of abstract software.
+%We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
+%[Discussion]
+
+%(stable locations), code bubbles (quick associations), patchworks (reduce view management issues in code bubbles).
+
+%Andrew Bragdon has implemented a system called Code Bubbles that enables the user to pull out methods from a file. 
+%The user is then able to move and group the methods as desired.  
+%Code Bubbles also can display the call graph for the selected method and allows the user to open called methods.
+
+%Code Canvas added semantic zoom to the Code Bubbles tool, allowing the user to gain a better understanding of how the current section of the system fits into the system as a whole~\cite{DeLine:CodeCanvas}.
+% lacked a set of rich and stable environmental cues.
+
+%Place cells, navigation, Kuhn (natural). Disorientation here.  Research has gradually introduced solutions that incrementally introduce elements that improve spatial memory support in programming environments (Desert, code canvas, code bubbles, patchworks, etc).  But where is the design ultimately heading?
+
+%Understanding, navigating, and changing software systems is daily challenge for software developers.
+
+%a main window for viewing content with a set of navigational links (tabs, tree views, and search results) to allow transitions between content.  
+%Research advances: More advanced forms allow multiple fragments or windows software to be displayed at once.
+
+%but limited design choices and increasing 
+%scale of development efforts grate against these capacities.  
+%Spatial memory.  Kuhn.
+
+% http://www.scientificamerican.com/article/reading-paper-screens/
+% http://healthland.time.com/2012/03/14/do-e-books-impair-memory/
+
+%The choices developers have available so far is to choose between better links to software while coding in a main document (e.g. recommendation systems)
+%or showing all the software (never escaping some form of view management due to the limited space to display content).
+
+
+%The motivation for these approaches (spatial memory).
+
+%Developers spend a large amount of time navigating source code.
+%In a laboratory study of 10 experienced Java developers, Ko. Developers spent, on average, 35 percent of their time performing the mechanics of navigation within and between source files. Previously, I studied data~\cite{Parnin:2006b} from twelve programmers collected over several months of development activity in the professional workplace and found that developers work with 57--83 methods in a day (25\% and 75\% percentile respectively) and frequently switched between those methods as they worked. 60\% of transitions were to different classes.
+
+%Observations of developers suggest they frequently rely on associations with \emph{environmental cues}\textemdash interface elements of the programming environment\textemdash 
+%for navigating and understanding new code.  For example, Ko et al.~\cite{KoMaintenance06} observed that programmers use cues, such as open-document tabs and scrollbars, 
+%for maintaining context during their programming tasks.  However, these cues are often insufficient: The act of navigation often disturbs the state of environmental cues, 
+%and the paucity of interface elements, such as tabbed panes, which often only contain a file name, starves associability.
+%In studies of developer navigation histories, a common finding is that developers frequently spend time flipping through open tabs because they fail to associate the tabs with desired code locations~\cite{Singer05}.
+
+%Interactive displays of various sizes and form can greatly expand the mental workspace of developers.  
+%Pulling aside a particular item of interest can be far easier and less costly than managing everything as a fragment or hoping for an 
+%intelligent heuristic to provide access to the correct artifacts.
+
+%[Applications of VR in software engineering]
+% This section could be said in better words or bullet points, or VR, or *something*
+
 
 \bibliographystyle{abbrv}
 \bibliography{nier2015_Immersion}
