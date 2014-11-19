@@ -126,10 +126,12 @@ In nature, information comes with a physical address (and often a temporal one),
 
 \subsubsection{Manipulation and Motion}
 
-The affordances provided by interaction with of a physical object can result in improved perception and retention. 
-For example, when comparing text read on paper versus read on computer displays, 
-comprehension and recall of the text is better when read on paper~\cite{}.  
-Additionally, the ability to serendipitously browse and relocate material is improved on paper due to the affordances offered by manipulating and turning pages.
+Manipulation is an important affordance.  The affordances provided by interaction with of a physical object can result in improved perception and retention. 
+For example, consider the affordances offered by manipulating and turning pages of a book.
+Numerous studies have established that when text read on paper versus read on computer displays; 
+as a result, comprehension and recall of the text is better when read on paper~\cite{}.  
+Additionally, the ability to serendipitously browse and relocate material is improved on paper due 
+to the ability to turn pages.
 %especially when the content is complexity.
 %Objects: E-books vs textbooks.
 %manipulation with leap motion.
@@ -151,8 +153,21 @@ Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{h
 
 \subsubsection{Liveness}
 
-There have been substantial amounts of VR research done in the past, but very little of it has shown how VR can aid in software engineering. 
-In this paper we present a vision of four software engineering activities that could benefit from VR.
+%There have been substantial amounts of VR research done in the past, but very little of it has shown how VR can aid in software engineering. 
+%In this paper we present a vision of four software engineering activities that could benefit from VR.
+Liveness is a powerful affordance that can be defined by the degree and speed of responsiveness to actions offered by an environment.
+When liveness is violated, the results can be nauseating.
+Simulator sickness is distinct from motion sickness, in that it arises due to a mismatch between a person's interaction and the response of the environment.
+For example, a person in virtual reality can become nauseous when they attempt to interact with the system but the system does not respond quickly enough.
+This is most apparent with head rotation, where users rotate their physical heads expecting to see an updated view but still see the initial view.
+
+Need to introduce live coding here, cite something.  Split some here, some in discussion.
+
+Largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}, RiftSketch demonstrates the potency of giving a creator, or programmer, a direct and immediate connection to their creation. 
+This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
+RiftSketch is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hinderance.  
+These benefits are especially evident in RiftSketch when the code describes a VR scene. 
+Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
 
 \subsubsection{Bending reality}
 
@@ -322,11 +337,7 @@ This sense of immersion gives the users unimpeded access to the simulation which
 We have presented two systems with applications in software engineering.
 
 Although the current implementation of RiftSketch is little more than a creative toy, the experience of using it shows the potential of practical applications. 
-Largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}, RiftSketch demonstrates the potency of giving a creator, or programmer, a direct and immediate connection to their creation. 
-This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
-RiftSketch is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hinderance.  
-These benefits are especially evident in RiftSketch when the code describes a VR scene. 
-Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
+<Mention hours logged in live coding>
 
 In practical applications, one could extend the concept of live coding and tight feedback loops in order to create customized programming environments. 
 VR programming environments could allow the user to take advantage of the malleability and expanse of virtual worlds. 
@@ -382,10 +393,8 @@ VR technology has come a long ways but there are still challenges that need to b
 
 \todo[Anthony]{Generalize things that can be overcome by a "technology gap" section.  }
 \subsection{Nausea}
-The main challenge to be overcome is nausea, or simulator sickness.
-Users can become nauseous when they attempt to interact with the system but the system does not respond quickly enough.
-This is most apparent with head rotation, where users rotate their physical heads expecting to see an updated view but still see the initial view.
-This issue can largely be solved by using higher quality gaming graphics cards.
+Text moved into affordances (Negative into a positive).
+%This issue can largely be solved by using higher quality gaming graphics cards.
 
 \subsection{Resolution}
 The Development Kit 2 of the Oculus Rift has a resolution of 1080p (ensure they say this on the website) but this allows merely passable reading of text. 
