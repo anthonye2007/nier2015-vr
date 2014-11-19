@@ -39,20 +39,20 @@ This paper describes several prototype applications for software engineering too
 
 \section{Introduction}
 
-%Understanding, navigating, and changing software systems is daily challenge for software developers.
-Human capacity for attention, cognition, and memory [guide our designs].
-ideally we try to take this into account.
-But
 Programming environments have not significantly changed in decades, 
-despite advances in understanding of [memory].
+despite advances in psychology, neuroscience, and social aspects of software development.
+And as a result, problems still persist.  Developers still experience disorientation when navigating code~\cite{PatchWorks?}.
+Developers still experience problems comprehending code~\cite{Tobias}.  These basic issues also impede other important software engineering activities, for example,
+when performing a code review, developers mostly report issues, such as code convention violations, instead of discussing design flaws or defects
+due to insufficient ability to navigate and understand the code under review~\cite{bacchelli:ModernCodeReviewChallenges}.  Other challenges, such as remote pairing, still persist.
 
-And as a result, problems still persist.  For example, we know the importance of spatial memory.
+%The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
+Researchers have attempted to improve programming environments by better understanding the human capacity for attention, cognition, and memory.
+For example, \emph{spatial memory}, definition, has .
 Place cells, navigation, Kuhn (natural). Disorientation here.  Research has gradually introduced solutions that incrementally introduce elements that improve spatial memory support in programming environments (Desert, code canvas, code bubbles, patchworks, etc).  But where is the design ultimately heading?
 
+%Understanding, navigating, and changing software systems is daily challenge for software developers.
 Code canvas (stable locations), code bubbles (quick associations), patchworks (reduce view management issues in code bubbles).
-
-Affodanrance =>
-Data mountain. More pathways => more activation. LTP persistence. notes: predict longer term retention.
 
 a main window for viewing content with a set of navigational links (tabs, tree views, and search results) to allow transitions between content.  
 Research advances: More advanced forms allow multiple fragments or windows software to be displayed at once.
@@ -75,7 +75,7 @@ Research advances: More advanced forms allow multiple fragments or windows softw
 %\end{subfigure}
 \end{figure}
 
-Developers commonly experience disorientation when navigating to code. 
+
 The disorientation stems from associative memory failures that arise when a developer must recall information about the places of code they are viewing or what to view next.
 Researchers believe the lack of rich and stable environmental cues in interface elements, such as document tabs, 
 prevent associative memories from being recalled.
@@ -85,9 +85,17 @@ but limited design choices and increasing
 scale of development efforts grate against these capacities.  
 Spatial memory.  Kuhn.
 
+% http://www.scientificamerican.com/article/reading-paper-screens/
+% http://healthland.time.com/2012/03/14/do-e-books-impair-memory/
 
 %The choices developers have available so far is to choose between better links to software while coding in a main document (e.g. recommendation systems)
 %or showing all the software (never escaping some form of view management due to the limited space to display content).
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=\textwidth,height=5cm]{figures/unwarpped_stack}
+\caption{The active fragment is in the middle of the user's view. The user is currently looking at the implementations of the methods (shown to the right) called by the active fragment. The user is able to easily read 3 of these fragments at once.  \label{immersion}}
+\end{figure*}
 
 
 The motivation for these approaches (spatial memory).
@@ -140,6 +148,7 @@ We provide a brief discussion of some open research questions and discuss some o
 
 
 \section{Background}
+
 % this is what VR can give that has not been captured by other domains
 % go into a bit of detail for each item
 % give concrete example of VR: we used the Rift and Leap Motion
@@ -167,10 +176,18 @@ Virtual environments can use the immersive property to display more information 
 We are still limited by the field of view of the human eye, so putting more information on the display is not novel, but what is novel is being able to distribute that information around the user in a meaningful way. 
 This immersion is possible because the Rift uses stereoscopic rendering (creates a slightly different image for each eye) to enable depth sensing.
 
+Affodanrance =>
+Data mountain. More pathways => more activation. LTP persistence. notes: predict longer term retention.
+
+
 \subsubsection{Motion}
 
 Objects: E-books vs textbooks.
 Motions, memory (kitten training).
+
+%Computer- vs. paper-based tasks: are they equivalent?
+%Noyes JM, Garland KJ.
+%Ergonomics. 2008 Sep;51(9):1352-75. doi: 10.1080/00140130802170387. Review.
 
 \subsubsection{Liveness}
 
@@ -180,13 +197,6 @@ There have been substantial amounts of VR research done in the past, but very li
 In this paper we present a vision of four software engineering activities that could benefit from VR.
 
 \section{Motivation Example}
-
-\begin{figure*}[ht]
-\centering
-\includegraphics[width=\textwidth,height=5cm]{figures/unwarpped_stack}
-\caption{The active fragment is in the middle of the user's view. The user is currently looking at the implementations of the methods (shown to the right) called by the active fragment. The user is able to easily read 3 of these fragments at once.  \label{immersion}}
-\end{figure*}
-
 
 Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
 After 10 years in flight, the probe lands against all odds but at an odd angle and without deploying its anchoring harpoons. 
@@ -263,8 +273,8 @@ Numbers in the code could represent anything, from the X, Y or Z components of a
 \subsection{Code Review}
 %First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information which leads to increased understanding of the software.
 
-The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
-The user views the environment through an Oculus Rift and interacts with hand gestures recognized by a Leap Motion Controller.
+% Redudant.
+%The user views the environment through an Oculus Rift and interacts with hand gestures recognized by a Leap Motion Controller.
 
 % piles vs circle
 \subsubsection{Piles as an Overview}
@@ -362,6 +372,7 @@ The widget would update itself as the user typed, not unlike existing code feedb
 
 \subsection{Open Questions}
 
+\todo[Anthony]{Either expand or cut out stand-alone questions without discussion}
 Other devices such as Google Glass, aim to help the user complete tasks in the physical world by adding information overlays (augmented reality). 
 Augmented reality seeks to help the user in the physical world while virtual reality seeks to completely replace physical reality. 
 Is it more useful to immerse the user in a completely virtual, dynamic environment, or to enhance the physical world of developers?
@@ -369,6 +380,7 @@ Is it more useful to immerse the user in a completely virtual, dynamic environme
 % Manipulating environment
 % Utilize the 'experience'?
   % Gamification of code review
+\todo{If the paper is done right, this question should not need to be asked.  Open question is a missing argument. Not good}
 Virtual reality is able to make users feel `presence', that is, to trick their mind into thinking they are physically in the environment. 
 This is critical to entertainment experiences but would creating such a compelling experience have tangible benefits like improved defect detection rate in a code review environment? 
 
