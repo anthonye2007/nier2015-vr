@@ -49,9 +49,31 @@ despite advances in understanding of [memory].
 And as a result, problems still persist.  For example, we know the importance of spatial memory.
 Place cells, navigation, Kuhn (natural). Disorientation here.  Research has gradually introduced solutions that incrementally introduce elements that improve spatial memory support in programming environments (Desert, code canvas, code bubbles, patchworks, etc).  But where is the design ultimately heading?
 
+Code canvas (stable locations), code bubbles (quick associations), patchworks (reduce view management issues in code bubbles).
+
+Affodanrance =>
+Data mountain. More pathways => more activation. LTP persistence. notes: predict longer term retention.
+
 a main window for viewing content with a set of navigational links (tabs, tree views, and search results) to allow transitions between content.  
 Research advances: More advanced forms allow multiple fragments or windows software to be displayed at once.
 
+
+\begin{figure}[ht!]
+\centering
+%\begin{subfigure}{.5\columnwidth}
+%	\centering
+\begin{tabular}{cc}
+	\includegraphics[width=.45\linewidth]{figures/setup/equipment}\label{fig:rift}
+ 	\includegraphics[width=.45\linewidth]{figures/setup/webcam_passthrough}\label{fig:leap}
+\end{tabular}
+\caption{Leap Motion with webcam attached to Rift (left), keyboard inside VR (right)}
+%	\caption{Leap Motion with webcam attached to Rift \label{fig:rift}}
+%\end{subfigure}%
+%\begin{subfigure}{.5\columnwidth}
+%  \centering
+%  \caption{Leap Motion and keyboard inside VR \label{fig:leap}}
+%\end{subfigure}
+\end{figure}
 
 Developers commonly experience disorientation when navigating to code. 
 The disorientation stems from associative memory failures that arise when a developer must recall information about the places of code they are viewing or what to view next.
@@ -79,7 +101,6 @@ for maintaining context during their programming tasks.  However, these cues are
 and the paucity of interface elements, such as tabbed panes, which often only contain a file name, starves associability.
 In studies of developer navigation histories, a common finding is that developers frequently spend time flipping through open tabs because they fail to associate the tabs with desired code locations~\cite{Singer05}.
 
-
 %Interactive displays of various sizes and form can greatly expand the mental workspace of developers.  
 %Pulling aside a particular item of interest can be far easier and less costly than managing everything as a fragment or hoping for an 
 %intelligent heuristic to provide access to the correct artifacts.
@@ -101,30 +122,8 @@ When coupled with input devices, such as the Leap motion, ...
 Live feedback (update with hands).  Simulation sickness.
 
 We envision a future where software engineers work in immersive environments which take advantage of more affordances of the human body than current workstations.
-
-
-
-%Virtual reality (VR) could increase the productivity of software engineers by several orders of magnitude because it offers affordances not yet used in software engineering.
-Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
-After 10 years in flight, the probe lands against all odds but at an odd angle and without deploying its anchoring harpoons. 
-Programmers are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface.
-
-Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. 
-
-You update your simulation with the data and step into VR to survey the situation. 
-After assessing the lander's options, you live-code and iterate on a number of solutions. 
-With each one you observe the lander's behaviour inside the simulation. 
-You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
-
-One coder sends.
-
-Finally, after having run the simulation dozens of times and being confident in your solution, you upload the program with time to spare. 
-
-
-The lander repositions itself as expected and the historic mission can continue successfully.
-
-
-Reality to shine through.
+We argue that these affordances provide a platform for new kinds of software engineering tools. 
+We imagine a future in which many software engineers find it most productive to design and build software within a VR environment. 
 
 
 %[Applications of VR in software engineering]
@@ -138,7 +137,9 @@ Finally, we show how an immersive environment could be used to experience physic
 %[Discussion]
 We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
 
-\section{Affordances of Virtual Reality}
+
+
+\section{Background}
 % this is what VR can give that has not been captured by other domains
 % go into a bit of detail for each item
 % give concrete example of VR: we used the Rift and Leap Motion
@@ -157,30 +158,28 @@ VR devices also completely immerse the user in the environment, so that the user
 This realistic imitation of the human body enables easier and more natural navigation as well as the ability to display more information at once in a meaningful way. 
 We get the naturalness of the physical world and the malleability of the virtual world.
 
-We argue that these affordances provide a platform for new kinds of software engineering tools. 
-We imagine a future in which many software engineers find it most productive to design and build software within a VR environment. 
 
-To immerse the user in a virtual environment we used a head-mounted display (Oculus Rift - Development Kit 2) and a Leap Motion Controller for gesture recognition. 
+\subsection{Affordances in Virtual Reality}
 
-\begin{figure}[ht!]
-\centering
-%\begin{subfigure}{.5\columnwidth}
-%	\centering
-\begin{tabular}{cc}
-	\includegraphics[width=.45\linewidth]{figures/setup/equipment}\label{fig:rift}
- 	\includegraphics[width=.45\linewidth]{figures/setup/webcam_passthrough}\label{fig:leap}
-\end{tabular}
-\caption{Leap Motion with webcam attached to Rift (left), keyboard inside VR (right)}
-%	\caption{Leap Motion with webcam attached to Rift \label{fig:rift}}
-%\end{subfigure}%
-%\begin{subfigure}{.5\columnwidth}
-%  \centering
-%  \caption{Leap Motion and keyboard inside VR \label{fig:leap}}
-%\end{subfigure}
-\end{figure}
+\subsubsection{Spatial Cognition and Memory}
+
+Virtual environments can use the immersive property to display more information than on a computer monitor. 
+We are still limited by the field of view of the human eye, so putting more information on the display is not novel, but what is novel is being able to distribute that information around the user in a meaningful way. 
+This immersion is possible because the Rift uses stereoscopic rendering (creates a slightly different image for each eye) to enable depth sensing.
+
+\subsubsection{Motion}
+
+Objects: E-books vs textbooks.
+Motions, memory (kitten training).
+
+\subsubsection{Liveness}
+
+
 
 There have been substantial amounts of VR research done in the past, but very little of it has shown how VR can aid in software engineering. 
 In this paper we present a vision of four software engineering activities that could benefit from VR.
+
+\section{Motivation Example}
 
 \begin{figure*}[ht]
 \centering
@@ -188,23 +187,83 @@ In this paper we present a vision of four software engineering activities that c
 \caption{The active fragment is in the middle of the user's view. The user is currently looking at the implementations of the methods (shown to the right) called by the active fragment. The user is able to easily read 3 of these fragments at once.  \label{immersion}}
 \end{figure*}
 
+
+Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
+After 10 years in flight, the probe lands against all odds but at an odd angle and without deploying its anchoring harpoons. 
+Programmers are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface.
+
+Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. 
+
+You update your simulation with the data and step into VR to survey the situation. 
+After assessing the lander's options, you live-code and iterate on a number of solutions. 
+With each one you observe the lander's behaviour inside the simulation. 
+You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
+
+One coder sends. (code review, sees replay of simulation), notices potential for clipping side?  Code related bug... new path booster reversion code not able to handle when at angle.
+
+Finally, after having run the simulation dozens of times and being confident in your solution, you upload the program with time to spare. 
+
+
+The lander repositions itself as expected and the historic mission can continue successfully.
+  
+
+\section{Systems}
+
+To immerse the user in a virtual environment we used a head-mounted display (Oculus Rift - Development Kit 2) and a Leap Motion Controller for gesture recognition.
+To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system.
+See Figure~\ref{fig:rift}.
+
+RiftSketch is a live coding environment built for VR.
+
+It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
+
+RiftSketch presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
+As the user types code into the editor, the world around them updates instantly to display the 3D scene dictated by their code. 
+RiftSketch also allows the user to animate their scene via a callback function which is executed on every frame. 
+The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
+
+immersion is a code review system that uses the overview and detail paradigm [cite] in three ways to allow reviewers to more easily find, analyze and navigate information relevant to the code being modified in this review.
+
+Transition.
+
+
 \section{Applications}
+
+In this section we describe how our systems can provide affiances and interactions used in the scenario above in the following applications:
+code review, live coding, remote collaboration, and simulation. 
+
 % ties all application together
 % take advantage of the affordances of VR
   % immersive env => lots of info at once
   % stereoscopic => true 3D; depth
-Virtual environments can use the immersive property to display more information than on a computer monitor. 
-We are still limited by the field of view of the human eye, so putting more information on the display is not novel, but what is novel is being able to distribute that information around the user in a meaningful way. 
-This immersion is possible because the Rift uses stereoscopic rendering (creates a slightly different image for each eye) to enable depth sensing.
+  
+ %Virtual reality (VR) could increase the productivity of software engineers by several orders of magnitude because it offers affordances not yet used in software engineering.
 
-In this section we describe how VR could aid in code review, live coding, remote collaboration, and simulation. 
-Our main contribution is not these specific ideas, but to show the possibilities of software engineering with VR.
+  
+  
+%Our main contribution is not these specific ideas, but to show the possibilities of software engineering with VR.
+
+\subsection{Live Coding}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=80mm]{figures/riftsketch/closer}
+\caption{RiftSketch screenshot \label{riftsketch}}
+\end{figure}
+
+\subsubsection{Hand Manipulation of Code}
+
+Furthermore, RiftSketch provides the user with shortcuts and input methods to quickly edit numbers in the code that they write. 
+Keyboard shortcuts allow the user to increment or decrement numbers in the code by increments of 0.1, 10 or 100. 
+Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input: the user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. 
+Numbers in the code could represent anything, from the X, Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
+
+\subsubsection{More Interactions}.
 
 \subsection{Code Review}
 %First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information which leads to increased understanding of the software.
 
 The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
-We created a prototype VR tool called Immersion that uses the overview and detail paradigm [cite] in three ways to allow reviewers to more easily find, analyze and navigate information relevant to the code being modified in this review.
 The user views the environment through an Oculus Rift and interacts with hand gestures recognized by a Leap Motion Controller.
 
 % piles vs circle
@@ -231,37 +290,6 @@ These diagrams illustrate how VR is able to show multiple overview and detail di
 Immersive VR environments have a lot more space for information display than current computer workstations.
 We used Immersion to illustrate that VR software engineering tools can use this increased space and the affordances of VR to more easily analyze and navigate the displayed information.
 % What does VR provide that makes this different from using a Leap with 5 monitors?
-
-\subsection{Live Coding}
-RiftSketch is a live coding environment built for VR. 
-It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
-RiftSketch presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
-As the user types code into the editor, the world around them updates instantly to display the 3D scene dictated by their code. 
-RiftSketch also allows the user to animate their scene via a callback function which is executed on every frame. 
-The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
-
-\begin{figure}[ht!]
-\centering
-\includegraphics[width=80mm]{figures/riftsketch/closer}
-\caption{RiftSketch screenshot \label{riftsketch}}
-\end{figure}
-
-Furthermore, RiftSketch provides the user with shortcuts and input methods to quickly edit numbers in the code that they write. 
-Keyboard shortcuts allow the user to increment or decrement numbers in the code by increments of 0.1, 10 or 100. 
-Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input: the user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. 
-Numbers in the code could represent anything, from the X, Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
-
-Although the current implementation of RiftSketch is little more than a creative toy, the experience of using it shows the potential of practical applications. 
-Largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}, RiftSketch demonstrates the potency of giving a creator, or programmer, a direct and immediate connection to their creation. 
-This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
-RiftSketch is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hinderance.  
-These benefits are especially evident in RiftSketch when the code describes a VR scene. 
-Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
-
-In practical applications, one could extend the concept of live coding and tight feedback loops in order to create customized programming environments. 
-VR programming environments could allow the user to take advantage of the malleability and expanse of virtual worlds. 
-For example, a user could live code a widget that indicates some statistic of the code they are currently editing, such as the cyclomatic complexity, test coverage or test result. 
-The widget would update itself as the user typed, not unlike existing code feedback tools such as NCrunch \footnote{NCrunch automated concurrent testing tool: http://www.ncrunch.net/}, and they could position the widget in their virtual periphery.
 
 \subsection{Remote Collaboration}
 % Imagining room inside HiFi with multiple avatars
@@ -318,7 +346,22 @@ This sense of immersion gives the users unimpeded access to the simulation which
 \section{Discussion}
 % VR vs AR in the future, which is better?
   % code snippets while wearing Google Glass could appear on peripherals
-We have presented virtual environments that completely immerse the user. 
+We have presented two systems with applications in software engineering.
+
+Although the current implementation of RiftSketch is little more than a creative toy, the experience of using it shows the potential of practical applications. 
+Largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}, RiftSketch demonstrates the potency of giving a creator, or programmer, a direct and immediate connection to their creation. 
+This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
+RiftSketch is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hinderance.  
+These benefits are especially evident in RiftSketch when the code describes a VR scene. 
+Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
+
+In practical applications, one could extend the concept of live coding and tight feedback loops in order to create customized programming environments. 
+VR programming environments could allow the user to take advantage of the malleability and expanse of virtual worlds. 
+For example, a user could live code a widget that indicates some statistic of the code they are currently editing, such as the cyclomatic complexity, test coverage or test result. 
+The widget would update itself as the user typed, not unlike existing code feedback tools such as NCrunch \footnote{NCrunch automated concurrent testing tool: http://www.ncrunch.net/}, and they could position the widget in their virtual periphery.
+
+\subsection{Open Questions}
+
 Other devices such as Google Glass, aim to help the user complete tasks in the physical world by adding information overlays (augmented reality). 
 Augmented reality seeks to help the user in the physical world while virtual reality seeks to completely replace physical reality. 
 Is it more useful to immerse the user in a completely virtual, dynamic environment, or to enhance the physical world of developers?
@@ -354,6 +397,8 @@ What barriers of adoption will be present for software engineers and what steps 
 % Here is a chance to include some honest things that need to be overcome, for example, resolution, nausea, configuration, pupil distance, etc.
 VR technology has come a long ways but there are still challenges that need to be overcome for widespread adoption by software engineers.
 % Nausea
+
+\todo[Anthony]{Generalize things that can be overcome by a "technology gap" section.  }
 \subsection{Nausea}
 The main challenge to be overcome is nausea, or simulator sickness.
 Users can become nauseous when they attempt to interact with the system but the system does not respond quickly enough.
@@ -386,8 +431,15 @@ Increased resolution and easier configuration will help reduce nausea in users, 
 \todo[Anthony]{Interacting with peers not in VR, mental cost of "jacking in", how webcam projection can alleviate some of this.}
 \todo[Anthony]{Mapping problems that aren't necessarily 3d to have a 3d representation in VR.}
 
+\todo[Anthony]{Opportunities for other gestures: Refactoring}
 
 \section{Related Work}
+
+\todo[Anthony]{Cite natural gestures paper}\\
+\todo[Anthony]{Revisit 3d visualization work.}
+
+\todo{Potential to kill this section because, we can instead cite through out paper}
+
 Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces~\cite{Cruz-Neira:CAVE}.  
 Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
 
