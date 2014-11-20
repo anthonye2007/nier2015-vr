@@ -72,16 +72,14 @@ For example, \emph{spatial memory}, a memory system in the parahippocampus that 
 \emph{Affordances}, are devices that often leverage innate cognitive mechanisms when performing actions in an environment, and can result in increased task performance. 
 Researchers have attempted to improve interfaces and programming environments that incorporate the human capacity for attention, cognition, and memory.
 For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Robertson:1998}. 
-After 6 months\todo{Check 6 months or 1 year}, participants could still recall the bookmarks based on position alone.  Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could observed as a person navigated a virtual town and when later recalling the paths through the town~\cite{Ekstrom:2003}.
+%After 6 months, participants could still recall the bookmarks based on position alone.  
 
 Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
 
-Head-mounted virtual reality (VR) displays allow the user to update their view by moving their bodies or rotating their neck, even a full 360 degrees.
-Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
-When coupled with input devices, such as the Leap motion, that allow direct manipulation with the hand, and live feedback in the environment, these affordances enable the user to feel immersed in a virtual environment.
-
 %Live feedback (update with hands).  Simulation sickness.
 
+Head-mounted virtual reality displays coupled with gesture input devices provide several previously unexplored affordances not yet fully utilized in a programming environments.
+%which enable the user to feel immersed in a virtual environment., and live feedback in the environment, 
 Our motivation and argument is simple: 
 Introducing affordances that leverage human capabilities can lead to improvements in programming environments.
 Interaction and manipulation of virtual space is a compelling but relatively unexplored alternative to windowed programming environments, with a set of new capacities to support affordances not currently available in existing programming environments.   Understanding the challenges and benefits offered by programming environments supported by VR is a space worth exploring.
@@ -97,7 +95,6 @@ We then illustrate a scenario with a future programming environment that fully i
 
 
 \section{Affordances in Virtual Reality}
-\todo[Chris]{Make not worthless.}
 % this is what VR can give that has not been captured by other domains
 % go into a bit of detail for each item
 % give concrete example of VR: we used the Rift and Leap Motion
@@ -105,12 +102,11 @@ We then illustrate a scenario with a future programming environment that fully i
 
 \subsubsection{Spatial Cognition and Memory}
 
-In addition to affordances of depth and ... six degrees.
+Head-mounted virtual reality displays allow the user to update their view by moving their bodies or rotating their neck, even a full 360 degrees.
+Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
 %VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
+Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could observed as a person navigated a virtual town and again when they later recalled the paths through the town~\cite{Ekstrom:2003}.
 
-\begin{quote}
-In nature, information comes with a physical address (and often a temporal one), and one can navigate to and from the address. Those raspberry patches we found last year are over the hill and through the woods\textemdash and they are still over the hill and through the woods.
-\end{quote}
 
 %VR devices render a slightly different image for each eye (stereoscopic rendering) which allows humans to sense depth in the images just like in the physical world. 
 %VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
@@ -153,19 +149,13 @@ Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{h
 
 \subsubsection{Liveness}
 
-Liveness is a powerful affordance that can be defined by the degree and speed of responsiveness to actions offered by an environment~\cite{Tanimoto:Liveness}.
+Liveness is a powerful affordance that can be defined by the speed and level of responsiveness to actions offered by an environment~\cite{Tanimoto:Liveness}.
+The potency of giving programmers a direct and immediate connection to their creations has been well illustrated in Bret Victor's seminal lecture, ``Inventing on Principle''~\cite{Victor:InventingOnPrincipleVideo}.%\cite{Victor:InventingOnPrincipleTranscript}.
+
 When liveness is violated, the results can be nauseating.
 Simulator sickness is distinct from motion sickness, in that it arises due to a mismatch between a person's interaction and the expected response of the environment.
 For example, a person in virtual reality can become nauseous when they attempt to interact with the system but the system does not respond quickly enough.
 This is most apparent with head rotation, where users rotate their physical heads expecting to see an updated view but still see the initial view.
-
-Need to introduce live coding here, cite something.  Split some here, some in discussion.
-Steve Tanimoto.
-
-\subsubsection{Malleable reality}
-
-Finally, there are opportunities to scale.
-Fitting in an airplane.
 
 \section{Motivation Example}
 
@@ -236,8 +226,8 @@ code review, live coding, remote collaboration, and simulation.
 
 \subsubsection{Liveness}
 
-\textsc{RiftSketch} demonstrates the potency of giving programmers a direct and immediate connection to their creations, largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}.
-The tight feedback loop allows programmers to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
+\textsc{RiftSketch} demonstrates liveness my providing a tight feedback loop between code written and its effect in a virtual environment.
+ and to quickly experiment with various solutions, algorithms and calculations. 
 \textsc{RiftSketch} is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hindrance.  
 These benefits are especially evident in \textsc{RiftSketch} when the code describes a VR scene. 
 Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
@@ -353,6 +343,11 @@ The widget would update itself as the user typed, not unlike existing code feedb
 \subsection{Open Questions}
 
 \todo[Anthony]{Either expand or cut out stand-alone questions without discussion}
+
+Discuss here or cut out:
+\subsubsection{Malleable reality}
+Finally, there are opportunities to scale.
+Fitting in an airplane.
 
 \subsubsection{Degrees of Immersion}
 
