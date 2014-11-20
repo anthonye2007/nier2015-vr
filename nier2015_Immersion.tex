@@ -348,17 +348,15 @@ The widget would update itself as the user typed, not unlike existing code feedb
 
 \subsection{Open Questions}
 
-\todo[Anthony]{Either expand or cut out stand-alone questions without discussion}
-
 \subsubsection{Degrees of Immersion}
 
-Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces~\cite{Cruz-Neira:CAVE}.  
-Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
-RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.~\cite{Jones:RoomAlive}
+%Virtual environments called CAVEs have been around since the 1990's in which a person can be in a physical room with displays covering all surfaces~\cite{Cruz-Neira:CAVE}.  
+%Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
+%RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.~\cite{Jones:RoomAlive}
 
 Augmented reality devices such as Google Glass, aim to help the user complete tasks in the physical world by adding information overlays. 
 Augmented reality seeks to help the user in the physical world while virtual reality seeks to completely replace physical reality. 
-\emph{Is it more useful to immerse the user in a completely virtual, dynamic environment, or to enhance the physical world of developers?}
+\emph{Is it more useful to immerse the user in a completely virtual environment, or to enhance their physical world?}
 
 % Where is the limit for too much info displayed at once?
 %\subsubsection{Information Overload}
@@ -371,43 +369,23 @@ Augmented reality seeks to help the user in the physical world while virtual rea
 
 % What gestures are most natural in VR?
 \subsubsection{Input Forms}
+Console controllers work well for navigation and limited action support but are surpassed by keyboards at text entry.
+However, such devices require users to interact with both the physical and virtual worlds at the same time.
+Gesture recognition removes interaction with the physical world but can cause physical strain.
+Voice recognition could reduce strain but may feel awkward in a shared work space.
 \emph{What is the best way for the user to provide input to a VR system?}
-The games industry has found a console controller to work well for navigation and limited action support but those controllers are poorly suited for text entry. 
-However, while the keyboard is well suited for text entry, many people find it hard to type while wearing a head-mounted display. 
-Gesture recognition devices like the Leap Motion Controller and Kinect sensor enable the user to perform more natural gestures, but often put too much strain on the user's arms. 
-Voice recognition added to gesture recognition could help to reduce that arm strain, but speaking to one's computer may feel disruptive and awkward in a shared office space.
 
 \section{Challenges}
-% Here is a chance to include some honest things that need to be overcome, for example, resolution, nausea, configuration, pupil distance, etc.
-VR technology has come a long ways but there are still challenges that need to be overcome for widespread adoption by software engineers.
-% Nausea
+
+%VR technology has come a long ways but there are still challenges that need to be overcome for widespread adoption by software engineers.
+
+
 \subsection{Technology Limitations}
 
-\subsubsection{Resolution}
-The Development Kit 2 of the Oculus Rift has a resolution of 1080p (ensure they say this on the website) but this allows merely passable reading of text. 
-Future iterations of the Rift and other head-mounted displays will need increased resolution to provide a more comfortable experience.
-Increased resolution will increase the sense of presence which in turn should reduce nausea.
-
-\subsubsection{Ease of Configuration}
-Small changes in configuration can provide large changes in results.
-This means that the Rift must be configured for each user which can take up to 15 minutes.
-The Rift requires users to measure the distance between their pupils for more accurate stereoscopic rendering, but current utilities are either time consuming or hard to use properly.
-
+The 1080p resolution of the Oculus Rift Development Kit 2 allows for passable text reading, but needs improvement for multi-hour sessions. 
+The Rift also requires users to measure the distance between their pupils for more accurate stereoscopic rendering, but current utilities are either time consuming or hard to use properly.
 Eyeglass wearers must go through extra trial and error to see if the headset is best used with glasses on and a reduced field of view or replace their glasses with stronger lenses in the Rift and have increased blurriness.
 
-%\subsubsubsection{Inter-pupillary distance}
-%One way to decrease nausea is to measure the distance between the user's pupils to more accurately render an image for each eye.
-%A software utility produced by Oculus attempts to measure this distance but is hard to use and often has varying results if used incorrectly.
-%Users would have a better experience if there was an easier way to measure the inter-pupillary distance.
-
-%\subsubsubsection{Lenses and Field of View}
-%The Rift puts a display very close to users' eyes and uses lenses to provide proper distortion.
-%Users can adjust the distance from their eyes to the lenses in order to obtain a sharper image and reduce nausea.
-%Users who typically wear eyeglasses can sometimes fit the headset overtop of their eyeglasses, but then must push the lenses as far away as possible, which decreases the field of view.
-%Alternatively, users can remove their eyeglasses and use stronger lenses instead to allow the lenses to be closer to the eyes.
-%However, these alternative lenses still reduce the field of view slightly, are not as powerful as required for some users, and removing one's eyeglasses becomes annoying if done frequently.
-
-%Increased resolution and easier configuration will help reduce nausea in users, and these improvements are necessary for widespread adoption by software engineers.
 
 % 'cost' isn't quite the right word... detractions? cons?
 \subsection{Cost of VR}
@@ -430,7 +408,6 @@ This could be an area well suited to 3D metaphorical programming as suggested by
 We envision a future where software engineers work in immersive environments which take advantage of more affordances of the human body than current workstations.
 We argue that these affordances provide a platform for new kinds of software engineering tools. 
 
-\todo[Anthony]{Recap affordances}
 %We imagine a future in which many software engineers find it most productive to design and build software within a VR environment. 
 
 
