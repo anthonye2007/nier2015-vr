@@ -158,23 +158,20 @@ For example, a person in virtual reality can become nauseous when they attempt t
 This is most apparent with head rotation, where users rotate their physical heads expecting to see an updated view but still see the initial view.
 
 \section{Motivation Example}
-
+% Danger of using "you", as researchers aren't programmers and sadly can't identify with this!
 Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
-After 10 years in flight, the probe lands against all odds but at an odd angle and without deploying its anchoring harpoons. 
-As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface.
-
-Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. 
+After 10 years in flight, the probe lands against all odds but in a position that is unable to receive sunlight and without deploying its anchoring harpoons.
+Automated telemetry programs cannot find a feasible path. As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. 
 
 You update your simulation with the data and step into VR to survey the situation. 
-After assessing the lander's options, you live-code and iterate on a number of solutions. 
-With each one you observe the lander's behavior inside the simulation. 
+After assessing the lander's options, you iterate on a number of solutions, first using your hands to position a possible path, and scale thrust settings, 
+and then the keyboard to refine the code. With each one you observe the lander's behavior inside the simulation.
 You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
 
-One coder sends. (code review, sees replay of simulation), notices potential for clipping side?  Code related bug... new path booster reversion code not able to handle when at angle.
+A peer programmer joins and watches a replay of your live coding session.  She notes an issue with potential collision and suggests that you can correct the path by gently crashing the the companion orbiter into probe.  You add this to the simulation, it seems to work.  But you're not done yet, the peer programmer has noticed a part of the code light up in the distance.
+It is a warning that collision detection code will not let you execute this action outside of the simulator.  You get around this by shutting off the engine right before impact.
 
 Finally, after having run the simulation dozens of times and being confident in your solution, you upload the program with time to spare. 
-
-
 The lander repositions itself as expected and the historic mission can continue successfully.
   
 
