@@ -192,9 +192,12 @@ The lander repositions itself as expected and the historic mission can continue 
 
 We have built two virtual reality prototypes for software engineering to more concretely demonstrate the affordances of VR. 
 \textsc{RiftSketch} primarily illustrates \emph{liveness} and \textsc{Immersion} chiefly demonstrates \emph{spatial cognition and memory}.
-Both systems use \emph{manipulation and motion} to aid their primary goals.
+Both systems use \emph{manipulation and motion} as well as \emph{malleable reality} to aid their primary goals.
 Both of these systems use a head-mounted display (Oculus Rift - Development Kit 2) to visually immerse the user in the environment and a Leap Motion Controller for gesture recognition.
 To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system (See Figure~\ref{fig:rift}).
+
+
+\subsection{RiftSketch}
 
 \textsc{RiftSketch} is a live coding environment built for VR.~\cite{Peiris:RiftSketchVideo}
 It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
@@ -204,7 +207,16 @@ As the user types code into the editor, the world around them updates instantly 
 \textsc{RiftSketch} also allows the user to animate their scene via a callback function which is executed on every frame. 
 The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
 
-\textsc{Immersion} is a code review prototype that uses the overview and detail paradigm~\cite{Shneiderman:InfoVisTaxonomy} in three ways to allow reviewers to more easily find, analyze and navigate information relevant to the code being modified in this review.
+
+\subsection{Immersion}
+
+\textsc{Immersion} is a code review prototype that displays code fragments in multiple ways to enhance spatial reasoning.
+Software packages are represented as traversable floor sections and are color coded by the amount of code modified for this review.
+The reviewer's view is centered around the active code fragment with fragment piles on the floor that the reviewer may want to see.
+Piles have previously been shown to effectively engage spatial reasoning.~\cite{Agarawala:BumpTop}
+The reviewer is able to expand one pile at a time into a ring of fragments to see the details of the fragments, based on Schneiderman's taxonomy including overview and detail visualizations. ~\cite{Shneiderman:InfoVisTaxonomy}
+% I looked at Code Canvas, but they didn't cite anything for semantic zoom
+\textsc{Immersion} uses semantic zoom [ ? ] to make method names readable even when at the back of the ring and the fragments retain a scaled height enabling the reviewer to approximate its length. 
 
 In the following section, we more fully describe how both the \textsc{RiftSketch} and \textsc{Immersion} systems demonstrate the benefits for software engineering by using the affordances of a VR environment.
 
@@ -240,48 +252,38 @@ Numbers in the code could represent anything, from the X, Y or Z components of a
 
 \subsection{Code Review}
 
-% Needs more specific heading
-\subsubsection{Spatial Cognition and Memory}
-Floor mats.
+% TODO Need more specific heading
+\subsubsection{Spatial Reasoning}
 
-Walk around.
-
-Piles occupy space.
-Can remember where piles are located. 
-
-Info displayed up/down, left/right, forward/backward.
-Uses all three dimensions. 
-Code Canvas and Code Bubbles could only allow two dimensions.
-
-\subsubsection{Gesture Interaction}.
-
-Move gesture details to here.
-
-Remove focus on the overview+detail diagrams.
-
-\subsubsection{Piles as an Overview}
 \textsc{Immersion} represents methods as code fragments similarly to Code Bubbles~\cite{Bragdon:CodeBubbles}.  
 The reviewer initially sees the active fragment in the center of the screen with other relevant fragments distributed around the floor in piles with more relevant piles closer to the reviewer. 
+Reviewers use spatial cognition to judge the relevance of piles by how far away the pile is as well as the size of the pile. 
 The reviewer is able to scan the labels of the piles and number of fragments in each pile to quickly verify if each pile is indeed relevant.
-Agarawala et al used piles in BumpTop for similar reasons and showed that they were effective~\cite{Agarawala:BumpTop}.
-The reviewer then makes a grabbing motion towards the most interesting pile and pulls their hand up to show all of the fragments in a circular expanded view to the right of the active fragment.
 
-% circle: foremost vs other fragments
-\subsubsection{Expanded Circle}
+\textsc{Immersion} divides the floor into sections based on packages of the system and color codes the sections to indicate how much that package has been modified by the code under review.
+By walking between packages, we expect reviewers to have better mental models due to the increased usage of spatial reasoning.
+Similarly, we expect that reviewers would be able to more easily recall review details after the review since the spatial elements of their brains were more engaged.
+
+%Info displayed up/down, left/right, forward/backward.
+%Uses all three dimensions. 
+%Code Canvas and Code Bubbles could only allow two dimensions.
+
+\subsubsection{Gesture Interaction}
+
+Reviewers can make a grabbing motion to select a pile and then can pull their hand up to transform the pile into a ring of fragments for more detailed inspection.
 The reviewer is now able to read the foremost fragment in the circle and can make horizontal finger swipes to rotate the circle and read other fragments. 
-\textsc{Immersion} uses semantic zoom to make method names readable even when at the back of the circle and the fragment retains its height so that the reviewer can quickly see how many lines of code it has. 
-The reviewer can select an especially large method using a pinch motion on the top and bottom and move it to become the active fragment. 
-The piles then change to include code relevant to the new fragment. 
-The reviewer can move their hand as if clearing off a desk to return to the previous active fragment.
+The reviewer can pinch the foremost ring fragment on the top and bottom and move it to the middle of the screen to become the active fragment.
+The piles then change to include code relevant to the new fragment, but the reviewer can move their hand as if clearing off a desk to return to the previous active fragment if they want to go back.
+
 
 % git diff + complexity vs active fragment
-\subsubsection{Big Picture}
-\textsc{Immersion} also displays overview diagrams of this changeset to allow the reviewer to see where this active fragment fits into the changeset as a whole. 
-Similarly an overview of the cyclomatic complexity also helps the reviewer to see which areas of the code would be most relevant to see. 
-These diagrams illustrate how VR is able to show multiple overview and detail diagrams without overwhelming the user.
+%\subsubsection{Big Picture}
+%\textsc{Immersion} also displays overview diagrams of this changeset to allow the reviewer to see where this active fragment fits into the changeset as a whole. 
+%Similarly an overview of the cyclomatic complexity also helps the reviewer to see which areas of the code would be most relevant to see. 
+%These diagrams illustrate how VR is able to show multiple overview and detail diagrams without overwhelming the user.
 
-Immersive VR environments have a lot more space for information display than current computer workstations.
-We used \textsc{Immersion} to illustrate that VR software engineering tools can use this increased space and the affordances of VR to more easily analyze and navigate the displayed information.
+%Immersive VR environments have a lot more space for information display than current computer workstations.
+%We used \textsc{Immersion} to illustrate that VR software engineering tools can use this increased space and the affordances of VR to more easily analyze and navigate the displayed information.
 % What does VR provide that makes this different from using a Leap with 5 monitors?
 
 \subsection{Remote Collaboration}
