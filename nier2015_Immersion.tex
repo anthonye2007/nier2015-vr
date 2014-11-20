@@ -41,15 +41,15 @@ This paper describes several prototype applications for software engineering too
 
 Programming environments have not significantly changed in decades, 
 despite advances in psychology, neuroscience, and social aspects of software development.
-And as a result, problems still persist.  Developers still experience disorientation when navigating code~\cite{PatchWorks?}.
-Developers still experience problems comprehending code~\cite{Tobias}.  These basic issues also impede other important software engineering activities, for example,
+And as a result, problems still persist.  Developers still experience disorientation when navigating code~\cite{Henley:2014}.
+Developers still experience problems comprehending code~\cite{Maalej:TOSEM:2014}.  These basic issues also impede other important software engineering activities, for example,
 when performing a code review, developers mostly report issues, such as code convention violations, instead of discussing design flaws or defects
 due to insufficient ability to navigate and understand the code under review~\cite{bacchelli:ModernCodeReviewChallenges}.  
 %Other challenges, such as remote pairing, still persist.
 
 %The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
-Researchers have explored the underlying cognitive issues to several problems developers experience~\cite{Parnin:MemoryFailures}.
-For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{KoMaintenance06} observed that developers lost track of relevant code because they had to temporally navigate to another location in code and forgot how to find the relevant code location again because the cues they relied on: position of scroll bars and document tabs where unstable and were disrupted as a result of their navigation.  Kuhn~\cite{CodeMaps} describes how developers maintain an internal spatial representation of code, and often refer to code as being "above" or "below" one another.
+Researchers have explored the underlying cognitive issues to several problems developers experience~\cite{Parnin:2012}.
+For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporally navigate to another location in code and forgot how to find the relevant code location again because the cues they relied on: position of scroll bars and document tabs where unstable and were disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and often refer to code as being "above" or "below" one another.
 
 \begin{figure}[ht]
 \centering
@@ -71,10 +71,10 @@ For example, \emph{spatial memory}, a memory system in the parahippocampus that 
 % Data Mountain: http://www.microsoft.com/usability/UEPostings/p153-robertson.pdf
 \emph{Affordances}, are devices that often leverage innate cognitive mechanisms when performing actions in an environment, and can result in increased task performance. 
 Researchers have attempted to improve interfaces and programming environments that incorporate the human capacity for attention, cognition, and memory.
-For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Data Mountain}. 
-After 6 months\todo{Check 6 months or 1 year}, participants could still recall the bookmarks based on position alone.  Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could observed as a person navigated a virtual town and when later recalling the paths through the town~\cite{EkstEta}.
+For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Robertson:1998}. 
+After 6 months\todo{Check 6 months or 1 year}, participants could still recall the bookmarks based on position alone.  Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could observed as a person navigated a virtual town and when later recalling the paths through the town~\cite{Ekstrom:2003}.
 
-Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
+Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
 
 Head-mounted virtual reality (VR) displays allow the user to update their view by moving their bodies or rotating their neck, even a full 360 degrees.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
@@ -129,7 +129,7 @@ In nature, information comes with a physical address (and often a temporal one),
 Manipulation is an important affordance.  The affordances provided by interaction with of a physical object can result in improved perception and retention. 
 For example, consider the affordances offered by manipulating and turning pages of a book.
 Numerous studies have established that when text read on paper versus read on computer displays; 
-as a result, comprehension and recall of the text is better when read on paper~\cite{}.  
+as a result, comprehension and recall of the text is better when read on paper~\cite{Noyes:2008}.  
 Additionally, the ability to serendipitously browse and relocate material is improved on paper due 
 to the ability to turn pages.
 %especially when the content is complexity.
@@ -139,7 +139,7 @@ to the ability to turn pages.
 % http://embodiedknowledge.blogspot.com/2011/12/classic-experiment-by-held-and-hein.html
 Motion in a physical space, through exertions such as walking, have important cognitive consequences.
 Simply going for a walk increases creativity, even prior to starting the creative task~\cite{Oppezzo:2014}.
-Other affordances can be aided by motion. For example, perception of depth is enhanced by self-actuated movement in a space~\cite{HeldAndHein}.
+Other affordances can be aided by motion. For example, perception of depth is enhanced by self-actuated movement in a space~\cite{Held:1963}.
 %Memory...
 
 Through input devices such as the Leap Motion, it is possible to manipulate and interact with virtual objects in virtual spaces.
