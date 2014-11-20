@@ -76,7 +76,7 @@ After 6 months\todo{Check 6 months or 1 year}, participants could still recall t
 
 Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
 
-Head-mounted VR displays allow the user to update their view by moving their bodies or rotating their neck, even a full 360 degrees.
+Head-mounted virtual reality (VR) displays allow the user to update their view by moving their bodies or rotating their neck, even a full 360 degrees.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
 When coupled with input devices, such as the Leap motion, that allow direct manipulation with the hand, and live feedback in the environment, these affordances enable the user to feel immersed in a virtual environment.
 
@@ -153,9 +153,7 @@ Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{h
 
 \subsubsection{Liveness}
 
-%There have been substantial amounts of VR research done in the past, but very little of it has shown how VR can aid in software engineering. 
-%In this paper we present a vision of four software engineering activities that could benefit from VR.
-Liveness is a powerful affordance that can be defined by the degree and speed of responsiveness to actions offered by an environment.
+Liveness is a powerful affordance that can be defined by the degree and speed of responsiveness to actions offered by an environment~\cite{Tanimoto:Liveness}.
 When liveness is violated, the results can be nauseating.
 Simulator sickness is distinct from motion sickness, in that it arises due to a mismatch between a person's interaction and the expected response of the environment.
 For example, a person in virtual reality can become nauseous when they attempt to interact with the system but the system does not respond quickly enough.
@@ -173,7 +171,7 @@ Fitting in an airplane.
 
 Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
 After 10 years in flight, the probe lands against all odds but at an odd angle and without deploying its anchoring harpoons. 
-Programmers are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface.
+As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface.
 
 Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. 
 
@@ -198,7 +196,7 @@ Both systems use \emph{manipulation and motion} to aid their primary goals.
 Both of these systems use a head-mounted display (Oculus Rift - Development Kit 2) to visually immerse the user in the environment and a Leap Motion Controller for gesture recognition.
 To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system (See Figure~\ref{fig:rift}).
 
-\textsc{RiftSketch} is a live coding environment built for VR.
+\textsc{RiftSketch} is a live coding environment built for VR.~\cite{Peiris:RiftSketchVideo}
 It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
 
 \textsc{RiftSketch} presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
@@ -226,8 +224,8 @@ code review, live coding, remote collaboration, and simulation.
 
 \subsubsection{Liveness}
 
-\textsc{RiftSketch} demonstrates the potency of giving a programmer direct and immediate connection to their creation, largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}.
-This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
+\textsc{RiftSketch} demonstrates the potency of giving programmers a direct and immediate connection to their creations, largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}.
+The tight feedback loop allows programmers to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
 \textsc{RiftSketch} is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hindrance.  
 These benefits are especially evident in \textsc{RiftSketch} when the code describes a VR scene. 
 Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
@@ -235,22 +233,36 @@ Watching the entire virtual world change around you as you type can be an extrem
 \subsubsection{Hand Manipulation of Code}
 
 Furthermore, \textsc{RiftSketch} provides the user with shortcuts and input methods to quickly edit numbers in the code that they write. 
-Keyboard shortcuts allow the user to increment or decrement numbers in the code by increments of 0.1, 10 or 100. 
+Keyboard shortcuts allow the user to increment or decrement numbers in the code by factors of 0.1, 10 or 100. 
 Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input: the user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. 
 Numbers in the code could represent anything, from the X, Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
 
 
 \subsection{Code Review}
-%First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information which leads to increased understanding of the software.
 
-% Redundant.
-%The user views the environment through an Oculus Rift and interacts with hand gestures recognized by a Leap Motion Controller.
+% Needs more specific heading
+\subsubsection{Spatial Cognition and Memory}
+Floor mats.
 
-% piles vs circle
+Walk around.
+
+Piles occupy space.
+Can remember where piles are located. 
+
+Info displayed up/down, left/right, forward/backward.
+Uses all three dimensions. 
+Code Canvas and Code Bubbles could only allow two dimensions.
+
+\subsubsection{Gesture Interaction}.
+
+Move gesture details to here.
+
+Remove focus on the overview+detail diagrams.
+
 \subsubsection{Piles as an Overview}
 \textsc{Immersion} represents methods as code fragments similarly to Code Bubbles~\cite{Bragdon:CodeBubbles}.  
 The reviewer initially sees the active fragment in the center of the screen with other relevant fragments distributed around the floor in piles with more relevant piles closer to the reviewer. 
-The reviewer is able to scan the label of the pile and number of fragments in each pile to quickly verify if this pile is indeed relevant.
+The reviewer is able to scan the labels of the piles and number of fragments in each pile to quickly verify if each pile is indeed relevant.
 Agarawala et al used piles in BumpTop for similar reasons and showed that they were effective~\cite{Agarawala:BumpTop}.
 The reviewer then makes a grabbing motion towards the most interesting pile and pulls their hand up to show all of the fragments in a circular expanded view to the right of the active fragment.
 
@@ -315,22 +327,21 @@ Remote workers often miss out on many benefits that in-person communication can 
 Shared VR spaces tailored to developers' activities can fill some of the gaps caused by distance and help the team to function better together. 
 
 \subsection{Simulation}
-Virtual Reality is well-suited to applications with physical analogs that can be simulated in 3D. 
+Virtual reality is well-suited to applications with physical analogs that can be simulated in 3D. 
 Although simulation software is not uncommon, 3D worlds are often difficult to to navigate and interact with when displayed on 2D devices. 
 Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. 
-Interacting with a simulation might require positioning a virtual cursor. 
+Interacting with a simulation might require positioning a virtual cursor which can be challenging when you only have a 2D view of the scene. 
 
-VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly by physically turning their head to look around a simulated car plant or by using their hands, via a Leap Motion controller, to interact with a simulated robot. 
+VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly. One can imagine a user physically turning their head to look around a simulated car plant or using their hands, via a Leap Motion controller, to interact with a simulated robot. 
 These direct interactions provide a subtle but important advantage over 2D-projected simulations. 
-This sense of immersion gives the users unimpeded access to the simulation which would allow for quicker turn-around when testing or debugging the simulated software, especially if combined with a live-coding solution.
+This sense of immersion gives the users unimpeded access to the simulation which allows for quicker turn-around when testing or debugging the simulated software, especially if combined with an in-situ live coding solution like \textsc{RiftSketch}.
 
 \section{Discussion}
 % VR vs AR in the future, which is better?
   % code snippets while wearing Google Glass could appear on peripherals
 We have presented two systems with applications in software engineering.
 
-Although the current implementation of \textsc{RiftSketch} is little more than a creative toy, the experience of using it shows the potential of practical applications. 
-<Mention hours logged in live coding>
+Although the current implementation of \textsc{RiftSketch} is little more than a creative toy, the authors' experience of using it for dozens of hours shows the potential of future applications. 
 
 In practical applications, one could extend the concept of live coding and tight feedback loops in order to create customized programming environments. 
 VR programming environments could allow the user to take advantage of the malleability and expanse of virtual worlds. 
@@ -347,37 +358,25 @@ Virtual environments called CAVEs have been around since the 1990's in which a p
 Users often use head-mounted displays with head tracking to update the displays and may use hand-held devices to enable interaction with objects in the CAVE.
 RoomAlive by Microsoft Research is similar to a CAVE but uses six Kinect sensors around the room to track the user.  This eliminates the need for wearable devices by the user but requires significant amounts of space.~\cite{Jones:RoomAlive}
 
-Other devices such as Google Glass, aim to help the user complete tasks in the physical world by adding information overlays (augmented reality). 
+Augmented reality devices such as Google Glass, aim to help the user complete tasks in the physical world by adding information overlays. 
 Augmented reality seeks to help the user in the physical world while virtual reality seeks to completely replace physical reality. 
-Is it more useful to immerse the user in a completely virtual, dynamic environment, or to enhance the physical world of developers?
-  
-% Manipulating environment
-% Utilize the 'experience'?
-  % Gamification of code review
-%\todo{If the paper is done right, this question should not need to be asked.  Open question is a missing argument. Not good}
-%Virtual reality is able to make users feel `presence', that is, to trick their mind into thinking they are physically in the environment. 
-%This is critical to entertainment experiences but would creating such a compelling experience have tangible benefits like improved defect detection rate in a code review environment? 
+\emph{Is it more useful to immerse the user in a completely virtual, dynamic environment, or to enhance the physical world of developers?}
 
 % Where is the limit for too much info displayed at once?
-The main advantage of VR is being able to display more information at once to the user.  
+\subsubsection{Information Overload}
+A large advantage of VR is being able to display more information at once to the user.  
 At what point does the extra information cause overload and begin to hinder productivity?  
 Is this balance between amount of information and processing speed the same for each person (other aspects of VR can differ per person)?
 
 % Does using a VR code review tool actually increase comprehension? Does it allow users to find bugs and provide alternative solutions?
 
 % What gestures are most natural in VR?
+\subsubsection{Input Forms}
 What is the best way for the user to provide input to a VR system? 
 The games industry has found a console controller to work well for navigation and limited action support but those controllers are poorly suited for text entry. 
 However, while the keyboard is well suited for text entry, many people find it hard to type while wearing a head-mounted display. 
 Gesture recognition devices like the Leap Motion Controller and Kinect sensor enable the user to perform more natural gestures, but often put too much strain on the user's arms. 
 Voice recognition added to gesture recognition could help to reduce that arm strain, but speaking to one's computer may feel disruptive and awkward in a shared office space.
-
-How can software engineers take advantage of the affordances of VR to improve upon existing 3D visualizations?
-
-% What use the z-axis for?
-% Use VR for specific activities?
-% Will a developer buy a Rift just for the tools?
-What barriers of adoption will be present for software engineers and what steps can researchers take now to mitigate those barriers?
 
 \section{Challenges}
 % Here is a chance to include some honest things that need to be overcome, for example, resolution, nausea, configuration, pupil distance, etc.
