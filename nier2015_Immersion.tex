@@ -76,6 +76,12 @@ For example, in one study, participants organized their web bookmarks by positio
 
 Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
 
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=\textwidth,height=5cm]{figures/unwarpped_stack}
+\caption{The active fragment is in the middle of the user's view. The user is currently looking at the implementations of the methods (shown to the right) called by the active fragment. The user is able to easily read 3 of these fragments at once.  \label{immersion}}
+\end{figure*}
+
 %Live feedback (update with hands).  Simulation sickness.
 
 Head-mounted virtual reality displays coupled with gesture input devices provide several previously unexplored affordances not yet fully utilized in a programming environments.
@@ -87,11 +93,6 @@ Interaction and manipulation of virtual space is a compelling but relatively une
 In this paper, we describe a set of affordances that VR provides and describe how they can be beneficial to integrate into programming environments.  
 We then illustrate a scenario with a future programming environment that fully integrates VR.  We then describe several systems we have prototyped to begin realizing this scenario and how the systems can be used in several applications related to software engineering.  Finally, We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
 
-\begin{figure*}[ht]
-\centering
-\includegraphics[width=\textwidth,height=5cm]{figures/unwarpped_stack}
-\caption{The active fragment is in the middle of the user's view. The user is currently looking at the implementations of the methods (shown to the right) called by the active fragment. The user is able to easily read 3 of these fragments at once.  \label{immersion}}
-\end{figure*}
 
 
 \section{Affordances in Virtual Reality}
@@ -213,7 +214,7 @@ In this section we describe how our systems can provide affiances and interactio
 code review, live coding, remote collaboration, and simulation. 
 
 
-\subsection{Live Coding}
+\subsection{Live Coding and Simulation}
 
 \begin{figure}[ht!]
 \centering
@@ -236,8 +237,20 @@ Keyboard shortcuts allow the user to increment or decrement numbers in the code 
 Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input: the user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. 
 Numbers in the code could represent anything, from the X, Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
 
+\subsubsection{Future Directions}
 
-\subsection{Code Review}
+Virtual reality is well-suited to applications with physical analogs that can be simulated in 3D. 
+Although simulation software is not uncommon, 3D worlds are often difficult to to navigate and interact with when displayed on 2D devices. 
+Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. 
+Interacting with a simulation might require positioning a virtual cursor which can be challenging when you only have a 2D view of the scene. 
+
+VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly. One can imagine a user physically turning their head to look around a simulated car plant or using their hands, via a Leap Motion controller, to interact with a simulated robot. 
+These direct interactions provide a subtle but important advantage over 2D-projected simulations. 
+This sense of immersion gives the users unimpeded access to the simulation which allows for quicker turn-around when testing or debugging the simulated software, especially if combined with an in-situ live coding solution like \textsc{RiftSketch}.
+
+
+
+\subsection{Code Review and Remote Collaboration}
 
 % TODO Need more specific heading
 \subsubsection{Spatial Reasoning}
@@ -262,18 +275,6 @@ The reviewer is now able to read the foremost fragment in the circle and can mak
 The reviewer can pinch the foremost ring fragment on the top and bottom and move it to the middle of the screen to become the active fragment.
 The piles then change to include code relevant to the new fragment, but the reviewer can move their hand as if clearing off a desk to return to the previous active fragment if they want to go back.
 
-
-% git diff + complexity vs active fragment
-%\subsubsection{Big Picture}
-%\textsc{Immersion} also displays overview diagrams of this changeset to allow the reviewer to see where this active fragment fits into the changeset as a whole. 
-%Similarly an overview of the cyclomatic complexity also helps the reviewer to see which areas of the code would be most relevant to see. 
-%These diagrams illustrate how VR is able to show multiple overview and detail diagrams without overwhelming the user.
-
-%Immersive VR environments have a lot more space for information display than current computer workstations.
-%We used \textsc{Immersion} to illustrate that VR software engineering tools can use this increased space and the affordances of VR to more easily analyze and navigate the displayed information.
-% What does VR provide that makes this different from using a Leap with 5 monitors?
-
-\subsection{Remote Collaboration}
 % Imagining room inside HiFi with multiple avatars
 % each developer could have an avatar
 % able to get facial expressions
@@ -284,6 +285,8 @@ The piles then change to include code relevant to the new fragment, but the revi
 % environment is dynamic
 
 % pair programming
+\subsubsection{Future Directions}
+
 Co-located development teams are able to communicate in person. 
 Distributed teams can try, but the technology is too slow and it doesn't feel good. 
 High Fidelity \footnote{https://highfidelity.io/} is implementing infrastructure for virtual worlds that is fast enough for developers to be able to sense body language and hear audio in real time.  
@@ -300,30 +303,34 @@ Everyone could meet in the shared VR live coding environment and watch while the
 The team would be able to see how the system changed rather than looking through large amounts of code.
 
   % pair designing
-Co-located teams can design together around a whiteboard in a conference room as they talk through the problems of the system. 
-A shared VR environment could have a similar room with sketching space that everyone can see. 
-Developers could drag-and-drop files or code snippets to display on the walls around them. 
-They could then discuss and annotate the code. 
-Additionally, visualizations such as structure diagrams or architecture of related systems could be overlaid on a wall for reference.
+%Co-located teams can design together around a whiteboard in a conference room as they talk through the problems of the system. 
+%A shared VR environment could have a similar room with sketching space that everyone can see. 
+%Developers could drag-and-drop files or code snippets to display on the walls around them. 
+%They could then discuss and annotate the code. 
+%Additionally, visualizations such as structure diagrams or architecture of related systems could be overlaid on a wall for reference.
 
 % exploring data visualization together
-Remote workers could experience immersive visualizations together. 
-A control flow graph could be represented by a maze of rooms through which the team could walk. 
-The team members could trace different paths and yet still be shown an overlay of where each of the other members are and how these positions relate to each other. 
-Currently remote workers can each trace separate paths of the code but have a hard time communicating what those paths are and how they relate to each other.
+%Remote workers could experience immersive visualizations together. 
+%A control flow graph could be represented by a maze of rooms through which the team could walk. 
+%The team members could trace different paths and yet still be shown an overlay of where each of the other members are and how these positions relate to each other. 
+%Currently remote workers can each trace separate paths of the code but have a hard time communicating what those paths are and how they relate to each other.
 
-Remote workers often miss out on many benefits that in-person communication can bring. 
-Shared VR spaces tailored to developers' activities can fill some of the gaps caused by distance and help the team to function better together. 
+%Remote workers often miss out on many benefits that in-person communication can bring. 
+%Shared VR spaces tailored to developers' activities can fill some of the gaps caused by distance and help the team to function better together. 
 
-\subsection{Simulation}
-Virtual reality is well-suited to applications with physical analogs that can be simulated in 3D. 
-Although simulation software is not uncommon, 3D worlds are often difficult to to navigate and interact with when displayed on 2D devices. 
-Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. 
-Interacting with a simulation might require positioning a virtual cursor which can be challenging when you only have a 2D view of the scene. 
 
-VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly. One can imagine a user physically turning their head to look around a simulated car plant or using their hands, via a Leap Motion controller, to interact with a simulated robot. 
-These direct interactions provide a subtle but important advantage over 2D-projected simulations. 
-This sense of immersion gives the users unimpeded access to the simulation which allows for quicker turn-around when testing or debugging the simulated software, especially if combined with an in-situ live coding solution like \textsc{RiftSketch}.
+% git diff + complexity vs active fragment
+%\subsubsection{Big Picture}
+%\textsc{Immersion} also displays overview diagrams of this changeset to allow the reviewer to see where this active fragment fits into the changeset as a whole. 
+%Similarly an overview of the cyclomatic complexity also helps the reviewer to see which areas of the code would be most relevant to see. 
+%These diagrams illustrate how VR is able to show multiple overview and detail diagrams without overwhelming the user.
+
+%Immersive VR environments have a lot more space for information display than current computer workstations.
+%We used \textsc{Immersion} to illustrate that VR software engineering tools can use this increased space and the affordances of VR to more easily analyze and navigate the displayed information.
+% What does VR provide that makes this different from using a Leap with 5 monitors?
+
+
+%\subsection{Simulation}
 
 \section{Discussion}
 % VR vs AR in the future, which is better?
