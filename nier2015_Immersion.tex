@@ -164,13 +164,7 @@ This is most apparent with head rotation, where users rotate their physical head
 Need to introduce live coding here, cite something.  Split some here, some in discussion.
 Steve Tanimoto.
 
-Largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}, RiftSketch demonstrates the potency of giving a creator, or programmer, a direct and immediate connection to their creation. 
-This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
-RiftSketch is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hinderance.  
-These benefits are especially evident in RiftSketch when the code describes a VR scene. 
-Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
-
-\subsubsection{Bending reality}
+\subsubsection{Malleable reality}
 
 Finally, there are opportunities to scale.
 Fitting in an airplane.
@@ -198,86 +192,84 @@ The lander repositions itself as expected and the historic mission can continue 
 
 \section{Systems}
 
-To immerse the user in a virtual environment we used a head-mounted display (Oculus Rift - Development Kit 2) and a Leap Motion Controller for gesture recognition.
-To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system.
-See Figure~\ref{fig:rift}.
+We have built two virtual reality prototypes for software engineering to more concretely demonstrate the affordances of VR. 
+\textsc{RiftSketch} primarily illustrates \emph{liveness} and \textsc{Immersion} chiefly demonstrates \emph{spatial cognition and memory}.
+Both systems use \emph{manipulation and motion} to aid their primary goals.
+Both of these systems use a head-mounted display (Oculus Rift - Development Kit 2) to visually immerse the user in the environment and a Leap Motion Controller for gesture recognition.
+To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system (See Figure~\ref{fig:rift}).
 
-RiftSketch is a live coding environment built for VR.
-
+\textsc{RiftSketch} is a live coding environment built for VR.
 It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
 
-RiftSketch presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
+\textsc{RiftSketch} presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
 As the user types code into the editor, the world around them updates instantly to display the 3D scene dictated by their code. 
-RiftSketch also allows the user to animate their scene via a callback function which is executed on every frame. 
+\textsc{RiftSketch} also allows the user to animate their scene via a callback function which is executed on every frame. 
 The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
 
-immersion is a code review system that uses the overview and detail paradigm [cite] in three ways to allow reviewers to more easily find, analyze and navigate information relevant to the code being modified in this review.
+\textsc{Immersion} is a code review prototype that uses the overview and detail paradigm~\cite{Shneiderman:InfoVisTaxonomy} in three ways to allow reviewers to more easily find, analyze and navigate information relevant to the code being modified in this review.
 
-Transition.
-
+In the following section, we more fully describe how both the \textsc{RiftSketch} and \textsc{Immersion} systems demonstrate the benefits for software engineering by using the affordances of a VR environment.
 
 \section{Applications}
 
 In this section we describe how our systems can provide affiances and interactions used in the scenario above in the following applications:
 code review, live coding, remote collaboration, and simulation. 
 
-% ties all application together
-% take advantage of the affordances of VR
-  % immersive env => lots of info at once
-  % stereoscopic => true 3D; depth
-  
- %Virtual reality (VR) could increase the productivity of software engineers by several orders of magnitude because it offers affordances not yet used in software engineering.
-
-  
-  
-%Our main contribution is not these specific ideas, but to show the possibilities of software engineering with VR.
 
 \subsection{Live Coding}
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{figures/riftsketch/closer}
-\caption{RiftSketch screenshot \label{riftsketch}}
+\caption{\textsc{RiftSketch} screenshot. The tree is generated by a recursive algorithm that the user has typed into the floating editor. The flying, animated birds represent tweets pulled in from the Twitter API, also generated by code that the user has entered. \label{RiftSketch}}
 \end{figure}
+
+\subsubsection{Liveness}
+
+\textsc{RiftSketch} demonstrates the potency of giving a programmer direct and immediate connection to their creation, largely inspired by Bret Victor's seminal lecture, "Inventing on Principle"~\cite{Victor:InventingOnPrincipleVideo}\cite{Victor:InventingOnPrincipleTranscript}.
+This tight feedback loop allows the programmer to better understand the effect of every part of the code that they write and to quickly experiment with various solutions, algorithms and calculations. 
+\textsc{RiftSketch} is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hindrance.  
+These benefits are especially evident in \textsc{RiftSketch} when the code describes a VR scene. 
+Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
 
 \subsubsection{Hand Manipulation of Code}
 
-Furthermore, RiftSketch provides the user with shortcuts and input methods to quickly edit numbers in the code that they write. 
+Furthermore, \textsc{RiftSketch} provides the user with shortcuts and input methods to quickly edit numbers in the code that they write. 
 Keyboard shortcuts allow the user to increment or decrement numbers in the code by increments of 0.1, 10 or 100. 
 Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input: the user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. 
 Numbers in the code could represent anything, from the X, Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
 
-\subsubsection{More Interactions}.
 
 \subsection{Code Review}
 %First, we show how an immersive code review environment could enable software engineers to more easily analyze and navigate information which leads to increased understanding of the software.
 
-% Redudant.
+% Redundant.
 %The user views the environment through an Oculus Rift and interacts with hand gestures recognized by a Leap Motion Controller.
 
 % piles vs circle
 \subsubsection{Piles as an Overview}
-Immersion shows code fragments similar to Code Bubbles~\cite{Bragdon:CodeBubbles}, but each fragment consists of exactly one method.  
-The reviewer initially sees the active fragment in the center of the screen with other relevant information distributed around the floor in piles with more relevant piles closer to the reviewer. 
-The reviewer is able to scan the label of the pile and number of fragments in each pile to quickly verify if this pile is indeed relevant. 
+\textsc{Immersion} represents methods as code fragments similarly to Code Bubbles~\cite{Bragdon:CodeBubbles}.  
+The reviewer initially sees the active fragment in the center of the screen with other relevant fragments distributed around the floor in piles with more relevant piles closer to the reviewer. 
+The reviewer is able to scan the label of the pile and number of fragments in each pile to quickly verify if this pile is indeed relevant.
+Agarawala et al used piles in BumpTop for similar reasons and showed that they were effective~\cite{Agarawala:BumpTop}.
 The reviewer then makes a grabbing motion towards the most interesting pile and pulls their hand up to show all of the fragments in a circular expanded view to the right of the active fragment.
 
 % circle: foremost vs other fragments
 \subsubsection{Expanded Circle}
 The reviewer is now able to read the foremost fragment in the circle and can make horizontal finger swipes to rotate the circle and read other fragments. 
-Immersion uses semantic zoom to make method names readable even when at the back of the circle and the fragment retains its height so that the reviewer can quickly see how many lines of code it has. 
+\textsc{Immersion} uses semantic zoom to make method names readable even when at the back of the circle and the fragment retains its height so that the reviewer can quickly see how many lines of code it has. 
 The reviewer can select an especially large method using a pinch motion on the top and bottom and move it to become the active fragment. 
 The piles then change to include code relevant to the new fragment. 
 The reviewer can move their hand as if clearing off a desk to return to the previous active fragment.
 
 % git diff + complexity vs active fragment
 \subsubsection{Big Picture}
-Immersion also displays overview diagrams of this changeset to allow the reviewer to see where this active fragment fits into the changeset as a whole. 
+\textsc{Immersion} also displays overview diagrams of this changeset to allow the reviewer to see where this active fragment fits into the changeset as a whole. 
 Similarly an overview of the cyclomatic complexity also helps the reviewer to see which areas of the code would be most relevant to see. 
 These diagrams illustrate how VR is able to show multiple overview and detail diagrams without overwhelming the user.
 
 Immersive VR environments have a lot more space for information display than current computer workstations.
-We used Immersion to illustrate that VR software engineering tools can use this increased space and the affordances of VR to more easily analyze and navigate the displayed information.
+We used \textsc{Immersion} to illustrate that VR software engineering tools can use this increased space and the affordances of VR to more easily analyze and navigate the displayed information.
 % What does VR provide that makes this different from using a Leap with 5 monitors?
 
 \subsection{Remote Collaboration}
@@ -337,7 +329,7 @@ This sense of immersion gives the users unimpeded access to the simulation which
   % code snippets while wearing Google Glass could appear on peripherals
 We have presented two systems with applications in software engineering.
 
-Although the current implementation of RiftSketch is little more than a creative toy, the experience of using it shows the potential of practical applications. 
+Although the current implementation of \textsc{RiftSketch} is little more than a creative toy, the experience of using it shows the potential of practical applications. 
 <Mention hours logged in live coding>
 
 In practical applications, one could extend the concept of live coding and tight feedback loops in order to create customized programming environments. 
