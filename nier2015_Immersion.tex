@@ -138,6 +138,8 @@ Simply going for a walk increases creativity, even prior to starting the creativ
 Other affordances can be aided by motion. For example, perception of depth is enhanced by self-actuated movement in a space~\cite{Held:1963}.
 %Memory...
 
+\todo[Anthony]{Cite natural gestures paper}\\
+
 Through input devices such as the Leap Motion, it is possible to manipulate and interact with virtual objects in virtual spaces.
 Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{http://cyberith.com/product/}}, allow free movement in a virtual space, including walking, running, and vertical movements such as jumping and crouching.  Such devices are already more affordable and require less space than typical standing desks.
 
@@ -337,6 +339,8 @@ VR programming environments could allow the user to take advantage of the mallea
 For example, a user could live code a widget that indicates some statistic of the code they are currently editing, such as the cyclomatic complexity, test coverage or test result. 
 The widget would update itself as the user typed, not unlike existing code feedback tools such as NCrunch \footnote{NCrunch automated concurrent testing tool: http://www.ncrunch.net/}, and they could position the widget in their virtual periphery.
 
+\todo[Anthony]{Opportunities for other gestures: Refactoring}
+
 \subsection{Open Questions}
 
 \todo[Anthony]{Either expand or cut out stand-alone questions without discussion}
@@ -377,53 +381,45 @@ Voice recognition added to gesture recognition could help to reduce that arm str
 % Here is a chance to include some honest things that need to be overcome, for example, resolution, nausea, configuration, pupil distance, etc.
 VR technology has come a long ways but there are still challenges that need to be overcome for widespread adoption by software engineers.
 % Nausea
+\subsection{Technology Limitations}
 
-\todo[Anthony]{Generalize things that can be overcome by a "technology gap" section.  }
-\subsection{Nausea}
-Text moved into affordances (Negative into a positive).
-%This issue can largely be solved by using higher quality gaming graphics cards.
-
-\subsection{Resolution}
+\subsubsection{Resolution}
 The Development Kit 2 of the Oculus Rift has a resolution of 1080p (ensure they say this on the website) but this allows merely passable reading of text. 
 Future iterations of the Rift and other head-mounted displays will need increased resolution to provide a more comfortable experience.
 Increased resolution will increase the sense of presence which in turn should reduce nausea.
 
-\subsection{Ease of Configuration}
+\subsubsection{Ease of Configuration}
 Small changes in configuration can provide large changes in results.
 This means that the Rift must be configured for each user which can take up to 15 minutes.
+The Rift requires users to measure the distance between their pupils for more accurate stereoscopic rendering, but current utilities are either time consuming or hard to use properly.
 
-\subsubsection{Inter-pupillary distance}
-One way to decrease nausea is to measure the distance between the user's pupils to more accurately render an image for each eye.
-A software utility produced by Oculus attempts to measure this distance but is hard to use and often has varying results if used incorrectly.
-Users would have a better experience if there was an easier way to measure the inter-pupillary distance.
+Eyeglass wearers must go through extra trial and error to see if the headset is best used with glasses on and a reduced field of view or replace their glasses with stronger lenses in the Rift and have increased blurriness.
 
-\subsubsection{Lenses and Field of View}
-The Rift puts a display very close to users' eyes and uses lenses to provide proper distortion.
-Users can adjust the distance from their eyes to the lenses in order to obtain a sharper image and reduce nausea.
-Users who typically wear eyeglasses can sometimes fit the headset overtop of their eyeglasses, but then must push the lenses as far away as possible, which decreases the field of view.
-Alternatively, users can remove their eyeglasses and use stronger lenses instead to allow the lenses to be closer to the eyes.
-However, these alternative lenses still reduce the field of view slightly, are not as powerful as required for some users, and removing one's eyeglasses becomes annoying if done frequently.
+%\subsubsubsection{Inter-pupillary distance}
+%One way to decrease nausea is to measure the distance between the user's pupils to more accurately render an image for each eye.
+%A software utility produced by Oculus attempts to measure this distance but is hard to use and often has varying results if used incorrectly.
+%Users would have a better experience if there was an easier way to measure the inter-pupillary distance.
 
-Increased resolution and easier configuration will help reduce nausea in users, and these improvements are necessary for widespread adoption by software engineers.
+%\subsubsubsection{Lenses and Field of View}
+%The Rift puts a display very close to users' eyes and uses lenses to provide proper distortion.
+%Users can adjust the distance from their eyes to the lenses in order to obtain a sharper image and reduce nausea.
+%Users who typically wear eyeglasses can sometimes fit the headset overtop of their eyeglasses, but then must push the lenses as far away as possible, which decreases the field of view.
+%Alternatively, users can remove their eyeglasses and use stronger lenses instead to allow the lenses to be closer to the eyes.
+%However, these alternative lenses still reduce the field of view slightly, are not as powerful as required for some users, and removing one's eyeglasses becomes annoying if done frequently.
 
-\todo[Anthony]{Interacting with peers not in VR, mental cost of "jacking in", how webcam projection can alleviate some of this.}
-\todo[Anthony]{Mapping problems that aren't necessarily 3d to have a 3d representation in VR.}
+%Increased resolution and easier configuration will help reduce nausea in users, and these improvements are necessary for widespread adoption by software engineers.
 
-\todo[Anthony]{Opportunities for other gestures: Refactoring}
+% 'cost' isn't quite the right word... detractions? cons?
+\subsection{Cost of VR}
+Putting on a VR headset means blocking out the rest of the physical world, including coworkers.
+Peers would lack the opportunity to ask questions and physical communication is stifled.
+Additionally, the VR headset wearer will have trouble interacting with the physical world while in VR.
+A webcam mounted to the headset enables some interaction with the physical world, as seen in Figure~\ref{fig:rift}, but has a limited field of view.
 
-\section{Related Work}
-
-\todo[Anthony]{Cite natural gestures paper}\\
-\todo[Anthony]{Revisit 3d visualization work.}
-
-\todo{Potential to kill this section because, we can instead cite through out paper}
-
-%Chris Parnin developed a tool called NosePrints which allows users to quickly see if a code smell is relevant~\cite{parnin:Noseprints}.
-
-Agarwala used piles to add structure to a 3D desktop.~\cite{Agarawala:BumpTop}
-
-Yongpisanpop created Bugarium that integrated a Leap Motion Controller to aid both interaction and visualization in a large-scale bug repository~\cite{Bugarium}.
-
+\subsection{3D Mapping}
+Some problems don't have an inherent 3D representation which makes display in VR a challenge.
+As seen in \textsc{Immersion}, 2D code can be displayed in VR but the code itself does not have a third dimension and thus loses the expressiveness of 3D.
+This could be an area well suited to 3D metaphorical programming as suggested by Ko et al~\cite{Ko:LearningBarriers}.
 
 
 \section{Conclusions}
@@ -433,6 +429,9 @@ Yongpisanpop created Bugarium that integrated a Leap Motion Controller to aid bo
 
 We envision a future where software engineers work in immersive environments which take advantage of more affordances of the human body than current workstations.
 We argue that these affordances provide a platform for new kinds of software engineering tools. 
+
+\todo[Anthony]{Recap affordances}
+
 %We imagine a future in which many software engineers find it most productive to design and build software within a VR environment. 
 
 
