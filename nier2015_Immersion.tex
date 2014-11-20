@@ -49,7 +49,7 @@ due to insufficient ability to navigate and understand the code under review~\ci
 
 %The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
 Researchers have explored the underlying cognitive issues to several problems developers experience~\cite{Parnin:2012}.
-For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporally navigate to another location in code and forgot how to find the relevant code location again because the cues they relied on: position of scroll bars and document tabs where unstable and were disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and often refer to code as being "above" or "below" one another.
+For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporally navigate to another location in code and forgot how to find the relevant code location again because the cues they relied on: position of scroll bars and document tabs where unstable and were disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' another.
 
 \begin{figure}[ht]
 \centering
@@ -76,22 +76,24 @@ For example, in one study, participants organized their web bookmarks by positio
 
 Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
 
-\begin{figure*}[ht]
+\begin{figure}[ht]
 \centering
-\includegraphics[width=\textwidth,height=5cm]{figures/unwarped_comet2}
+\includegraphics[width=\linewidth]{figures/unwarped_comet2}
 \caption{The active fragment is in the middle of the user's view. The user is currently looking at the implementations of the methods (shown to the right) called by the active fragment. The user is able to easily read 3 of these fragments at once.  \label{immersion}}
-\end{figure*}
+\end{figure}
 
 %Live feedback (update with hands).  Simulation sickness.
+In this paper, we describe how head-mounted virtual reality displays coupled with gesture input devices provide several previously unexplored affordances not yet fully utilized in a programming environments. 
+%Understanding the challenges and benefits offered by programming environments supported by VR is a space worth exploring.
+%We then illustrate a scenario with a future programming environment that fully integrates VR.  
+We then describe several systems we have prototyped and how the systems can be used in several applications related to software engineering.  Finally, We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
 
-Head-mounted virtual reality displays coupled with gesture input devices provide several previously unexplored affordances not yet fully utilized in a programming environments.
+
 %which enable the user to feel immersed in a virtual environment., and live feedback in the environment, 
-Our motivation and argument is simple: 
-Introducing affordances that leverage human capabilities can lead to improvements in programming environments.
-Interaction and manipulation of virtual space is a compelling but relatively unexplored alternative to windowed programming environments, with a set of new capacities to support affordances not currently available in existing programming environments.   Understanding the challenges and benefits offered by programming environments supported by VR is a space worth exploring.
+%Our motivation and argument is simple: 
+%Introducing affordances that leverage human capabilities can lead to improvements in programming environments.
+%Interaction and manipulation of virtual space is a compelling but relatively unexplored alternative to windowed programming environments, with a set of new capacities to support affordances not currently available in existing programming environments.   
 
-In this paper, we describe a set of affordances that VR provides and describe how they can be beneficial to integrate into programming environments.  
-We then illustrate a scenario with a future programming environment that fully integrates VR.  We then describe several systems we have prototyped to begin realizing this scenario and how the systems can be used in several applications related to software engineering.  Finally, We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
 
 
 
@@ -100,6 +102,7 @@ We then illustrate a scenario with a future programming environment that fully i
 % go into a bit of detail for each item
 % give concrete example of VR: we used the Rift and Leap Motion
 % the affordances allow an immersive environment: big whoop. Why should I care about an immersive environment?
+We describe a set of affordances that VR provides and describe how they can be beneficial to integrate into programming environments.  
 
 \subsubsection{Spatial Cognition and Memory}
 
@@ -127,20 +130,20 @@ Manipulation is an important affordance.  The affordances provided by interactio
 For example, consider the affordances offered by manipulating and turning pages of a book.
 Numerous studies have established that when text read on paper versus read on computer displays; 
 as a result, comprehension and recall of the text is better when read on paper~\cite{Noyes:2008}.  
-Additionally, the ability to serendipitously browse and relocate material is improved on paper due 
-to the ability to turn pages.
+Additionally, the ability to serendipitously browse and relocate material is improved.
+% on paper due to the ability to turn pages.
 %especially when the content is complexity.
 %Objects: E-books vs textbooks.
 %manipulation with leap motion.
-
 % http://embodiedknowledge.blogspot.com/2011/12/classic-experiment-by-held-and-hein.html
-Motion in a physical space, through exertions such as walking, have important cognitive consequences.
-Simply going for a walk increases creativity, even prior to starting the creative task~\cite{Oppezzo:2014}.
+Motion in a physical space, through exertions such as walking, have important cognitive consequences~\cite{Oppezzo:2014}.
+%Simply going for a walk increases creativity, even prior to starting the creative task~\cite{Oppezzo:2014}.
 Other affordances can be aided by motion. For example, perception of depth is enhanced by self-actuated movement in a space~\cite{Held:1963}.
 %Memory...
 
-Through input devices such as the Leap Motion, it is possible to manipulate and interact with virtual objects in virtual spaces.
-Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{http://cyberith.com/product/}}, allow free movement in a virtual space, including walking, running, and vertical movements such as jumping and crouching.  Such devices are already more affordable and require less space than typical standing desks.
+Researchers have explored integrating natural interactions with existing programming environments~\cite{Delimarschi:2014}.
+Through input devices such as the Leap Motion, it is possible to also manipulate and interact with virtual objects.
+Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{http://cyberith.com/product/}}, allow free movement in a virtual space, including walking, running, and vertical movements such as jumping and crouching.%  Such devices are as affordable and require less space than standing desks.
 
 %Self-actuated motion enhances the 
 
@@ -162,7 +165,7 @@ This is most apparent with head rotation, where users rotate their physical head
 % Danger of using "you", as researchers aren't programmers and sadly can't identify with this!
 Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
 After 10 years in flight, the probe lands against all odds but in a position that is unable to receive sunlight and without deploying its anchoring harpoons.
-Automated telemetry programs cannot find a feasible path. As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned. 
+Automated telemetry programs cannot find a feasible path. As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned.
 
 You update your simulation with the data and step into VR to survey the situation. 
 After assessing the lander's options, you iterate on a number of solutions, first using your hands to position a possible path, and scale thrust settings, 
