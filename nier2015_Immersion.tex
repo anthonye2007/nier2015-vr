@@ -31,10 +31,10 @@ chris.parnin@ncsu.edu}}
 
 \maketitle
 \begin{abstract}
-Software engineers primarily interact with software using a keyboard and mouse and typically view software on a small number of 2D monitors.
+Software engineers primarily interact with source code using a keyboard and mouse, and typically view software on a small number of 2D monitors.
 This interaction paradigm does not take advantage of many affordances of natural human movement and perception.
-Virtual reality (VR) environments designed for software engineering could greatly increase productivity by taking advantage of innate affordances.
-This paper describes several prototype applications for software engineering tools in VR, including a live coding environment and code review system, and discusses possible benefits, open research questions, challenges, and future research directions.
+Virtual reality (VR) environments designed for software engineering can greatly increase productivity by taking advantage of innate affordances.
+This paper describes the affordances offered by VR; demonstrates the benefits of VR and software engineering in prototypes for live coding and code review; and discusses future work, open questions, and the challenges of VR.
 \end{abstract}
 
 \section{Introduction}
@@ -165,8 +165,8 @@ For example, a person in virtual reality can become nauseous when they attempt t
 % Applications
 \section{Applications}
 
-We have built two virtual reality prototypes for software engineering to concretely demonstrate the affordances of VR.
-In this section we describe how these systems can provide affordances and interactions from the comet example above in live coding and code review.
+We have built VR prototypes for live coding and code review which concretely demonstrate the benefits of using the affordances of VR.
+We argue that the benefits described in this section can also be extended to other software engineering activities. %todo -- pull into other section
 
 Both of these systems use a head-mounted display (Oculus Rift - Development Kit 2) and a Leap Motion Controller for gesture recognition.
 
@@ -180,6 +180,7 @@ Both of these systems use a head-mounted display (Oculus Rift - Development Kit 
 As the user types code into the editor, the world around them updates instantly to display the 3D scene dictated by their code. 
 \textsc{RiftSketch} also allows the user to animate their scene via a callback function which is executed on every frame. 
 The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
+This animation makes the user truly feel \emph{inside} the scene in a way not captured by a 2D screenshot.
 
 To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system (See Figure~\ref{fig:rift}).
 
@@ -210,11 +211,14 @@ Numbers in the code could represent anything, from the X, Y or Z components of a
 % Danger of using "you", as researchers aren't programmers and sadly can't identify with this!
 Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
 After 10 years in flight, the probe lands against all odds but in a position that is unable to receive sunlight and without deploying its anchoring harpoons.
-Automated telemetry programs cannot find a feasible path. As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data shows exactly where and how the lander is positioned.
+Automated telemetry programs cannot find a feasible path.
+As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. 
+Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data shows exactly where and how the lander is positioned.
 
 You update your simulation with the data and step into \textsc{RiftSketch} to survey the situation. 
 After assessing the lander's options, you iterate on possible solutions, first by using hand gestures to manipulate a possible path and scale thrust settings, 
-and then the keyboard to refine the code. With each solution, you observe the lander's behavior inside \textsc{RiftSketch}.
+and then the keyboard to refine the code. 
+With each solution, you observe the lander's behavior inside \textsc{RiftSketch}.
 You walk around the lander to inspect its position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, and zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
 
 Finally, after having run the simulation dozens of times in \textsc{RiftSketch}, you pass the software on to review.
@@ -252,16 +256,17 @@ The piles then change to include code relevant to the new fragment, but the revi
 \subsubsection{Usage Example}
 
 %% talk about this in remote collaboration
-Consider the comet scenario from before where a programmer has implemented a repositioning flight path for the lander.
+Consider the previous comet scenario where a programmer has implemented a repositioning flight path for the lander.
 
-A reviewer puts on the Rift and enters \textsc{Immersion} to ensure this solution will actually work.
-She notes an edge case which might cause a collision and suggests gently crashing the companion orbiter into the probe.
+A reviewer puts on a Rift and enters \textsc{Immersion} to ensure this solution will actually work.
+She notes an edge case which might cause a collision and suggests gently crashing the companion orbiter into the probe to avoid a larger collision.
 The original programmer implements the suggestion in \textsc{RiftSketch}, ensures the simulation works and celebrates before submitting the correction to the reviewer.
 However, the reviewer sees a section of code light up in \textsc{Immersion}.
-As she walks over to the section she sees that it is the collision detection section.
-She expands the 'Related Artifacts' pile and sees that shutting off the engine just before impact might avoid the collision.
-The programmer verifies that the reduced thrust modifies the flight path enough and the code is uploaded to the lander.
-The lander repositions itself as expected and the historic mission can continue successfully.
+As she walks over to the section she sees that it is the collision detection section warning that the system will not allow this code to execute outside of the simulator.
+She realizes she can allow the execution by shutting off the engine just before impact to override the system.
+%She expands the 'Related Artifacts' pile and sees that shutting off the engine just before impact might avoid the collision.
+%The programmer verifies that the reduced thrust modifies the flight path enough and the code is uploaded to the lander.
+They upload the code and the lander repositions itself as expected.
 
 
 %   RS
