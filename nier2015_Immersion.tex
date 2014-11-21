@@ -49,7 +49,7 @@ due to insufficient ability to navigate and understand the code under review~\ci
 
 %The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
 Researchers have explored the underlying cognitive issues to several problems developers experience~\cite{Parnin:2012}.
-For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporarily navigate to another location and forgot how to find the original location. This loss was because the cues they relied on, such as position of scroll bars and document tabs, were unstable or disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' another.
+For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporarily navigate to another location and forgot how to find the original location. This loss was because the cues they relied on, such as position of scroll bars and document tabs, were unstable or disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' other code.
 
 \begin{figure}[ht]
 \centering
@@ -69,12 +69,12 @@ For example, \emph{spatial memory}, a memory system in the parahippocampus that 
 \end{figure}
 
 % Data Mountain: http://www.microsoft.com/usability/UEPostings/p153-robertson.pdf
-\emph{Affordances}, are devices that often leverage innate cognitive mechanisms when performing actions in an environment, and can result in increased task performance. 
+\emph{Affordances} are devices that often leverage innate cognitive mechanisms when performing actions in an environment, which can result in increased task performance. 
 Researchers have attempted to improve interfaces and programming environments that incorporate the human capacity for attention, cognition, and memory.
 For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Robertson:1998}. 
 %After 6 months, participants could still recall the bookmarks based on position alone.  
 
-Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allows a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
+Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles} allows a developer to quickly position related fragments of code on an infinitely scrollable screen, which improves navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removes management of fragments and introduces a more stable position, to improve disorientation that was still present with users of Code Bubbles.
 
 \begin{figure}[ht]
 \centering
@@ -83,7 +83,7 @@ Similarly, researchers have incorporated affordances for spatial memory in progr
 \end{figure}
 
 %Live feedback (update with hands).  Simulation sickness.
-In this paper, we describe how head-mounted virtual reality displays coupled with gesture input devices provide several previously unexplored affordances not yet fully utilized in a programming environments. 
+In this paper, we describe how head-mounted virtual reality displays coupled with gesture input devices provide several previously unexplored affordances not yet fully utilized in programming environments. 
 %Understanding the challenges and benefits offered by programming environments supported by VR is a space worth exploring.
 %We then illustrate a scenario with a future programming environment that fully integrates VR.  
 We then describe several systems we have prototyped and how the systems can be used in several applications related to software engineering.  Finally, We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
@@ -106,10 +106,10 @@ We describe a set of affordances that VR provides and describe the potential ben
 
 \subsubsection{Spatial Cognition and Memory}
 
-Head-mounted virtual reality displays allow the user to update their view by moving their bodies or rotating their neck, even a full 360 degrees.
+Head-mounted virtual reality displays allow the user to update their view by moving their body or rotating their neck, even a full 360 degrees.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
 %VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
-Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could observed as a person navigated a virtual town and again when they later recalled the paths through the town~\cite{Ekstrom:2003}.
+Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could be observed as a person navigated a virtual town and again when they later recalled the paths through the town~\cite{Ekstrom:2003}.
 
 
 %VR devices render a slightly different image for each eye (stereoscopic rendering) which allows humans to sense depth in the images just like in the physical world. 
@@ -141,7 +141,7 @@ Other affordances can be aided by motion. For example, perception of depth is en
 
 Researchers have explored integrating natural interactions with existing programming environments~\cite{Delimarschi:2014}.
 Through input devices such as the Leap Motion, it is possible to also manipulate and interact with virtual objects.
-Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{http://cyberith.com/product/}}, allow free movement in a virtual space, including walking, running, and vertical movements such as jumping and crouching.%  Such devices are as affordable and require less space than standing desks.
+Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{http://cyberith.com/product/}} allow free movement in a virtual space such as walking, running, jumping and crouching.%  Such devices are as affordable and require less space than standing desks.
 
 %Self-actuated motion enhances the 
 
@@ -157,7 +157,7 @@ The potency of giving programmers a direct and immediate connection to their cre
 When liveness is violated, the results can be nauseating.
 Simulator sickness is distinct from motion sickness, in that it arises due to a mismatch between a person's interaction and the expected response of the environment.
 For example, a person in virtual reality can become nauseous when they attempt to interact with the system but the system does not respond quickly enough.
-This is most apparent with head rotation, where users rotate their physical heads expecting to see an updated view but still see the initial view.
+%This is most apparent with head rotation, where users rotate their physical heads expecting to see an updated view but still see the initial view.
 
 \section{Motivating Example}
 % Danger of using "you", as researchers aren't programmers and sadly can't identify with this!
@@ -166,9 +166,9 @@ After 10 years in flight, the probe lands against all odds but in a position tha
 Automated telemetry programs cannot find a feasible path. As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data shows exactly where and how the lander is positioned.
 
 You update your simulation with the data and step into VR to survey the situation. 
-After assessing the lander's options, you iterate on a number of solutions, first by using your hands to manipulate a possible path and scale thrust settings, 
-and then the keyboard to refine the code. With each solution you observe the lander's behavior inside the simulation.
-You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
+After assessing the lander's options, you iterate on possible solutions, first by using hand gestures to manipulate a possible path and scale thrust settings, 
+and then the keyboard to refine the code. With each solution, you observe the lander's behavior inside the simulation.
+You walk around the lander to inspect its position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, and zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
 
 %% talk about this in remote collaboration
 %A peer programmer joins and watches a replay of your live coding session.  She notes an issue with potential collision and suggests that you can correct the path by gently crashing the the companion orbiter into probe.  You add this to the simulation, it seems to work.  But you're not done yet, the peer programmer has noticed a part of the code light up in the distance.
@@ -220,7 +220,7 @@ Both of these systems use a head-mounted display (Oculus Rift - Development Kit 
 
 \subsection{Live Coding}
 
-\textsc{RiftSketch}\footnote{http://www.youtube.com/watch?v=SKPYx4CEIlM} is a live coding environment built for VR which allows users to describe a 3D scene using the Three.js library\footnote{http://threejs.org/}.
+\textsc{RiftSketch}\footnote{\url{http://www.youtube.com/watch?v=SKPYx4CEIlM}} is a live coding environment built for VR which allows users to describe a 3D scene using the Three.js library\footnote{\url{http://threejs.org/}}.
 %It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
 
 \textsc{RiftSketch} presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
