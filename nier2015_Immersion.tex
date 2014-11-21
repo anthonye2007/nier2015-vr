@@ -41,15 +41,15 @@ This paper describes several prototype applications for software engineering too
 
 Programming environments have not significantly changed in decades, 
 despite advances in psychology, neuroscience, and social aspects of software development.
-And as a result, problems still persist.  Developers still experience disorientation when navigating code~\cite{Henley:2014}.
-Developers still experience problems comprehending code~\cite{Maalej:TOSEM:2014}.  These basic issues also impede other important software engineering activities, for example,
+As a result, problems still persist.  Developers still experience disorientation when navigating code~\cite{Henley:2014}.
+Developers still experience problems comprehending code~\cite{Maalej:TOSEM:2014}.  These basic issues also impede other important software engineering activities. For example,
 when performing a code review, developers mostly report issues, such as code convention violations, instead of discussing design flaws or defects
 due to insufficient ability to navigate and understand the code under review~\cite{bacchelli:ModernCodeReviewChallenges}.  
 %Other challenges, such as remote pairing, still persist.
 
 %The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
 Researchers have explored the underlying cognitive issues to several problems developers experience~\cite{Parnin:2012}.
-For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporally navigate to another location in code and forgot how to find the relevant code location again because the cues they relied on: position of scroll bars and document tabs where unstable and were disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' another.
+For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporarily navigate to another location and forgot how to find the original location. This loss was because the cues they relied on, such as position of scroll bars and document tabs, were unstable or disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' another.
 
 \begin{figure}[ht]
 \centering
@@ -74,7 +74,7 @@ Researchers have attempted to improve interfaces and programming environments th
 For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Robertson:1998}. 
 %After 6 months, participants could still recall the bookmarks based on position alone.  
 
-Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allowed a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
+Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles}, allows a developer to quickly position related fragments of code on an infinitely scrollable screen, which improved navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removed management of fragments and introduced a more stable position, to improve disorientation that was still present with users of Code Bubbles.
 
 \begin{figure}[ht]
 \centering
@@ -102,7 +102,7 @@ We then describe several systems we have prototyped and how the systems can be u
 % go into a bit of detail for each item
 % give concrete example of VR: we used the Rift and Leap Motion
 % the affordances allow an immersive environment: big whoop. Why should I care about an immersive environment?
-We describe a set of affordances that VR provides and describe how they can be beneficial to integrate into programming environments.  
+We describe a set of affordances that VR provides and describe the potential benefits of integrating them into programming environments.
 
 \subsubsection{Spatial Cognition and Memory}
 
@@ -126,10 +126,8 @@ Virtual reality can directly mimic the affordances offered by physical navigatio
 
 \subsubsection{Manipulation and Motion}
 
-Manipulation is an important affordance.  The affordances provided by interaction with of a physical object can result in improved perception and retention. 
-For example, consider the affordances offered by manipulating and turning pages of a book.
-Numerous studies have established that when text read on paper versus read on computer displays; 
-as a result, comprehension and recall of the text is better when read on paper~\cite{Noyes:2008}.  
+The affordances provided by manipulation of a physical object can result in improved perception and retention. 
+For example, consider how the affordances offered by turning pages of a book result in increased comprehension and recall of the text when compared to reading on computer displays~\cite{Noyes:2008}.
 Additionally, the ability to serendipitously browse and relocate material is improved.
 % on paper due to the ability to turn pages.
 %especially when the content is complexity.
@@ -165,11 +163,11 @@ This is most apparent with head rotation, where users rotate their physical head
 % Danger of using "you", as researchers aren't programmers and sadly can't identify with this!
 Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
 After 10 years in flight, the probe lands against all odds but in a position that is unable to receive sunlight and without deploying its anchoring harpoons.
-Automated telemetry programs cannot find a feasible path. As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data tells you exactly where and how the lander is positioned.
+Automated telemetry programs cannot find a feasible path. As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data shows exactly where and how the lander is positioned.
 
 You update your simulation with the data and step into VR to survey the situation. 
-After assessing the lander's options, you iterate on a number of solutions, first using your hands to position a possible path, and scale thrust settings, 
-and then the keyboard to refine the code. With each one you observe the lander's behavior inside the simulation.
+After assessing the lander's options, you iterate on a number of solutions, first by using your hands to manipulate a possible path and scale thrust settings, 
+and then the keyboard to refine the code. With each solution you observe the lander's behavior inside the simulation.
 You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
 
 A peer programmer joins and watches a replay of your live coding session.  She notes an issue with potential collision and suggests that you can correct the path by gently crashing the the companion orbiter into probe.  You add this to the simulation, it seems to work.  But you're not done yet, the peer programmer has noticed a part of the code light up in the distance.
@@ -181,9 +179,9 @@ The lander repositions itself as expected and the historic mission can continue 
 
 \section{Systems}
 
-We have built two virtual reality prototypes for software engineering to more concretely demonstrate the affordances of VR. 
+We have built two virtual reality prototypes for software engineering to concretely demonstrate the affordances of VR. 
 \textsc{RiftSketch} primarily illustrates \emph{liveness} and \textsc{Immersion} chiefly demonstrates \emph{spatial cognition and memory}.
-Both systems use \emph{manipulation and motion} as well as \emph{malleable reality} to aid their primary goals.
+Both systems use \emph{manipulation and motion} to aid their primary goals.
 Both of these systems use a head-mounted display (Oculus Rift - Development Kit 2) to visually immerse the user in the environment and a Leap Motion Controller for gesture recognition.
 To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system (See Figure~\ref{fig:rift}).
 
@@ -204,16 +202,16 @@ The user can manipulate the state of the 3D scene in this looped block of code i
 \textsc{Immersion} is a code review prototype that displays code fragments in multiple ways to enhance spatial reasoning.
 Software packages are represented as traversable floor sections and are color coded by the amount of code modified for this review.
 The reviewer's view is centered around the active code fragment with fragment piles on the floor that the reviewer may want to see.
-Piles have previously been shown to effectively engage spatial reasoning.~\cite{Agarawala:BumpTop}
-The reviewer is able to expand one pile at a time into a ring of fragments to see the details of the fragments, based on Schneiderman's taxonomy including overview and detail visualizations. ~\cite{Shneiderman:InfoVisTaxonomy}
+Piles have previously been shown to effectively engage spatial reasoning~\cite{Agarawala:BumpTop}.
+The reviewer is able to expand one pile at a time into a ring of fragments to see the details of the fragments, based on Schneiderman's taxonomy including overview and detail visualizations~\cite{Shneiderman:InfoVisTaxonomy}.
 % I looked at Code Canvas, but they didn't cite anything for semantic zoom
-\textsc{Immersion} uses semantic zoom [ ? ] to make method names readable even when at the back of the ring and the fragments retain a scaled height enabling the reviewer to approximate its length. 
+\textsc{Immersion} uses semantic zoom to make method names readable even when at the back of the ring and the fragments retain a scaled height enabling the reviewer to approximate its length. 
 
 In the following section, we more fully describe how both the \textsc{RiftSketch} and \textsc{Immersion} systems demonstrate the benefits for software engineering by using the affordances of a VR environment.
 
 \section{Applications}
 
-In this section we describe how our systems can provide affiances and interactions used in the scenario above in the following applications:
+In this section we describe how our systems can provide affiances and interactions used in the comet example above in the following applications:
 code review, live coding, remote collaboration, and simulation. 
 
 
@@ -227,9 +225,8 @@ code review, live coding, remote collaboration, and simulation.
 
 \subsubsection{Liveness}
 
-\textsc{RiftSketch} demonstrates liveness my providing a tight feedback loop between code written and its effect in a virtual environment.
- and to quickly experiment with various solutions, algorithms and calculations. 
-\textsc{RiftSketch} is also very effective as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hindrance.  
+\textsc{RiftSketch} demonstrates liveness by providing a tight feedback loop between code written and its effect in a virtual environment, and to quickly experiment with various solutions, algorithms and calculations. 
+\textsc{RiftSketch} is also very promising as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hindrance.  
 These benefits are especially evident in \textsc{RiftSketch} when the code describes a VR scene. 
 Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
 
@@ -376,27 +373,22 @@ Voice recognition could reduce strain but may feel awkward in a shared work spac
 
 \section{Challenges}
 
-%VR technology has come a long ways but there are still challenges that need to be overcome for widespread adoption by software engineers.
-
-
-\subsection{Technology Limitations}
-
-The 1080p resolution of the Oculus Rift Development Kit 2 allows for passable text reading, but needs improvement for multi-hour sessions. 
-The Rift also requires users to measure the distance between their pupils for more accurate stereoscopic rendering, but current utilities are either time consuming or hard to use properly.
-Eyeglass wearers must go through extra trial and error to see if the headset is best used with glasses on and a reduced field of view or replace their glasses with stronger lenses in the Rift and have increased blurriness.
-
-
-% 'cost' isn't quite the right word... detractions? cons?
-\subsection{Cost of VR}
+\subsection{Separation from the Physical}
 Putting on a VR headset means blocking out the rest of the physical world, including coworkers.
-Peers would lack the opportunity to ask questions and physical communication is stifled.
-Additionally, the VR headset wearer will have trouble interacting with the physical world while in VR.
+Peers may lack the opportunity to ask questions and physical communication is stifled.
+Additionally, the VR headset wearer may have trouble interacting with the physical world while in VR.
 A webcam mounted to the headset enables some interaction with the physical world, as seen in Figure~\ref{fig:rift}, but has a limited field of view.
 
 \subsection{3D Mapping}
 Some problems don't have an inherent 3D representation which makes display in VR a challenge.
 As seen in \textsc{Immersion}, 2D code can be displayed in VR but the code itself does not have a third dimension and thus loses the expressiveness of 3D.
 This could be an area well suited to 3D metaphorical programming as suggested by Ko et al~\cite{Ko:LearningBarriers}.
+
+\subsection{Technology Limitations}
+
+The 1080p resolution of the Oculus Rift Development Kit 2 allows for passable text reading, but needs improvement for multi-hour sessions. 
+The Rift also requires users to measure the distance between their pupils for more accurate stereoscopic rendering, but current utilities are either time consuming or hard to use properly.
+Eyeglass wearers must go through extra trial and error to see if the headset is best used with glasses on and a reduced field of view or replace their glasses with stronger lenses in the Rift and have increased blurriness.
 
 
 \section{Conclusions}
