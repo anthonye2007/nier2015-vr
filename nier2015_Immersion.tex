@@ -159,7 +159,7 @@ Simulator sickness is distinct from motion sickness, in that it arises due to a 
 For example, a person in virtual reality can become nauseous when they attempt to interact with the system but the system does not respond quickly enough.
 This is most apparent with head rotation, where users rotate their physical heads expecting to see an updated view but still see the initial view.
 
-\section{Motivation Example}
+\section{Motivating Example}
 % Danger of using "you", as researchers aren't programmers and sadly can't identify with this!
 Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
 After 10 years in flight, the probe lands against all odds but in a position that is unable to receive sunlight and without deploying its anchoring harpoons.
@@ -170,52 +170,65 @@ After assessing the lander's options, you iterate on a number of solutions, firs
 and then the keyboard to refine the code. With each solution you observe the lander's behavior inside the simulation.
 You walk around the lander to inspect it's position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
 
-A peer programmer joins and watches a replay of your live coding session.  She notes an issue with potential collision and suggests that you can correct the path by gently crashing the the companion orbiter into probe.  You add this to the simulation, it seems to work.  But you're not done yet, the peer programmer has noticed a part of the code light up in the distance.
-It is a warning that collision detection code will not let you execute this action outside of the simulator.  You get around this by shutting off the engine right before impact.
+%% talk about this in remote collaboration
+%A peer programmer joins and watches a replay of your live coding session.  She notes an issue with potential collision and suggests that you can correct the path by gently crashing the the companion orbiter into probe.  You add this to the simulation, it seems to work.  But you're not done yet, the peer programmer has noticed a part of the code light up in the distance.
+%It is a warning that the collision detection code will not let you execute this action outside of the simulator.  You get around this by shutting off the engine right before impact.
 
-Finally, after having run the simulation dozens of times and being confident in your solution, you upload the program with time to spare. 
+Finally, after having run the simulation dozens of times in VR, you upload the program with time to spare. 
 The lander repositions itself as expected and the historic mission can continue successfully.
   
 
-\section{Systems}
+%\section{Systems}
 
-We have built two virtual reality prototypes for software engineering to concretely demonstrate the affordances of VR. 
-\textsc{RiftSketch} primarily illustrates \emph{liveness} and \textsc{Immersion} chiefly demonstrates \emph{spatial cognition and memory}.
-Both systems use \emph{manipulation and motion} to aid their primary goals.
-Both of these systems use a head-mounted display (Oculus Rift - Development Kit 2) to visually immerse the user in the environment and a Leap Motion Controller for gesture recognition.
-To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system (See Figure~\ref{fig:rift}).
+%We have built two virtual reality prototypes for software engineering to concretely demonstrate the affordances of VR. 
+%\textsc{RiftSketch} primarily illustrates \emph{liveness} and \textsc{Immersion} chiefly demonstrates \emph{spatial cognition and memory}.
+%Both systems use \emph{manipulation and motion} to aid their primary goals.
+%Both of these systems use a head-mounted display (Oculus Rift - Development Kit 2) to visually immerse the user in the environment and a Leap Motion Controller for gesture recognition.
+%To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system (See Figure~\ref{fig:rift}).
 
 
-\subsection{RiftSketch}
+%\subsection{RiftSketch}
 
-\textsc{RiftSketch} is a live coding environment built for VR.~\cite{Peiris:RiftSketchVideo}
-It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
+%\textsc{RiftSketch} is a live coding environment built for VR.~\cite{Peiris:RiftSketchVideo}
+%It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
+
+%\textsc{RiftSketch} presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
+%As the user types code into the editor, the world around them updates instantly to display the 3D scene dictated by their code. 
+%\textsc{RiftSketch} also allows the user to animate their scene via a callback function which is executed on every frame. 
+%The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
+
+
+%\subsection{Immersion}
+%
+%\textsc{Immersion} is a code review prototype that displays code fragments in multiple ways to enhance spatial reasoning.
+%Software packages are represented as traversable floor sections and are color coded by the amount of code modified for this review.
+%The reviewer's view is centered around the active code fragment with fragment piles on the floor that the reviewer may want to see.
+%Piles have previously been shown to effectively engage spatial reasoning.
+%The reviewer is able to expand one pile at a time into a ring of fragments to see the details of the fragments, based on Schneiderman's taxonomy including overview and detail visualizations~\cite{Shneiderman:InfoVisTaxonomy}.
+% I looked at Code Canvas, but they didn't cite anything for semantic zoom
+%\textsc{Immersion} uses semantic zoom to make method names readable even when at the back of the ring and the fragments retain a scaled height enabling the reviewer to approximate its length. 
+
+%In the following section, we more fully describe how both the \textsc{RiftSketch} and \textsc{Immersion} systems demonstrate the benefits for software engineering by using the affordances of a VR environment.
+
+\section{Applications}
+
+We have built two virtual reality prototypes for software engineering to concretely demonstrate the affordances of VR.
+In this section we describe how these systems can provide affordances and interactions from the comet example above in live coding and code review.
+
+Both of these systems use a head-mounted display (Oculus Rift - Development Kit 2) and a Leap Motion Controller for gesture recognition.
+
+
+\subsection{Live Coding}
+
+\textsc{RiftSketch}\footnote{http://www.youtube.com/watch?v=SKPYx4CEIlM} is a live coding environment built for VR which allows users to describe a 3D scene using the Three.js library\footnote{http://threejs.org/}.
+%It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
 
 \textsc{RiftSketch} presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
 As the user types code into the editor, the world around them updates instantly to display the 3D scene dictated by their code. 
 \textsc{RiftSketch} also allows the user to animate their scene via a callback function which is executed on every frame. 
 The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
 
-
-\subsection{Immersion}
-
-\textsc{Immersion} is a code review prototype that displays code fragments in multiple ways to enhance spatial reasoning.
-Software packages are represented as traversable floor sections and are color coded by the amount of code modified for this review.
-The reviewer's view is centered around the active code fragment with fragment piles on the floor that the reviewer may want to see.
-Piles have previously been shown to effectively engage spatial reasoning~\cite{Agarawala:BumpTop}.
-The reviewer is able to expand one pile at a time into a ring of fragments to see the details of the fragments, based on Schneiderman's taxonomy including overview and detail visualizations~\cite{Shneiderman:InfoVisTaxonomy}.
-% I looked at Code Canvas, but they didn't cite anything for semantic zoom
-\textsc{Immersion} uses semantic zoom to make method names readable even when at the back of the ring and the fragments retain a scaled height enabling the reviewer to approximate its length. 
-
-In the following section, we more fully describe how both the \textsc{RiftSketch} and \textsc{Immersion} systems demonstrate the benefits for software engineering by using the affordances of a VR environment.
-
-\section{Applications}
-
-In this section we describe how our systems can provide affiances and interactions used in the comet example above in the following applications:
-code review, live coding, remote collaboration, and simulation. 
-
-
-\subsection{Live Coding and Simulation}
+To assist in interaction with the keyboard, we allow reality to shine through by using a web camera mounted on the Rift and project that image in the system (See Figure~\ref{fig:rift}).
 
 \begin{figure}[ht!]
 \centering
@@ -237,27 +250,17 @@ Keyboard shortcuts allow the user to increment or decrement numbers in the code 
 Integration with the Leap Motion Controller provides users with the ability to manipulate numbers using natural input: the user places the editor's cursor over a number and then can move their hand up and down above the Leap Motion controller in order to increase or decrease the number. 
 Numbers in the code could represent anything, from the X, Y or Z components of a position or rotation vector, the red, green or blue components of an object's material or a component in the calculation of an object's animated speed.
 
-\subsubsection{Future Directions}
 
-Virtual reality is well-suited to applications with physical analogs that can be simulated in 3D. 
-Although simulation software is not uncommon, 3D worlds are often difficult to to navigate and interact with when displayed on 2D devices. 
-Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. 
-Interacting with a simulation might require positioning a virtual cursor which can be challenging when you only have a 2D view of the scene. 
+\subsection{Code Review}
 
-VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly. One can imagine a user physically turning their head to look around a simulated car plant or using their hands, via a Leap Motion controller, to interact with a simulated robot. 
-These direct interactions provide a subtle but important advantage over 2D-projected simulations. 
-This sense of immersion gives the users unimpeded access to the simulation which allows for quicker turn-around when testing or debugging the simulated software, especially if combined with an in-situ live coding solution like \textsc{RiftSketch}.
+\textsc{Immersion} represents methods as code fragments similarly to Code Bubbles~\cite{Bragdon:CodeBubbles} and displays groups of fragments as piles on the floor like BumpTop~\cite{Agarawala:BumpTop}.
+Piles can be expanded into a more detailed ring: an overview and detail visualization~\cite{Shneiderman:InfoVisTaxonomy}.
 
 
-
-\subsection{Code Review and Remote Collaboration}
-
-% TODO Need more specific heading
 \subsubsection{Spatial Reasoning}
 
-\textsc{Immersion} represents methods as code fragments similarly to Code Bubbles~\cite{Bragdon:CodeBubbles}.  
-The reviewer initially sees the active fragment in the center of the screen with other relevant fragments distributed around the floor in piles with more relevant piles closer to the reviewer. 
-Reviewers use spatial cognition to judge the relevance of piles by how far away the pile is as well as the size of the pile. 
+The reviewer initially sees the active fragment in the center of the screen with other relevant fragments distributed around the floor in piles. 
+Reviewers use spatial cognition to judge the relevance of piles by how far away the pile is as well as the size of the pile.
 The reviewer is able to scan the labels of the piles and number of fragments in each pile to quickly verify if each pile is indeed relevant.
 
 \textsc{Immersion} divides the floor into sections based on packages of the system and color codes the sections to indicate how much that package has been modified by the code under review.
@@ -285,22 +288,47 @@ The piles then change to include code relevant to the new fragment, but the revi
 % environment is dynamic
 
 % pair programming
-\subsubsection{Future Directions}
+\section{Discussion}
 
-Co-located development teams are able to communicate in person. 
-Distributed teams can try, but the technology is too slow and it doesn't feel good. 
-High Fidelity \footnote{https://highfidelity.io/} is implementing infrastructure for virtual worlds that is fast enough for developers to be able to sense body language and hear audio in real time.  
-Distributed development teams will have the foundational issues of remote communication solved which enables a shared VR environment to become truly powerful.
+\subsection{Future Directions}
 
-A benefit of co-location is pair programming, where two developers program at the same computer and can catch each others errors. 
-VR and body sensing with a device like PrioVR would enable remote developers to be at a shared virtual desk right next to each other. 
-They would be able to see the same files, talk in real time, and even point to which line of the code they are talking about. 
+\subsubsection{Simulation}
+
+Virtual reality is well-suited to applications with physical analogs that can be simulated in 3D such as the earlier comet example. 
+Although simulation software is not uncommon, 3D worlds and models are often difficult to navigate and interact with when displayed on 2D devices. 
+Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. 
+%Interacting with a simulation might require positioning a virtual cursor which can be challenging when you only have a 2D view of the scene. 
+% TODO - relate to comet
+
+%VR, on the other hand, allows users to view, explore and manipulate simulated worlds directly. One can imagine a user physically turning their head to look around a simulated car plant or using their hands, via a Leap Motion controller, to interact with a simulated robot. 
+%These direct interactions provide a subtle but important advantage over 2D-projected simulations. 
+%This sense of immersion gives the users unimpeded access to the simulation which allows for quicker turn-around when testing or debugging the simulated software, especially if combined with an in-situ live coding solution like \textsc{RiftSketch}.
+
+
+\subsubsection{Remote Collaboration}
+
+Both \textsc{RiftSketch} and \textsc{Immersion} could help facilitate remote collaboration.
+Multiple programmers located around the world could join each other in a VR live coding space to figure out how to land the comet from the motivating example.
+They would be able to provide extra insight and could arrive at the solution faster.
+
+A different set of programmers, also located around the world, could then join each other in a VR code review environment to review the proposed solution.
+They are able to see what each person is thinking based on their annotations of the piles of information in their section of the system.
+
+
+%Co-located development teams are able to communicate in person. 
+%Distributed teams can try, but the technology is too slow and it doesn't feel right. 
+%High Fidelity \footnote{https://highfidelity.io/} is implementing infrastructure for virtual worlds that is fast enough for developers to be able to sense body language and hear audio in real time.  
+%Distributed development teams will have the foundational issues of remote communication solved which enables a shared VR environment to become truly powerful.
+
+%A benefit of co-location is pair programming, where two developers program at the same computer and can catch each others errors. 
+%VR and body sensing with a device like PrioVR would enable remote developers to be at a shared virtual desk right next to each other. 
+%They would be able to see the same files, talk in real time, and even point to which line of the code they are talking about. 
 
 % pair 'live coding'/code review
-Sharing a live coding environment enables all participants to have a tight feedback loop. 
-This could be especially useful when the primary developer of a section needs to explain their modifications to the rest of the team. 
-Everyone could meet in the shared VR live coding environment and watch while the developer walks through modification of their code. 
-The team would be able to see how the system changed rather than looking through large amounts of code.
+%Sharing a live coding environment enables all participants to have a tight feedback loop. 
+%This could be especially useful when the primary developer of a section needs to explain their modifications to the rest of the team. 
+%Everyone could meet in the shared VR live coding environment and watch while the developer walks through modification of their code. 
+%The team would be able to see how the system changed rather than looking through large amounts of code.
 
   % pair designing
 %Co-located teams can design together around a whiteboard in a conference room as they talk through the problems of the system. 
@@ -365,7 +393,7 @@ Augmented reality seeks to help the user in the physical world while virtual rea
 
 % What gestures are most natural in VR?
 \subsection{Input Forms}
-Console controllers work well for navigation and limited action support but are surpassed by keyboards at text entry.
+Gaming console controllers work well for navigation and limited action support but are surpassed by keyboards at text entry.
 However, such devices require users to interact with both the physical and virtual worlds at the same time.
 Gesture recognition removes interaction with the physical world but can cause physical strain.
 Voice recognition could reduce strain but may feel awkward in a shared work space.
@@ -382,7 +410,7 @@ A webcam mounted to the headset enables some interaction with the physical world
 \subsection{3D Mapping}
 Some problems don't have an inherent 3D representation which makes display in VR a challenge.
 As seen in \textsc{Immersion}, 2D code can be displayed in VR but the code itself does not have a third dimension and thus loses the expressiveness of 3D.
-This could be an area well suited to 3D metaphorical programming as suggested by Ko et al~\cite{Ko:LearningBarriers}.
+This could be an area well suited to 3D metaphorical programming as suggested by Ko et al.~\cite{Ko:LearningBarriers}.
 
 \subsection{Technology Limitations}
 
