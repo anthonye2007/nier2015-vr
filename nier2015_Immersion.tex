@@ -85,7 +85,7 @@ Similarly, researchers have incorporated affordances for spatial memory in progr
 In this paper, we describe how head-mounted virtual reality displays coupled with gesture input devices provide several previously unexplored affordances not yet fully utilized in programming environments. 
 %Understanding the challenges and benefits offered by programming environments supported by VR is a space worth exploring.
 %We then illustrate a scenario with a future programming environment that fully integrates VR.  
-We then describe several systems we have prototyped and how the systems can be used in several applications related to software engineering.  Finally, We provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
+We then describe several systems we have prototyped and how the systems can be used in several applications related to software engineering.  Finally, we provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
 
 
 %which enable the user to feel immersed in a virtual environment., and live feedback in the environment, 
@@ -103,11 +103,13 @@ We then describe several systems we have prototyped and how the systems can be u
 % the affordances allow an immersive environment: big whoop. Why should I care about an immersive environment?
 We describe a set of affordances that VR provides and describe the potential benefits of integrating them into programming environments.
 
-\subsubsection{Spatial Cognition and Memory}
+\subsubsection{Spatial Cognition}
 
-Head-mounted virtual reality displays allow the user to update their view by moving their body or rotating their neck, even a full 360 degrees.
+Existing 3D visualizations attempt to take advantage of spatial cognition but lose much of their impact when displayed on a 2D screen~\cite{Teyseyre:Overview3DSoftwareVisualization}.
+In contrast, head-mounted virtual reality displays allow the user to update their view by moving their body or rotating their neck, even a full 360 degrees.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
 %VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
+
 Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could be observed as a person navigated a virtual town and again when they later recalled the paths through the town~\cite{Ekstrom:2003}.
 
 
@@ -325,11 +327,9 @@ They upload the code and the lander repositions itself as expected.
 
 \subsection{Future Directions}
 
-\subsubsection{Simulation}
+%\subsubsection{Simulation}
 
-Virtual reality is well-suited to applications with physical analogs that can be simulated in 3D such as the earlier comet example. 
-Although simulation software is not uncommon, 3D worlds and models are often difficult to navigate and interact with when displayed on 2D devices. 
-Users have to actively think about moving a camera viewpoint in 3D space in order to view a certain part of a simulation. 
+
 %Interacting with a simulation might require positioning a virtual cursor which can be challenging when you only have a 2D view of the scene. 
 % TODO - relate to comet
 
