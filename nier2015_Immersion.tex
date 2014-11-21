@@ -217,7 +217,7 @@ After assessing the lander's options, you iterate on possible solutions, first b
 and then the keyboard to refine the code. With each solution, you observe the lander's behavior inside \textsc{RiftSketch}.
 You walk around the lander to inspect its position after each maneuver, leaning in to ensure that its feet are planted firmly in the regolith, and zooming out to an orbital view to verify that its new position maintains a line-of-sight to the orbiter on this lob-sided comet. 
 
-Finally, after having run the simulation dozens of times in \textsc{RiftSketch}, you upload the program with time to spare. 
+Finally, after having run the simulation dozens of times in \textsc{RiftSketch}, you pass the software on to review.
 
 
 
@@ -252,18 +252,17 @@ The piles then change to include code relevant to the new fragment, but the revi
 \subsubsection{Usage Example}
 
 %% talk about this in remote collaboration
-Consider the comet scenario from before where a programmer has uploaded a possible solution which is now ready for review.
+Consider the comet scenario from before where a programmer has implemented a repositioning flight path for the lander.
 
-
-A peer programmer joins and watches a replay of your live coding session.  
-She notes an issue with potential collision and suggests that you can correct the path by gently crashing the the companion orbiter into probe.  
-You add this to the simulation, it seems to work.  
-But you're not done yet, the peer programmer has noticed a part of the code light up in the distance.
-It is a warning that the collision detection code will not let you execute this action outside of the simulator.  
-You get around this by shutting off the engine right before impact.
-
-Finally, after having run the simulation dozens of times in VR, you upload the program with time to spare. 
+A reviewer puts on the Rift and enters \textsc{Immersion} to ensure this solution will actually work.
+She notes an edge case which might cause a collision and suggests gently crashing the companion orbiter into the probe.
+The original programmer implements the suggestion in \textsc{RiftSketch}, ensures the simulation works and celebrates before submitting the correction to the reviewer.
+However, the reviewer sees a section of code light up in \textsc{Immersion}.
+As she walks over to the section she sees that it is the collision detection section.
+She expands the 'Related Artifacts' pile and sees that shutting off the engine just before impact might avoid the collision.
+The programmer verifies that the reduced thrust modifies the flight path enough and the code is uploaded to the lander.
 The lander repositions itself as expected and the historic mission can continue successfully.
+
 
 %   RS
 %     Usage Example (comet)
