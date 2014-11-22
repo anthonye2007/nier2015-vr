@@ -42,13 +42,13 @@ This paper describes the affordances offered by VR; demonstrates the benefits of
 Programming environments from the previous decades still do not address programmer issues despite advances in psychology, neuroscience, and social aspects of software development.
 As a result, problems still persist.  Developers still experience disorientation when navigating code~\cite{Henley:2014}.
 Developers still experience problems comprehending code~\cite{Maalej:TOSEM:2014}.  These basic issues also impede other important software engineering activities. For example,
-when performing a code review, developers mostly report issues, such as code convention violations, instead of discussing design flaws or defects
-due to insufficient ability to navigate and understand the code under review~\cite{bacchelli:ModernCodeReviewChallenges}.  
+in code review, due to insufficient ability to navigate and understand the code under review, developers mostly report issues, such as convention violations, instead of discussing design flaws or defects
+~\cite{bacchelli:ModernCodeReviewChallenges}.  
 %Other challenges, such as remote pairing, still persist.
 
 %The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
-Researchers have explored the underlying cognitive issues to several problems developers experience~\cite{Parnin:2012}.
-For example, \emph{spatial memory}, a memory system in the parahippocampus that supports ability to retain memory of locations, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporarily navigate to another location and forgot how to find the original location. This loss was because the cues they relied on, such as position of scroll bars and document tabs, were unstable or disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' other code.
+Researchers have explored the cognitive issues underlying several problems developers experience~\cite{Parnin:2012}.
+For example, \emph{spatial memory}, a memory system in the parahippocampus that supports the ability to retain spatial awareness, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  Even after a single exposure, these memories can persist as long as a year.  The disorientation developers experience in programming environments often result from failures to engage a human's innate processing of spatial memory. Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code because they had to temporarily navigate to another location and forgot how to find the original location. This loss ocurred when the cues they relied on, such as position of scroll bars and document tabs, were disrupted as a result of their navigation.  Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' other code.
 
 \begin{figure}[ht]
 \centering
@@ -68,20 +68,21 @@ For example, \emph{spatial memory}, a memory system in the parahippocampus that 
 \end{figure}
 
 % Data Mountain: http://www.microsoft.com/usability/UEPostings/p153-robertson.pdf
-\emph{Affordances} are devices that often leverage innate cognitive mechanisms when performing actions in an environment, which can result in increased task performance. 
-Researchers have attempted to improve interfaces and programming environments that incorporate the human capacity for attention, cognition, and memory.
+\emph{Affordances} are devices that leverage innate cognitive mechanisms.
+Researchers have attempted to improve interfaces that incorporate the human capacity for attention, cognition, and memory.
 For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Robertson:1998}. 
 %After 6 months, participants could still recall the bookmarks based on position alone.  
 
-Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable plane which enables preservation of stable spatial positions of code location.  Code Bubbles~\cite{Bragdon:CodeBubbles} allows a developer to quickly position related fragments of code on an infinitely scrollable screen, which improves navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removes management of fragments and introduces a more stable position, to improve disorientation that was still present with users of Code Bubbles.
+Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable, zoomable plane which preserves stable spatial positions of code.  Code Bubbles~\cite{Bragdon:CodeBubbles} allows a developer to quickly position related fragments of code on an infinitely scrollable screen, which improves navigation and comprehension of fragments.  Patchworks~\cite{Henley:2014}, removes management of fragments and introduces a more stable layout, to improve disorientation that was still present with users of Code Bubbles.
 
 
 
 %Live feedback (update with hands).  Simulation sickness.
-In this paper, we describe how head-mounted virtual reality displays coupled with gesture input devices provide several previously unexplored affordances not yet fully utilized in programming environments. 
+Spatial memory is just one such affordance that can be leveraged to improve programming environments and there are many others that could be better used. 
+This paper describes how head-mounted virtual reality (VR) displays coupled with gesture input provide several affordances not yet fully utilized in programming environments.
 %Understanding the challenges and benefits offered by programming environments supported by VR is a space worth exploring.
 %We then illustrate a scenario with a future programming environment that fully integrates VR.  
-We then describe several systems we have prototyped and how the systems can be used in several applications related to software engineering.  Finally, we provide a brief discussion of some open research questions and discuss some of the challenges of using VR in software engineering with existing technologies.
+We then describe several VR systems we have prototyped and how VR can be applied to software engineering.  Finally, we provide a brief discussion of future work, open research questions, and challenges of using VR in software engineering with existing technologies.
 
 
 %which enable the user to feel immersed in a virtual environment., and live feedback in the environment, 
@@ -106,7 +107,7 @@ In contrast, head-mounted virtual reality displays allow the user to update thei
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
 %VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
 
-Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, the firing patterns of place cells could be observed as a person navigated a virtual town and again when they later recalled the paths through the town~\cite{Ekstrom:2003}.
+Virtual reality can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, place cells could be observed firing in the same sequence as a person navigated a virtual town and again when they later recalled the paths through the town~\cite{Ekstrom:2003}.
 
 
 %VR devices render a slightly different image for each eye (stereoscopic rendering) which allows humans to sense depth in the images just like in the physical world. 
@@ -124,7 +125,7 @@ Virtual reality can directly mimic the affordances offered by physical navigatio
 \subsubsection{Manipulation and Motion}
 
 The affordances provided by manipulation of a physical object can result in improved perception and retention. 
-For example, consider how the affordances offered by turning pages of a book result in increased comprehension and recall of the text when compared to reading on computer displays~\cite{Noyes:2008}.
+For example, the affordances offered by turning pages of a book result in increased comprehension and recall as when compared to reading the same text on computer displays~\cite{Noyes:2008}.
 Additionally, the ability to serendipitously browse and relocate material is improved.
 % on paper due to the ability to turn pages.
 %especially when the content is complexity.
@@ -137,8 +138,8 @@ Other affordances can be aided by motion. For example, perception of depth is en
 %Memory...
 
 Researchers have explored integrating natural interactions with existing programming environments~\cite{Delimarschi:2014}.
-Through input devices such as the Leap Motion, it is possible to also manipulate and interact with virtual objects.
-Physical movement is possible in virtual spaces.  Body harnesses\footnote{\url{http://cyberith.com/product/}} allow free movement in a virtual space such as walking, running, jumping and crouching.%  Such devices are as affordable and require less space than standing desks.
+Through input devices such as the Leap Motion, it is possible to physically interact with virtual objects.
+Physical movement is also possible in virtual spaces.  Body harnesses\footnote{\url{http://cyberith.com/product/}} allow free movement in a virtual space such as walking, running, jumping and crouching.%  Such devices are as affordable and require less space than standing desks.
 
 %Self-actuated motion enhances the 
 
@@ -171,7 +172,7 @@ Both of these systems use a head-mounted display (Oculus Rift - Development Kit 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=80mm]{figures/riftsketch/unwarped_tree}
-\caption{\textsc{RiftSketch} screenshot. The tree is generated by a recursive algorithm that the user has typed into the floating editor. The flying, animated birds represent tweets pulled in from the Twitter API, also generated by code that the user has entered. \label{RiftSketch}}
+\caption{\textsc{RiftSketch} screenshot. The tree is generated by a recursive algorithm that the user has typed into the floating editor. The flying, animated birds represent tweets pulled in from the Twitter API, also generated by code that the user has entered. \label{fig:RiftSketch}}
 \end{figure}
 
 \subsection{Live Coding}
@@ -179,7 +180,7 @@ Both of these systems use a head-mounted display (Oculus Rift - Development Kit 
 \textsc{RiftSketch}\footnote{\url{http://www.youtube.com/watch?v=SKPYx4CEIlM}} is a live coding environment built for VR which allows users to describe a 3D scene using the Three.js library\footnote{\url{http://threejs.org/}}.
 %It allows a user to describe a 3D scene using geometries, materials, textures, lights, meshes and other primitives provided by the Three.js library, which is a convenient wrapper for the WebGL APIs available in modern browsers. 
 
-\textsc{RiftSketch} presents a user with a simple text editor, floating in front of them in an otherwise empty VR world. 
+\textsc{RiftSketch} presents a user with a simple text editor (see Figure~\ref{fig:RiftSketch}), floating in front of them in an otherwise empty VR world. 
 As the user types code into the editor, the world around them updates instantly to display the 3D scene dictated by their code. 
 \textsc{RiftSketch} also allows the user to animate their scene via a callback function which is executed on every frame. 
 The user can manipulate the state of the 3D scene in this looped block of code in order to add behaviour to the objects in their scene.
@@ -194,7 +195,7 @@ To assist in interaction with the keyboard, we allow reality to shine through by
 \textsc{RiftSketch} demonstrates liveness by providing a tight feedback loop between code written and its effect in a virtual environment, and to quickly experiment with various solutions, algorithms and calculations. 
 \textsc{RiftSketch} is also very promising as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hindrance.  
 These benefits are especially evident in \textsc{RiftSketch} when the code describes a VR scene. 
-Watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
+As the authors have previously experienced, watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
 
 \subsubsection{Hand Manipulation of Code}
 
@@ -209,8 +210,8 @@ Numbers in the code could represent anything, from the X, Y or Z components of a
 \subsubsection{Usage Example}
 % Danger of using "you", as researchers aren't programmers and sadly can't identify with this!
 Consider the following scenario: A space mission has just landed a probe on the surface of a comet.
-After 10 years in flight, the probe lands against all odds but in a position that is unable to receive sunlight and without deploying its anchoring harpoons.
-Automated telemetry programs cannot find a feasible path.
+After 10 years in flight, the probe lands against all odds but in a position that is unable to receive sunlight.
+Automated telemetry programs cannot find a feasible flight path.
 As a programmer, you are tasked with updating the lander's software to reposition itself safely on solid ground and you have 24 hours before its batteries die and the probe deflects off the comet surface. 
 Thankfully the companion orbiter has gathered detailed information about the surface around the landing site and telemetry data shows exactly where and how the lander is positioned.
 
@@ -229,20 +230,21 @@ Finally, after having run the simulation dozens of times in \textsc{RiftSketch},
 
 
 \textsc{Immersion} represents methods as code fragments similarly to Code Bubbles~\cite{Bragdon:CodeBubbles} and displays groups of fragments as piles on the floor like BumpTop~\cite{Agarawala:BumpTop}.
-Piles can be expanded into a more detailed ring: an overview and detail visualization~\cite{Shneiderman:InfoVisTaxonomy}.
+Piles can be expanded into a more detailed ring for an overview and detail visualization~\cite{Shneiderman:InfoVisTaxonomy}.
+
 
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\linewidth]{figures/immersion_unwarped}
 \caption{\textsc{Immersion} screenshot. The reviewer is reviewing code to reposition the lander on the comet. The reviewer sees the active method, piles of relevant fragments on the floor, and has expanded one pile into a fragment ring on the left to read the details of those fragments. A model of the comet and the lander's expected flight path is shown in the upper left. The reviewer can walk between code packages on the floor which are color coded according to amount of modification for this review. GitHub details are shown in the upper right. 
- \label{immersion}}
+ \label{fig:Immersion}}
 \end{figure}
 
 
 \subsubsection{Spatial Reasoning}
 
-The reviewer initially sees the active fragment in the center of the screen with other relevant fragments distributed around the floor in piles. 
+The reviewer initially sees the active fragment in the center of the screen (see Figure~\ref{fig:Immersion}) with other relevant fragments distributed around the floor in piles. 
 Reviewers use spatial cognition to judge the relevance of piles by how far away the pile is as well as the size of the pile.
 The reviewer is able to scan the labels of the piles and number of fragments in each pile to quickly verify if each pile is indeed relevant.
 
@@ -259,7 +261,9 @@ Similarly, we expect that reviewers would be able to more easily recall review d
 Reviewers can make a grabbing motion to select a pile and then can pull their hand up to transform the pile into a ring of fragments for more detailed inspection.
 The reviewer is now able to read the foremost fragment in the circle and can make horizontal finger swipes to rotate the circle and read other fragments. 
 The reviewer can pinch the foremost ring fragment on the top and bottom and move it to the middle of the screen to become the active fragment.
-The piles then change to include code relevant to the new fragment, but the reviewer can move their hand as if clearing off a desk to return to the previous active fragment if they want to go back.
+If the reviewer wants to return to the previous method, they can move their hand as if clearing off a desk.
+
+We have initially focused on supporting exploration -- comments can be added via keyboard input, but we are investigating alternative ways to mark and flag code.
 
 
 \subsubsection{Usage Example}
@@ -332,7 +336,6 @@ They upload the code and the lander repositions itself as expected.
 % pair programming
 \section{Discussion}
 
-\subsection{Future Directions}
 
 %\subsubsection{Simulation}
 
@@ -345,13 +348,13 @@ They upload the code and the lander repositions itself as expected.
 %This sense of immersion gives the users unimpeded access to the simulation which allows for quicker turn-around when testing or debugging the simulated software, especially if combined with an in-situ live coding solution like \textsc{RiftSketch}.
 
 
-\subsubsection{Remote Collaboration}
+\subsection{Remote Collaboration}
 
 Both \textsc{RiftSketch} and \textsc{Immersion} could help facilitate remote collaboration.
 Multiple programmers located around the world could join each other in a VR live coding space to figure out how to land the comet from the motivating example.
 They would be able to provide extra insight and could arrive at the solution faster.
 
-A different set of programmers, also located around the world, could then join each other in a VR code review environment to review the proposed solution.
+A different set of programmers could then join each other in a VR code review environment to review the proposed solution.
 They are able to see what each person is thinking based on their annotations of the piles of information in their section of the system.
 
 
@@ -416,8 +419,7 @@ They are able to see what each person is thinking based on their annotations of 
 
 \subsection{Open Questions}
 
-\subsubsection{Degrees of Immersion}
-
+\textbf{Degrees of Immersion.} 
 Augmented reality devices such as Google Glass, aim to help the user complete tasks in the physical world by adding information overlays. 
 Augmented reality seeks to help the user in the physical world while virtual reality seeks to completely replace physical reality. 
 \emph{Is it more useful to immerse the user in a completely virtual environment, or to enhance their physical world?}
@@ -432,7 +434,7 @@ Augmented reality seeks to help the user in the physical world while virtual rea
 % Does using a VR code review tool actually increase comprehension? Does it allow users to find bugs and provide alternative solutions?
 
 % What gestures are most natural in VR?
-\subsubsection{Input Forms}
+\textbf{Input Forms.}
 Gaming console controllers work well for navigation and limited action support but are surpassed by keyboards at text entry.
 However, such devices require users to interact with both the physical and virtual worlds at the same time.
 Gesture recognition removes interaction with the physical world but can cause physical strain.
@@ -464,11 +466,10 @@ Eyeglass wearers must go through extra trial and error to see if the headset is 
 %The immersive environment allows users to process more information at once and stereoscopic rendering enables depth-sensing. 
 %Together, these affordances provide a novel platform for new software engineering tools.
 
-Virtual reality offers affordances in spatial cognition, manipulation, and liveness that two-dimensional development environments have not been able to take full advantage of.
-Software engineering can use virtual reality as a platform for entirely new kinds of tools.
-We described how both live coding and code review could benefit from VR tools but we envision virtual reality can benefit many other software engineering activities as well.
-
-Research in this area is needed now so that software engineers can escape from the confines of rectangular displays and emerge into VR environments better suited to the human body and brain.
+Two-dimensional development environments have not been able to take full advantage of affordances such as spatial cognition, manipulation, and liveness.
+%Virtual reality offers affordances in spatial cognition, manipulation, and liveness that two-dimensional development environments have not been able to take full advantage of.
+This paper describes a vision of how software engineering can use virtual reality for new kinds of tools that can take advantage of these affordances.
+We described how both live coding and code review could benefit from VR tools but we envision many other software engineering activities can benefit from virtual reality as well.
 
 %We envision a future where software engineers work in immersive environments which take advantage of more affordances of the human body than current workstations.
 %We argue that these affordances provide a platform for new kinds of software engineering tools. 
