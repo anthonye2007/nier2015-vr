@@ -70,7 +70,8 @@ For example, \emph{spatial memory}, a memory system in the parahippocampus that 
 % Data Mountain: http://www.microsoft.com/usability/UEPostings/p153-robertson.pdf
 \emph{Affordances} are devices that leverage innate cognitive mechanisms.
 Researchers have attempted to improve interfaces that incorporate the human capacity for attention, cognition, and memory.
-For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space~\cite{Robertson:1998}. 
+For example, in one study, participants organized their web bookmarks by positioning screenshots of the pages on various piles in a 3-dimensional space which resulted in reduced storage and retrieval time as well as reduced retrieval failures.~\cite{Robertson:1998}. 
+
 %After 6 months, participants could still recall the bookmarks based on position alone.  
 
 Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable, zoomable plane which preserves stable spatial positions of code.  Code Bubbles~\cite{Bragdon:CodeBubbles} allows a developer to quickly position related fragments of code on an infinitely scrollable screen, which improves navigation and comprehension of fragments.  
@@ -158,6 +159,10 @@ Physical movement is also possible in virtual spaces.  Body harnesses\footnote{\
 % For example, a person in virtual reality can become nauseous when they attempt to interact with the system but the system does not respond quickly enough.
 %This is most apparent with head rotation, where users rotate their physical heads expecting to see an updated view but still see the initial view.
 
+\subsubsection{Feedback}
+The Gulf of Evaluation, as described by Norman, arises when there is difficulty assessing the state of the system~\cite{Norman:DesignOfEverydayThings}.  VR allows software engineers to be in environments that attempt to eliminate this gulf by eliminating the delay between programmer action and seeing the result of their action. Such fast feedback has previously been implemented in two-dimensional displays~\cite{Burnett:LivenessLevel4} but VR extends this ability to three-dimensional displays.
+
+
 
 
 
@@ -191,9 +196,9 @@ To assist in interaction with the keyboard, we allow reality to shine through by
 
 
 
-\subsubsection{Liveness}
+\subsubsection{Feedback}
 
-\textsc{RiftSketch} demonstrates liveness by providing a tight feedback loop between code written and its effect in a virtual environment, and to quickly experiment with various solutions, algorithms and calculations. 
+\textsc{RiftSketch} provides a tight feedback loop between code written and its effect in a virtual environment, enabling quick experiments with various solutions, algorithms and calculations. 
 \textsc{RiftSketch} is also very promising as a learning tool since users can see their mistakes immediately and correct themselves without an intermediate compile step that might otherwise act as a hindrance.  
 These benefits are especially evident in \textsc{RiftSketch} when the code describes a VR scene. 
 As the authors have previously experienced, watching the entire virtual world change around you as you type can be an extremely powerful and engaging experience.
@@ -341,12 +346,17 @@ They upload the code and the lander repositions itself as expected.
 \section{Discussion}
 
 \subsection{Simulation}
-VR enables improved simulation with two affordances.
-First, VR allows users to interact with their virtual environment in ways more like the physical environment. This improved interaction includes more realistic vision and a feeling of presence [3] which enables software engineers to create simulations of experiences that are typically impossible in the physical world.
-Second, virtual environments are changed more easily than physical environments and are thus cheaper. This malleability is true of all digital technology, not just VR, but VR is the combination of realistic interaction and virtual malleability.
-Existing applications include NASA who is using VR to control a robotic arm resulting in higher efficiency [1]. Educational experience Titans of Space [2] allows students to experience our solar system in a way that makes them feel like they are truly right next to the sun.
+%VR enables improved simulation with two affordances.
+%First, VR allows users to interact with their virtual environment in ways more like the physical environment. This improved interaction includes more realistic vision and a feeling of presence [3] which enables software engineers to create simulations of experiences that are typically impossible in the physical world.
+%Second, virtual environments are changed more easily than physical environments and are thus cheaper. This malleability is true of all digital technology, not just VR, but VR is the combination of realistic interaction and virtual malleability.
 
-VR has opened the door for software engineers to create systems that increase efficiency and enable previously impossible experiences. An area of future research is how to create tools for the software engineers creating these VR systems.  Which existing tools will still be helpful?  What problems do VR software engineers face that have no tool support?
+
+VR has opened the door for software engineers to create systems that increase efficiency and enable previously impossible experiences. 
+Existing applications include NASA who is using VR to control a robotic arm resulting in higher efficiency~\footnote{www.engadget.com/2013/12/23/nasa-jpl-control-robotic-arm-kinect-2/}. Educational experience Titans of Space~\footnote{www.crunchywood.com} allows students to experience our solar system in a way that makes them feel like they are truly right next to the sun.
+
+Future research is needed on how to create tools for the software engineers creating these VR systems.
+%Which existing tools will still be helpful?
+What problems do VR software engineers face that have no tool support?
 
 
 
@@ -479,7 +489,7 @@ Eyeglass wearers must go through extra trial and error to see if the headset is 
 %The immersive environment allows users to process more information at once and stereoscopic rendering enables depth-sensing. 
 %Together, these affordances provide a novel platform for new software engineering tools.
 
-Two-dimensional development environments have not been able to take full advantage of affordances such as spatial cognition, manipulation, and liveness.
+Two-dimensional development environments have not been able to take full advantage of affordances such as spatial cognition, manipulation, and feedback.
 %Virtual reality offers affordances in spatial cognition, manipulation, and liveness that two-dimensional development environments have not been able to take full advantage of.
 This paper describes a vision of how software engineering can use virtual reality for new kinds of tools that can take advantage of these affordances.
 We described how both live coding and code review could benefit from VR tools but we envision many other software engineering activities can benefit from virtual reality as well.
