@@ -51,8 +51,7 @@ Virtual reality (VR) allows humans to interact with the digital realm in ways th
 
 %The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
 Researchers have explored the cognitive issues underlying several problems developers experience~\cite{Parnin:2012}.
-For example, \emph{spatial memory}, a memory system in the parahippocampus that supports the ability to retain spatial awareness, is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  
-Even after a single exposure, these memories can persist as long as a year.  
+For example, \emph{spatial memory} is a memory system in the parahippocampus that supports the ability to retain spatial awareness. 
 The disorientation developers experience in programming environments often result from failures to engage a human's innate processing of spatial memory. 
 Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code when the cues they relied on, such as position of scroll bars and document tabs, were disrupted as a result of their navigation.
 Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' other code.
@@ -110,10 +109,14 @@ We then describe several VR systems we have prototyped and how VR can be applied
 We describe a set of affordances that VR provides and describe the potential benefits of integrating them into programming environments.
 
 \subsubsection{Spatial Cognition}
-
-Existing 3D visualizations attempt to take advantage of spatial cognition but lose much of their impact when displayed on a 2D screen~\cite{Teyseyre:Overview3DSoftwareVisualization}.
-In contrast, head-mounted VR displays allow the user to update their view by moving their body or rotating their neck, even a full 360 degrees.
+Spatial memory is supported by place cells that fire as a person navigates through a physical space and other contextual cues in the environment.  
+%Even after a single exposure, these memories can persist as long as a year. 
+%Existing 3D visualizations attempt to take advantage of spatial cognition but lose much of their impact when displayed on a 2D screen~\cite{Teyseyre:Overview3DSoftwareVisualization}.
+Head-mounted VR displays allow the user to update their view by moving their body or rotating their neck, firing place cells in the process.
 Additionally, these displays render a slightly different image for each eye (stereoscopic rendering) which enables the human eye to more easily sense depth of images on the display.
+These displays can create a sense of \emph{presence}, or `being there',~\cite{Slater:PlaceInVR}.
+We expect users' spatial memory to be more engaged in VR than for 2D displays, especially when viewing 3D visualizations.
+
 %VR devices also completely immerse the user in the environment, so that the user's head has six degrees of freedom. 
 
 VR can directly mimic the affordances offered by physical navigation. Based on electrocorticography (eCoG) recordings on the surface of the brain, place cells could be observed firing in the same sequence as a person navigated a virtual town and again when they later recalled the paths through the town~\cite{Ekstrom:2003}.
