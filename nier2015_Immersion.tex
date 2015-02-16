@@ -49,32 +49,24 @@ in code review, due to insufficient ability to navigate and understand the code 
 
 %The primary reason for modern code reviews not resulting in more defects found is a lack of understanding of the code being modified~\cite{bacchelli:ModernCodeReviewChallenges}. 
 Researchers have explored the cognitive issues underlying several problems developers experience~\cite{Parnin:2012}.
-For example, \emph{spatial memory} is a memory system in the parahippocampus that supports the ability to retain spatial awareness. 
-The disorientation developers experience in programming environments often result from failures to engage a human's innate processing of spatial memory. 
+One such issue is \emph{spatial memory}, a memory system in the parahippocampus that supports the ability to retain spatial awareness. 
 Ko et al.~\cite{Ko:2006} observed that developers lost track of relevant code when the cues they relied on, such as position of scroll bars and document tabs, were disrupted as a result of their navigation.
-Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' other code.
-
-\begin{figure}[ht]
-\centering
-%\begin{subfigure}{.5\columnwidth}
-%	\centering
-\begin{tabular}{cc}
-	\includegraphics[width=.45\linewidth]{figures/setup/equipment}\label{fig:rift}
- 	\includegraphics[width=.45\linewidth]{figures/setup/webcam_passthrough}\label{fig:leap}
-\end{tabular}
-\caption{Leap Motion with webcam attached to Rift (left), keyboard inside VR (right)}
-%	\caption{Leap Motion with webcam attached to Rift \label{fig:rift}}
-%\end{subfigure}%
-%\begin{subfigure}{.5\columnwidth}
-%  \centering
-%  \caption{Leap Motion and keyboard inside VR \label{fig:leap}}
-%\end{subfigure}
-\end{figure}
+Similar disorientation often results from failures to engage a human's innate processing of spatial memory. 
+%Kuhn~\cite{Kuhn:2010} describes how developers maintain an internal spatial representation of code, and refer to code as being ``above or below'' other code.
 
 % Data Mountain: http://www.microsoft.com/usability/UEPostings/p153-robertson.pdf
 \emph{Affordances} are devices that leverage innate cognitive mechanisms.
 Researchers have attempted to improve interfaces that incorporate the human capacity for attention, cognition, and memory.
 For example, one study reduced storage and retrieval time of web bookmarks as well as reduced retrieval failures by positioning screenshots of the pages on various piles in a 3D space~\cite{Robertson:1998}.
+
+\begin{figure}[ht]
+\centering
+\begin{tabular}{cc}
+	\includegraphics[width=.45\linewidth]{figures/setup/equipment}\label{fig:rift}
+ 	\includegraphics[width=.45\linewidth]{figures/setup/webcam_passthrough}\label{fig:leap}
+\end{tabular}
+\caption{Leap Motion with webcam attached to Rift (left), keyboard inside VR (right)}
+\end{figure}
 
 Similarly, researchers have incorporated affordances for spatial memory in programming environments.  Code Canvas~\cite{DeLine:CodeCanvas} positions code files on a large scrollable, zoomable plane which preserves stable spatial positions of code.  Code Bubbles~\cite{Bragdon:CodeBubbles} allows a developer to quickly position related fragments of code on an infinitely scrollable screen, which improves navigation and comprehension of fragments.  
 %Patchworks~\cite{Henley:2014}, removes management of fragments and introduces a more stable layout, to improve disorientation that was still present with users of Code Bubbles.
